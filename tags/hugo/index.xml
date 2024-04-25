@@ -3,14 +3,19 @@
   <channel>
     <title>Hugo on Wish&#39;s Blog</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link>http://localhost:1313/tags/hugo/</link>
 =======
     <link>https://wish2333.github.io/tags/hugo/</link>
 >>>>>>> c8aa6f5 (update)
+=======
+    <link>http://localhost:1313/tags/hugo/</link>
+>>>>>>> 1b6c2bd (create)
     <description>Recent content in Hugo on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Feb 1988 03:02:52 +0800</lastBuildDate>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -20,12 +25,19 @@
       <guid>http://localhost:1313/1988/stack-theme-mod/</guid>
 =======
     <atom:link href="https://wish2333.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+=======
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+>>>>>>> 1b6c2bd (create)
     <item>
       <title>Hugo | Hugo-stack-theme主题魔改版</title>
-      <link>https://wish2333.github.io/1988/stack-theme-mod/</link>
+      <link>http://localhost:1313/1988/stack-theme-mod/</link>
       <pubDate>Sat, 13 Feb 1988 03:02:52 +0800</pubDate>
+<<<<<<< HEAD
       <guid>https://wish2333.github.io/1988/stack-theme-mod/</guid>
 >>>>>>> c8aa6f5 (update)
+=======
+      <guid>http://localhost:1313/1988/stack-theme-mod/</guid>
+>>>>>>> 1b6c2bd (create)
       <description>Github仓库地址：Mantyke/stack-theme-mod 本主题由CaiJimmy制作并发布，这个仓库是由Mantyke修改的魔改</description>
     </item>
   </channel>
