@@ -1,285 +1,139 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Example Site</title>
-        <link>http://localhost:1313/</link>
-        <description>Recent content on Example Site</description>
+        <title>Wish&#39;s Blog</title>
+        <link>https://wish2333.github.io/</link>
+        <description>Recent content on Wish&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 13 Feb 2022 03:02:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Hugo | Hugo-stack-theme主题魔改版</title>
-        <link>http://localhost:1313/2022/stack-theme-mod/</link>
-        <pubDate>Sun, 13 Feb 2022 03:02:52 +0800</pubDate>
+        <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Cold and Warmth of the Police Station</title>
+        <link>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</link>
+        <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/2022/stack-theme-mod/</guid>
-        <description>&lt;p&gt;Github仓库地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mantyke&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Mantyke&lt;/a&gt;/&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mantyke/Hugo-stack-theme-mod&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;stack-theme-mod&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本主题由&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;CaiJimmy&lt;/a&gt;制作并&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;发布&lt;/a&gt;，这个仓库是由&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Mantyke&lt;/a&gt;修改的魔改版本&lt;/p&gt;
-&lt;p&gt;预览：&lt;a class=&#34;link&#34; href=&#34;https://stack-theme-mod.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Demo站&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;h2 id=&#34;使用方式&#34;&gt;使用方式&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;从零建立博客&lt;/strong&gt;：Fork仓库到自己账号下，用Github 注册 Vercel，依次点击Overview → New Project → import刚刚Fork的仓库，设置&lt;code&gt;FRAMEWORK PRESET&lt;/code&gt;为Hugo → 点击&lt;code&gt;Environment Variables&lt;/code&gt;，设置&lt;code&gt;NAME&lt;/code&gt;为&lt;code&gt;HUGO_VERSION&lt;/code&gt;，&lt;code&gt;Value&lt;/code&gt;为&lt;code&gt;Hugo版本号（如0.89.0）&lt;/code&gt; → 点击Add → 点击Deploy，稍等十来秒即可部署完成。下载仓库到本地后使用Github Desktop更新文章。（注，本地预览需安装Hugo，具体请参照&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 一起动手搭建个人博客吧&lt;/a&gt;相关内容）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;旧博客更换主题&lt;/strong&gt;：不同主题方式不同，推荐只保留原博客的content文件夹，迁移到本仓库content文件夹后再按情况调整。&lt;/p&gt;
-&lt;br&gt;
-&lt;h2 id=&#34;魔改内容&#34;&gt;魔改内容&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;调整文章页面为三栏显示（代码来自&lt;a class=&#34;link&#34; href=&#34;https://github.com/ShadowySpirits/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ShadowySpirits&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;文章按年份分类&lt;/li&gt;
-&lt;li&gt;增加文章字数统计与站点总字数、总篇数显示&lt;/li&gt;
-&lt;li&gt;修改全站字体为思源宋体&lt;/li&gt;
-&lt;li&gt;增加一个引用短代码（短代码来自&lt;a class=&#34;link&#34; href=&#34;https://guanqr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;荷戟独彷徨&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;添加一个友情链接页面并设置为双栏（友情链接代码来自&lt;a class=&#34;link&#34; href=&#34;https://bore.vip/archives/3bf3725e/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Bore&lt;/a&gt;，双栏代码来自&lt;a class=&#34;link&#34; href=&#34;https://tech.randomwaves.space/posts/21-12-08-make-hugo-stack-theme-links-display-in-two-columns/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;BB_Roin&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;一系列基于个人美观喜好的CSS修改&lt;/li&gt;
-&lt;li&gt;右侧栏增加Categories小部件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;h2 id=&#34;部分使用说明&#34;&gt;部分使用说明&lt;/h2&gt;
-&lt;h3 id=&#34;引用样式短代码&#34;&gt;引用样式短代码&lt;/h3&gt;
-&lt;p&gt;（注：实际使用请补全花括号&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-fallback&#34;&gt;{&amp;lt; quote &amp;gt;}}}
-三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。
-{&amp;lt; /quote &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;
-
-&lt;blockquote class=&#34;quote&#34;&gt;
-        &lt;p&gt;三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。&lt;/p&gt;&lt;/blockquote&gt; 
-&lt;br&gt;&lt;/p&gt;
-&lt;h3 id=&#34;友情链接使用方式&#34;&gt;友情链接使用方式&lt;/h3&gt;
-&lt;p&gt;友链头像放在&lt;code&gt;/assets/link-img&lt;/code&gt;，友链数据放在&lt;code&gt;/data/links.json&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[
-    {
-        &amp;quot;title&amp;quot;: &amp;quot;小球飞鱼&amp;quot;,
-        &amp;quot;website&amp;quot;: &amp;quot;https://mantyke.icu/&amp;quot;,
-        &amp;quot;image&amp;quot;: &amp;quot;mantyke.png&amp;quot;,
-     &amp;quot;description&amp;quot;: &amp;quot;我们会一起遇见鲸鱼吗？&amp;quot;
-    },
-	{
-        &amp;quot;title&amp;quot;: &amp;quot;友情链接2&amp;quot;,
-        &amp;quot;website&amp;quot;: &amp;quot;&amp;quot;,
-        &amp;quot;image&amp;quot;: &amp;quot;&amp;quot;,
-     &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;
-    }
-]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;修改页尾信息&#34;&gt;修改页尾信息&lt;/h3&gt;
-&lt;p&gt;站点名称及建站时间请修改以下代码&lt;/p&gt;
-&lt;p&gt;站点名称及链接：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
-
-    &amp;lt;section class=&amp;quot;copyright&amp;quot;&amp;gt;
-        &amp;amp;copy; 
-        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format &amp;quot;2006&amp;quot;))) }}
-            {{ .Site.Params.footer.since }} - 
-        {{ end }}
-        {{ now.Format &amp;quot;2006&amp;quot; }} &amp;lt;a href=&amp;quot;https://stack-theme-mod.vercel.app/&amp;quot;&amp;gt;Example Site&amp;lt;/a&amp;gt;·&amp;lt;i class=&amp;quot;fas fa-bell&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;a id=&amp;quot;days&amp;quot;&amp;gt;0&amp;lt;/a&amp;gt;Days&amp;lt;br&amp;gt;
-      {{$var :=  $scratch.Get &amp;quot;total&amp;quot;}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共书写了{{$var}}k字·共 {{ len (where .Site.RegularPages &amp;quot;Section&amp;quot; &amp;quot;post&amp;quot;) }}篇文章&amp;lt;/br&amp;gt;&amp;lt;span&amp;gt;&amp;lt;p&amp;gt;
-    &amp;lt;/section&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
-
-var s1 = &#39;2022-02-13&#39;;//设置为建站时间
-s1 = new Date(s1.replace(/-/g, &amp;quot;/&amp;quot;));
-s2 = new Date();
-var days = s2.getTime() - s1.getTime();
-var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
-document.getElementById(&#39;days&#39;).innerHTML = number_of_days;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;h2 id=&#34;其他常见修改&#34;&gt;其他常见修改&lt;/h2&gt;
-&lt;h3 id=&#34;设置博客头像&#34;&gt;设置博客头像&lt;/h3&gt;
-&lt;p&gt;位置：&lt;code&gt;/assets/img&lt;/code&gt;，请将头像命名为&lt;code&gt;avatar.png&lt;/code&gt;，替换原头像文件&lt;/p&gt;
-&lt;h3 id=&#34;删除博客头像&#34;&gt;删除博客头像&lt;/h3&gt;
-&lt;p&gt;位置：&lt;code&gt;/layouts/partials/sidebar/left.html&lt;/code&gt;，注释或删去以下部分：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;        {{ with .Site.Params.sidebar.avatar }}
-            {{ if (default true .enabled) }}
-            &amp;lt;figure class=&amp;quot;site-avatar&amp;quot;&amp;gt;
-                &amp;lt;a href=&amp;quot;{{ .Site.BaseURL | relLangURL }}&amp;quot;&amp;gt;
-                {{ if not .local }}
-                    &amp;lt;img src=&amp;quot;{{ .src }}&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;300&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
-                {{ else }}
-                    {{ $avatar := resources.Get (.src) }}
-                    
-                    {{ if $avatar }}
-                        {{ $avatarResized := $avatar.Resize &amp;quot;300x&amp;quot; }}
-                        &amp;lt;img src=&amp;quot;{{ $avatarResized.RelPermalink }}&amp;quot; width=&amp;quot;{{ $avatarResized.Width }}&amp;quot;
-                            height=&amp;quot;{{ $avatarResized.Height }}&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
-                    {{ else }}
-                        {{ errorf &amp;quot;Failed loading avatar from %q&amp;quot; . }}
-                    {{ end }}
-                {{ end }}
-                &amp;lt;/a&amp;gt;
-                {{ with $.Site.Params.sidebar.emoji }}
-                    &amp;lt;span class=&amp;quot;emoji&amp;quot;&amp;gt;{{ . }}&amp;lt;/span&amp;gt;
-                {{ end }}
-            &amp;lt;/figure&amp;gt;
-            {{ end }}
-        {{ end }}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;修改博客背景颜色&#34;&gt;修改博客背景颜色&lt;/h3&gt;
-&lt;p&gt;位置：&lt;code&gt;assets\scss\variables.scss&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;--body-background: #f6f6f6;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;指定首页分类标签颜色&#34;&gt;指定首页分类标签颜色&lt;/h3&gt;
-&lt;p&gt;位置：&lt;code&gt;content\categories&lt;/code&gt;，创建分类同名文件夹后，在文件夹内创建&lt;code&gt;_index.md&lt;/code&gt;文件，写入frontmatter&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;title: &amp;quot;做猫贵在折腾&amp;quot; //分类名称
-description: &amp;quot;简介 Blablabla&amp;quot; //不需要可以删了
-image: &amp;quot;ffxiv_20210830_230509_817.png&amp;quot; //分类题图，不需要也可以删了
-style:
-    background: &amp;quot;#80aba9&amp;quot; //分类标签底色
-    color: &amp;quot;#fff&amp;quot;
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;配置各类图标&#34;&gt;配置各类图标&lt;/h3&gt;
-&lt;p&gt;图标放在：&lt;code&gt;/assets/icons&lt;/code&gt;，svg格式，配置方式参考&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/configuration/custom-menu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;文档&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;其他参考&#34;&gt;其他参考&lt;/h3&gt;
-&lt;p&gt;其他我站修改及Hugo博客搭建教程可参见以下文章，作者代码水平为0，写作时间跨度较大，参考时务必注意：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 一起动手搭建个人博客吧&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/f9f0ec87/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 看中 Stack 主题的归档功能，搬家并做修改&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/a08f1963/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 另一篇 Stack 主题装修记录&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/comment/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 为 Blog 增加评论区&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/47a5331b/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 以正确姿势自动添加文章最后更新时间&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/cf2cf0fb/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 在文章中插入轮播图片&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2022/stack-theme-furnish03/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo | 第三篇 Stack 主题装修记录，堂堂再临！&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;如果您喜欢或使用这个魔改版主题成功搭建了自己的个人博客，欢迎到我的&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2022/stack-theme-mod/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;个人博客&lt;/a&gt;中留言告诉我，我会很开心的！&lt;/p&gt;
-&lt;br&gt;
-</description>
-        </item>
-        <item>
-        <title>Chinese Test</title>
-        <link>http://localhost:1313/2020/test-chinese/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/2020/test-chinese/</guid>
-        <description>&lt;img src="http://localhost:1313/2020/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" /&gt;&lt;h2 id=&#34;短代码测试&#34;&gt;短代码测试&lt;/h2&gt;
+        <guid>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</guid>
+        <description>&lt;img src="https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/t019aad1f5548ec9421.png" alt="Featured image of post The Cold and Warmth of the Police Station" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
 
 &lt;blockquote class=&#34;quote&#34;&gt;
-        &lt;p&gt;三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。&lt;/p&gt;&lt;/blockquote&gt; 
-&lt;h2 id=&#34;正文测试&#34;&gt;正文测试&lt;/h2&gt;
-&lt;p&gt;而这些并不是完全重要，更加重要的问题是， 带着这些问题，我们来审视一下学生会退会。 既然如何， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 我们不得不面对一个非常尴尬的事实，那就是， 可是，即使是这样，学生会退会的出现仍然代表了一定的意义。 学生会退会，发生了会如何，不发生又会如何。 经过上述讨论， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 学生会退会，到底应该如何实现。 这样看来， 在这种困难的抉择下，本人思来想去，寝食难安。 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 就我个人来说，学生会退会对我的意义，不能不说非常重大。 莎士比亚曾经提到过，人的一生是短的，但如果卑劣地过这一生，就太长了。这似乎解答了我的疑惑。 莫扎特说过一句富有哲理的话，谁和我一样用功，谁就会和我一样成功。这启发了我， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 学生会退会，到底应该如何实现。 一般来说， 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 在这种困难的抉择下，本人思来想去，寝食难安。 了解清楚学生会退会到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 问题的关键究竟为何？ 而这些并不是完全重要，更加重要的问题是。&lt;/p&gt;
-&lt;p&gt;奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必须务必慎重的考虑考虑。 既然如此， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 带着这些问题，我们来审视一下学生会退会。 我认为， 我认为， 在这种困难的抉择下，本人思来想去，寝食难安。 问题的关键究竟为何？ 每个人都不得不面对这些问题。 在面对这种问题时， 要想清楚，学生会退会，到底是一种怎么样的存在。 我认为， 既然如此， 每个人都不得不面对这些问题。 在面对这种问题时， 那么， 我认为， 学生会退会因何而发生。&lt;/p&gt;
-&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;思念是最暖的忧伤像一双翅膀&lt;br&gt;
-让我停不了飞不远在过往游荡&lt;br&gt;
-不告而别的你 就算为了我着想&lt;br&gt;
-这么沉痛的呵护 我怎么能翱翔&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=3aypp_YlBzI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;最暖的憂傷 - 田馥甄&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+        &lt;p&gt;On March 11th, the documentary &amp;ldquo;Guarding Liberation West 3&amp;rdquo;, co-produced by the Changsha Public Security Bureau and Bilibili, came to a successful conclusion, amassing over 200 million views and sparking heated discussions. Throughout the series, it featured both bizarre incidents that left viewers laughing and crying, as well as thrilling on-site arrests, showcasing both the stern and rigorous law enforcement procedures and heartwarming grassroots services.
+Behind the hustle and bustle, the guardians never rest; in recent years, documentaries focusing on law enforcement have increasingly attracted the younger generation. Today, let us take a step into these &amp;ldquo;outposts&amp;rdquo; that serve and protect the people, gaining an understanding of the most authentic front lines of police work.&lt;/p&gt;&lt;/blockquote&gt; 
+&lt;h2 id=&#34;guarding-liberation-west&#34;&gt;Guarding Liberation West&lt;/h2&gt;
+&lt;p&gt;The &amp;ldquo;Guarding Liberation West&amp;rdquo; series is a legal education documentary centered around the daily work of police officers in Changsha, Hunan Province. This documentary deeply showcases the routine tasks of urban police officers in the central business district of a metropolis, revealing the intricate interplay of law, reason, emotion, and reality within complex policing situations through activities such as police patrols, multi-departmental cooperation, suspect interrogations, and involvement in major cases. It portrays a vivid image of responsible, rational, and compassionate police officers, and disseminates relevant safety and legal knowledge to the public through various case stories. The featured police officers in the show have distinct characteristics, each with their own areas of expertise and endearing personalities, which constitutes one of the main attractions of &amp;ldquo;Guarding Liberation West&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Thanks to the rich experience of Hunan TV in producing variety shows, and due to the everyday, relatable nature of the cases depicted in &amp;ldquo;Guarding Liberation West&amp;rdquo;, the program infuses a certain level of entertainment into the rigorous process of law enforcement, ensuring seriousness while also catering to viewers&amp;rsquo; preferences for amusement. In the bar and commercial districts, an abundance of civil disturbances resulting from alcohol consumption serve as a recurring thread throughout the three episodes. Incidents under the influence of alcohol can sometimes jeopardize public safety, create misunderstandings, appear absurdly comical, or lead to tragedies. The show captures life&amp;rsquo;s nuances vividly in minor incidents while maintaining strict rigor in significant matters, providing viewers with a delightful viewing experience.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Guarding Liberation West&amp;rdquo; is filled with wit, humor, and laugh-out-loud moments, telling stories of human life and its vicissitudes in the Liberation West area of Changsha, portraying the spirit, unique personalities, and selfless dedication of grassroots police officers in the new era. While conducting serious legal education, it also offers a sense of relaxation and enjoyment, making it an essential companion during meals.&lt;/p&gt;
+&lt;h2 id=&#34;big-city-no-small-matters&#34;&gt;Big City, No Small Matters&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;Big City, No Small Matters&amp;rdquo; is a police documentary produced by Oriental Satellite TV. Unlike &amp;ldquo;Guarding Liberation West&amp;rdquo;, this program shifts its focus from grassroots police station affairs to the actions against crime, concentrating on criminal and economic cases in Shanghai (referred to as &amp;ldquo;Shen City&amp;rdquo;). The show embeds itself within various criminal investigation and economic investigation teams across Shanghai, closely following the processes of solving cases involving forensic science, anti-theft, anti-fraud, plainclothes operations, major cases, and drug enforcement. Viewers can experience the intensity firsthand through the lens, accompanying law enforcement officers to the front lines of capturing suspects, immersively feeling the tense atmosphere and recreating the thrilling moments of apprehension.&lt;/p&gt;
+&lt;p&gt;Criminal and economic crimes are more serious and hardcore compared to civil cases. This series covers not only recurring heinous acts such as drug trafficking and tax evasion but also new forms of crime like online and telecommunications fraud. The show particularly highlights these novel criminal methods, serving as a stark reminder that &amp;ldquo;the law&amp;rsquo;s net is vast and though it may have gaps, none can escape.&amp;rdquo; It further embodies the professional attitude of investigative teams who constantly monitor and vigilantly protect society. A thought-provoking aspect is that a significant number of suspects involved in online fraud are young people adept at internet technology, yet often lack knowledge about relevant laws, only realizing they&amp;rsquo;ve broken the law upon arrest. This underscores the importance of economic legal education. Concurrently, elderly individuals are more susceptible to falling victim to online scams, making it an urgent social development issue to integrate this demographic into an increasingly digital payment-dominated environment.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re drawn to the hardcore elements of criminal and economic investigations, eager to explore the strategies behind cracking major cases, or simply wish to experience the adrenaline rush of frontline law enforcement, &amp;ldquo;Big City, No Small Matters&amp;rsquo; might just be the perfect fit for you.&lt;/p&gt;
+&lt;h2 id=&#34;forensic-files&#34;&gt;Forensic Files&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;Forensic Files&amp;rdquo; is a police documentary produced by China Central Television, which uses a series of classic cases as a vehicle to narrate the entire process of case investigation from the perspective of forensic experts, tightly integrating criminalistics with detective work. Although the program mainly tells the story through the eyes of forensic experts, it presents a comprehensive view of all stages from identification to apprehension, featuring a tight pace and interlocking clues and motives, creating a strong sense of deduction that is both suspenseful and captivating.&lt;/p&gt;
+&lt;p&gt;The show particularly highlights the forensic criminal investigation techniques, which are highly specialized and core content. For instance, regarding the concept of time of death, &amp;ldquo;Forensic Files&amp;rdquo; provides detailed explanations: how forensic experts use specific methods to accurately estimate the time of death for victims, thereby providing solid evidence for detectives to solve cases.&lt;/p&gt;
+&lt;p&gt;Under the scalpel, the last words of the victims are conveyed; under the microscope, the wrongdoings of criminals are exposed. &amp;ldquo;Forensic Files&amp;rdquo; guides viewers to unravel the intricate details of cases, revealing all hidden truths. While solving cases, the program also conveys the noble professional spirit of forensic experts, who speak for the deceased and advocate for the rights of the living.&lt;/p&gt;
+&lt;p&gt;Observing the dynamics of society, safeguarding local tranquility. Grassroots police officers, criminal investigation officers, and economic crime investigation officers jointly maintain the peace of the city, piecing together the truth like a puzzle, breaking through barriers amidst confusion to pinpoint the source of evil. You may rarely encounter them, but more often than not, they blend into the hustle and bustle of urban life and the everyday routines of the marketplace. In times of urgent police situations, they are the brave ones going against the tide; after the storm has passed, they shine as the most dazzling light in the sky above the city. Their brilliance may be hidden in the ordinary, yet their true colors still shine through even in understated ways.&lt;/p&gt;
+&lt;h2 id=&#34;引入&#34;&gt;引入&lt;/h2&gt;
+
+
+&lt;blockquote class=&#34;quote&#34;&gt;
+        &lt;p&gt;3月11日，长沙市公安局联合哔哩哔哩制作的纪录片《守护解放西3》圆满完结，本片狂揽两亿播放，引发热烈讨论。在系列纪录片中，既有让人哭笑不得的“奇葩”事件，也有惊心动魄的现场抓捕，既展现了冷峻严肃的执法过程，也记录了温暖感人的基层服务。
+在繁华背后，守护永不打烊，近些年来，警务题材的纪录片越来越吸引着年轻一代。今天，就让我们一起来走进这些便民护民的“哨站”，了解最真实的警情第一线。&lt;/p&gt;&lt;/blockquote&gt; 
+&lt;h2 id=&#34;守护解放西&#34;&gt;守护解放西&lt;/h2&gt;
+&lt;p&gt;《守护解放西》系列是一部以湖南长沙市民警办案为核心内容的普法纪录片。这部纪录片深度展示了大都市核心商圈城市警察的日常工作，通过民警巡逻、多警种联动、疑犯审讯、要案参与等事件，展现警情复杂地带的法、理、情、事，展现有担当、有理性、有人情的人民警察形象，并通过各类案件故事普及相关安全和法律常识。参与出镜的警员特点鲜明，在工作上各有擅长领域，在性格上各有可爱之处，这也是解放西的一大看点。&lt;/p&gt;
+&lt;p&gt;得益于湖南台综艺制作的丰富经验，也由于解放西涉及的案件比较日常化、生活化，《守护解放西》给严谨认真的执法过程融入了一定的娱乐元素，确保普法节目的严肃性的同时，兼顾了观众喜闻乐见的趣味性。在酒馆商区，酒后滋事的民事警情极其丰富，成为贯穿三集的重要线索之一。酒精催化之下发生的事情，有时危害公共安全，有时导致误会频出，有时显得荒唐可笑，有时甚至造成悲剧。节目制作时，在小事上表现生动，在大事上保持严谨，给观众提供了舒适的观片体验。&lt;/p&gt;
+&lt;p&gt;《守护解放西》有梗有趣有笑点，讲述发生在长沙解放西地带的种种人间烟火的故事，展现新时代基层民警的精神风貌、特色个性以及忘我精神。在严肃普法的过程中也给人心情上的放松，绝对是下饭必备。&lt;/p&gt;
+&lt;h2 id=&#34;大城无小事&#34;&gt;大城无小事&lt;/h2&gt;
+&lt;p&gt;《大城无小事》是东方卫视的警务纪录片。不同于《守护解放西》，节目将视线从基层派出所事务转向了打击犯罪的行动，集中聚焦申城的刑事、经济类案件，蹲点驻守上海市各刑侦、经侦队伍，深入刑事科学、反侵财、反诈、便衣、重案、缉毒等侦查队伍，全程跟拍破案过程。观众可以通过镜头随民警奔赴抓捕嫌犯的第一现场，深临其境感受紧张氛围，还原惊险抓捕时刻。&lt;/p&gt;
+&lt;p&gt;刑事、经济类犯罪相较民事案件更加地严肃、硬核，节选案件既包括贩毒、逃税等老生常谈的恶行事件，也包括了网络电信诈骗等新型犯罪方式。节目聚焦于更多新型犯罪方式，警示着心怀不轨之人“法网恢恢，疏而不漏”，更体现着侦查队伍动态监测、时刻守护的职业态度。引人深思的是，相当部分的实施网络诈骗的嫌疑人是对网络技术更加擅长的年轻人，而他们往往对相关法律疏于认识，遭到逮捕时才惊觉触犯了法律，更加体现出经济普法的重要性。同时，容易收到网络诈骗的受害者又是中老年人群，让中老年人群融入线上支付占主流的大环境，也成为社会发展亟需解决的问题。&lt;/p&gt;
+&lt;p&gt;如果喜欢硬核的刑侦、经侦过程，窥探大案背后的破解之法，或者希望体验一线抓捕的紧张刺激，这部《大城无小事》也许会适合你。&lt;/p&gt;
+&lt;h2 id=&#34;法医密档&#34;&gt;法医密档&lt;/h2&gt;
+&lt;p&gt;《法医密档》是中央电视台出品的警务记录片。节目以一个个经典案例为载体，从法医的视角讲述案件侦破的过程，将刑事科学技术与刑侦紧密结合。虽然是从法医的视角讲述案件，但是节目从鉴定到抓捕各个过程全面展现、节奏紧凑，线索、动机环环相扣，颇具推理感，紧张而精彩。&lt;/p&gt;
+&lt;p&gt;节目着重介绍法医的刑事调查技术，十分硬核。例如死亡时间的概念，《法医密档》中就会对死亡时间做详细的介绍：法医是通过什么方式，能够精准的推算出死者的死亡时间，进而为刑侦人员提供可靠的破案依据。除了“死亡时间”之外，还有如何确定“死者身份”、如何通过一滴干枯的血迹寻找凶手等等。&lt;/p&gt;
+&lt;p&gt;手术刀下传达着被害者的遗言，显微镜上揭露了犯罪者的恶行，《法医密档》将会带你在案件的蛛丝马迹里抽丝剥茧，找出一切未知的真相。在破解案件的同时，也在传递法医“为死者代言，为生者谋权”的职业精神。&lt;/p&gt;
+&lt;p&gt;察一态社会，守一方安宁。基层民警、刑侦民警、经侦民警，共同守望着城市的一方安宁，如拼图般还原出事件真相，在扑朔迷离中刺破壁垒，去锁定邪恶的源头。或许你很少会遇见他们，更多的时候，他们隐入都市的喧闹，隐入市井烟火的日常。警情险急时，他们是站在风口浪尖的逆行者，雨过天晴，他们是这座城市上空最耀眼的光芒。光华隐于平凡，淡彩亦显本色。&lt;/p&gt;
 &lt;h2 id=&#34;图片&#34;&gt;图片&lt;/h2&gt;
 &lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 66; 
-			flex-basis: 160px&#34;
+			flex-grow: 56; 
+			flex-basis: 135px&#34;
 	&gt;
-	&lt;a href=&#34;http://localhost:1313/2020/test-chinese/florian-klauer-nptLmg6jqDo-unsplash.jpg&#34; data-size=&#34;667x1000&#34;&gt;
-		&lt;img src=&#34;http://localhost:1313/2020/test-chinese/florian-klauer-nptLmg6jqDo-unsplash.jpg&#34;
-			width=&#34;667&#34;
-			height=&#34;1000&#34;
-			srcset=&#34;http://localhost:1313/2020/test-chinese/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2020/test-chinese/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_1024x0_resize_q75_box.jpg 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/559_35a8ddfcf2226bebfd9c3794ec6722036b01a2cf.jpg&#34; data-size=&#34;506x899&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/559_35a8ddfcf2226bebfd9c3794ec6722036b01a2cf.jpg&#34;
+			width=&#34;506&#34;
+			height=&#34;899&#34;
+			srcset=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/559_35a8ddfcf2226bebfd9c3794ec6722036b01a2cf_hu1edef96915c4454cf25ed6a134d90027_92184_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/559_35a8ddfcf2226bebfd9c3794ec6722036b01a2cf_hu1edef96915c4454cf25ed6a134d90027_92184_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Photo by Florian Klauer on Unsplash&#34;&gt;
+			alt=&#34;&amp;ldquo;Guarding Liberation West&amp;rdquo;&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;Photo by Florian Klauer on Unsplash&lt;/figcaption&gt;
+	&lt;figcaption&gt;“Guarding Liberation West”&lt;/figcaption&gt;
 	
 &lt;/figure&gt;  &lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 149; 
-			flex-basis: 359px&#34;
+			flex-grow: 150; 
+			flex-basis: 360px&#34;
 	&gt;
-	&lt;a href=&#34;http://localhost:1313/2020/test-chinese/luca-bravo-alS7ewQ41M8-unsplash.jpg&#34; data-size=&#34;1000x667&#34;&gt;
-		&lt;img src=&#34;http://localhost:1313/2020/test-chinese/luca-bravo-alS7ewQ41M8-unsplash.jpg&#34;
-			width=&#34;1000&#34;
-			height=&#34;667&#34;
-			srcset=&#34;http://localhost:1313/2020/test-chinese/luca-bravo-alS7ewQ41M8-unsplash_hu0a3f1163de68d0b9471979ebf0ecf11e_32400_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2020/test-chinese/luca-bravo-alS7ewQ41M8-unsplash_hu0a3f1163de68d0b9471979ebf0ecf11e_32400_1024x0_resize_q75_box.jpg 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/R-C1.jpg&#34; data-size=&#34;473x315&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/R-C1.jpg&#34;
+			width=&#34;473&#34;
+			height=&#34;315&#34;
+			srcset=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/R-C1_hud089b566227ec27a035d4878757caeb3_17632_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/R-C1_hud089b566227ec27a035d4878757caeb3_17632_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Photo by Luca Bravo on Unsplash&#34;&gt;
+			alt=&#34;&amp;ldquo;Forensic Files&amp;rdquo;&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;Photo by Luca Bravo on Unsplash&lt;/figcaption&gt;
+	&lt;figcaption&gt;“Forensic Files”&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 133; 
-			flex-basis: 320px&#34;
+			flex-grow: 177; 
+			flex-basis: 426px&#34;
 	&gt;
-	&lt;a href=&#34;http://localhost:1313/2020/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg&#34; data-size=&#34;1000x750&#34;&gt;
-		&lt;img src=&#34;http://localhost:1313/2020/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg&#34;
-			width=&#34;1000&#34;
-			height=&#34;750&#34;
-			srcset=&#34;http://localhost:1313/2020/test-chinese/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2020/test-chinese/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_1024x0_resize_q75_box.jpg 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/v2-d7b3154260d6943d1e7956a940f75d02_r.png&#34; data-size=&#34;1080x608&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/v2-d7b3154260d6943d1e7956a940f75d02_r.png&#34;
+			width=&#34;1080&#34;
+			height=&#34;608&#34;
+			srcset=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/v2-d7b3154260d6943d1e7956a940f75d02_r_hubb8c69a86201150b27040cd8f676b20c_998714_480x0_resize_box_3.png 480w, https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/v2-d7b3154260d6943d1e7956a940f75d02_r_hubb8c69a86201150b27040cd8f676b20c_998714_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Photo by Helena Hertz on Unsplash&#34;&gt;
+			alt=&#34;&amp;ldquo;Guarding Liberation West&amp;rdquo;&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;Photo by Helena Hertz on Unsplash&lt;/figcaption&gt;
+	&lt;figcaption&gt;“Guarding Liberation West”&lt;/figcaption&gt;
 	
 &lt;/figure&gt;  &lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 66; 
-			flex-basis: 160px&#34;
+			flex-grow: 75; 
+			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;http://localhost:1313/2020/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg&#34; data-size=&#34;667x1000&#34;&gt;
-		&lt;img src=&#34;http://localhost:1313/2020/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg&#34;
-			width=&#34;667&#34;
-			height=&#34;1000&#34;
-			srcset=&#34;http://localhost:1313/2020/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash_hub241c2a9c7a2caf7e16a2a5bbc7141ff_18711_480x0_resize_q75_box.jpg 480w, http://localhost:1313/2020/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash_hub241c2a9c7a2caf7e16a2a5bbc7141ff_18711_1024x0_resize_q75_box.jpg 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/270x360.webp&#34; data-size=&#34;270x360&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/270x360.webp&#34;
+			width=&#34;270&#34;
+			height=&#34;360&#34;
+			srcset=&#34;https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/270x360_hu6717c43aacdf7d960f3af147149885f2_15268_480x0_resize_q75_h2_box_2.webp 480w, https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/270x360_hu6717c43aacdf7d960f3af147149885f2_15268_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
 			loading=&#34;lazy&#34;
-			alt=&#34;Photo by Hudai Gayiran on Unsplash&#34;&gt;
+			alt=&#34;&amp;ldquo;Big City, No Small Matters&amp;rdquo;&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;Photo by Hudai Gayiran on Unsplash&lt;/figcaption&gt;
+	&lt;figcaption&gt;“Big City, No Small Matters”&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;![Photo by Florian Klauer on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg)  ![Photo by Luca Bravo on Unsplash](luca-bravo-alS7ewQ41M8-unsplash.jpg) 
-
-![Photo by Helena Hertz on Unsplash](helena-hertz-wWZzXlDpMog-unsplash.jpg)  ![Photo by Hudai Gayiran on Unsplash](hudai-gayiran-3Od_VKcDEAA-unsplash.jpg)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;相册语法来自 &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Typlog&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>http://localhost:1313/2019/markdown-syntax-guide/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://wish2333.github.io/1988/markdown-syntax-guide/</link>
+        <pubDate>Fri, 11 Mar 1988 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/2019/markdown-syntax-guide/</guid>
-        <description>&lt;img src="http://localhost:1313/2019/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+        <guid>https://wish2333.github.io/1988/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://wish2333.github.io/1988/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
 &lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
 &lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
@@ -484,11 +338,11 @@ rev = &amp;quot;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;quot;
         </item>
         <item>
         <title>Placeholder Text</title>
-        <link>http://localhost:1313/2019/placeholder-text/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://wish2333.github.io/1988/placeholder-text/</link>
+        <pubDate>Wed, 09 Mar 1988 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/2019/placeholder-text/</guid>
-        <description>&lt;img src="http://localhost:1313/2019/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+        <guid>https://wish2333.github.io/1988/placeholder-text/</guid>
+        <description>&lt;img src="https://wish2333.github.io/1988/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
 &lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
@@ -515,10 +369,10 @@ rev = &amp;quot;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;quot;
         </item>
         <item>
         <title>Math Typesetting</title>
-        <link>http://localhost:1313/2019/math-typesetting/</link>
-        <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://wish2333.github.io/1988/math-typesetting/</link>
+        <pubDate>Tue, 08 Mar 1988 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/2019/math-typesetting/</guid>
+        <guid>https://wish2333.github.io/1988/math-typesetting/</guid>
         <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
@@ -548,11 +402,11 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Emoji Support</title>
-        <link>http://localhost:1313/2019/emoji-support/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+        <link>https://wish2333.github.io/1988/emoji-support/</link>
+        <pubDate>Sat, 05 Mar 1988 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/2019/emoji-support/</guid>
-        <description>&lt;img src="http://localhost:1313/2019/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+        <guid>https://wish2333.github.io/1988/emoji-support/</guid>
+        <description>&lt;img src="https://wish2333.github.io/1988/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -576,6 +430,167 @@ $$&lt;/p&gt;</description>
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Hugo | Hugo-stack-theme主题魔改版</title>
+        <link>https://wish2333.github.io/1988/stack-theme-mod/</link>
+        <pubDate>Sat, 13 Feb 1988 03:02:52 +0800</pubDate>
+        
+        <guid>https://wish2333.github.io/1988/stack-theme-mod/</guid>
+        <description>&lt;p&gt;Github仓库地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mantyke&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mantyke&lt;/a&gt;/&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mantyke/Hugo-stack-theme-mod&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stack-theme-mod&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本主题由&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CaiJimmy&lt;/a&gt;制作并&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;发布&lt;/a&gt;，这个仓库是由&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mantyke&lt;/a&gt;修改的魔改版本&lt;/p&gt;
+&lt;p&gt;预览：&lt;a class=&#34;link&#34; href=&#34;https://stack-theme-mod.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Demo站&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;使用方式&#34;&gt;使用方式&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;从零建立博客&lt;/strong&gt;：Fork仓库到自己账号下，用Github 注册 Vercel，依次点击Overview → New Project → import刚刚Fork的仓库，设置&lt;code&gt;FRAMEWORK PRESET&lt;/code&gt;为Hugo → 点击&lt;code&gt;Environment Variables&lt;/code&gt;，设置&lt;code&gt;NAME&lt;/code&gt;为&lt;code&gt;HUGO_VERSION&lt;/code&gt;，&lt;code&gt;Value&lt;/code&gt;为&lt;code&gt;Hugo版本号（如0.89.0）&lt;/code&gt; → 点击Add → 点击Deploy，稍等十来秒即可部署完成。下载仓库到本地后使用Github Desktop更新文章。（注，本地预览需安装Hugo，具体请参照&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 一起动手搭建个人博客吧&lt;/a&gt;相关内容）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;旧博客更换主题&lt;/strong&gt;：不同主题方式不同，推荐只保留原博客的content文件夹，迁移到本仓库content文件夹后再按情况调整。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;魔改内容&#34;&gt;魔改内容&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;调整文章页面为三栏显示（代码来自&lt;a class=&#34;link&#34; href=&#34;https://github.com/ShadowySpirits/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ShadowySpirits&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;文章按年份分类&lt;/li&gt;
+&lt;li&gt;增加文章字数统计与站点总字数、总篇数显示&lt;/li&gt;
+&lt;li&gt;修改全站字体为思源宋体&lt;/li&gt;
+&lt;li&gt;增加一个引用短代码（短代码来自&lt;a class=&#34;link&#34; href=&#34;https://guanqr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;荷戟独彷徨&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;添加一个友情链接页面并设置为双栏（友情链接代码来自&lt;a class=&#34;link&#34; href=&#34;https://bore.vip/archives/3bf3725e/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bore&lt;/a&gt;，双栏代码来自&lt;a class=&#34;link&#34; href=&#34;https://tech.randomwaves.space/posts/21-12-08-make-hugo-stack-theme-links-display-in-two-columns/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BB_Roin&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;一系列基于个人美观喜好的CSS修改&lt;/li&gt;
+&lt;li&gt;右侧栏增加Categories小部件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;部分使用说明&#34;&gt;部分使用说明&lt;/h2&gt;
+&lt;h3 id=&#34;引用样式短代码&#34;&gt;引用样式短代码&lt;/h3&gt;
+&lt;p&gt;（注：实际使用请补全花括号&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-fallback&#34;&gt;{&amp;lt; quote &amp;gt;}}}
+三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。
+{&amp;lt; /quote &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+&lt;blockquote class=&#34;quote&#34;&gt;
+        &lt;p&gt;三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。&lt;/p&gt;&lt;/blockquote&gt; 
+&lt;br&gt;&lt;/p&gt;
+&lt;h3 id=&#34;友情链接使用方式&#34;&gt;友情链接使用方式&lt;/h3&gt;
+&lt;p&gt;友链头像放在&lt;code&gt;/assets/link-img&lt;/code&gt;，友链数据放在&lt;code&gt;/data/links.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+    {
+        &amp;quot;title&amp;quot;: &amp;quot;小球飞鱼&amp;quot;,
+        &amp;quot;website&amp;quot;: &amp;quot;https://mantyke.icu/&amp;quot;,
+        &amp;quot;image&amp;quot;: &amp;quot;mantyke.png&amp;quot;,
+     &amp;quot;description&amp;quot;: &amp;quot;我们会一起遇见鲸鱼吗？&amp;quot;
+    },
+	{
+        &amp;quot;title&amp;quot;: &amp;quot;友情链接2&amp;quot;,
+        &amp;quot;website&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;image&amp;quot;: &amp;quot;&amp;quot;,
+     &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;修改页尾信息&#34;&gt;修改页尾信息&lt;/h3&gt;
+&lt;p&gt;站点名称及建站时间请修改以下代码&lt;/p&gt;
+&lt;p&gt;站点名称及链接：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
+
+    &amp;lt;section class=&amp;quot;copyright&amp;quot;&amp;gt;
+        &amp;amp;copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format &amp;quot;2006&amp;quot;))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format &amp;quot;2006&amp;quot; }} &amp;lt;a href=&amp;quot;https://stack-theme-mod.vercel.app/&amp;quot;&amp;gt;Example Site&amp;lt;/a&amp;gt;·&amp;lt;i class=&amp;quot;fas fa-bell&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;a id=&amp;quot;days&amp;quot;&amp;gt;0&amp;lt;/a&amp;gt;Days&amp;lt;br&amp;gt;
+      {{$var :=  $scratch.Get &amp;quot;total&amp;quot;}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共书写了{{$var}}k字·共 {{ len (where .Site.RegularPages &amp;quot;Section&amp;quot; &amp;quot;post&amp;quot;) }}篇文章&amp;lt;/br&amp;gt;&amp;lt;span&amp;gt;&amp;lt;p&amp;gt;
+    &amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#位置：layout/partials/footer/footer.html
+
+var s1 = &#39;2022-02-13&#39;;//设置为建站时间
+s1 = new Date(s1.replace(/-/g, &amp;quot;/&amp;quot;));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById(&#39;days&#39;).innerHTML = number_of_days;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;其他常见修改&#34;&gt;其他常见修改&lt;/h2&gt;
+&lt;h3 id=&#34;设置博客头像&#34;&gt;设置博客头像&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;/assets/img&lt;/code&gt;，请将头像命名为&lt;code&gt;avatar.png&lt;/code&gt;，替换原头像文件&lt;/p&gt;
+&lt;h3 id=&#34;删除博客头像&#34;&gt;删除博客头像&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;/layouts/partials/sidebar/left.html&lt;/code&gt;，注释或删去以下部分：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        {{ with .Site.Params.sidebar.avatar }}
+            {{ if (default true .enabled) }}
+            &amp;lt;figure class=&amp;quot;site-avatar&amp;quot;&amp;gt;
+                &amp;lt;a href=&amp;quot;{{ .Site.BaseURL | relLangURL }}&amp;quot;&amp;gt;
+                {{ if not .local }}
+                    &amp;lt;img src=&amp;quot;{{ .src }}&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;300&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
+                {{ else }}
+                    {{ $avatar := resources.Get (.src) }}
+                    
+                    {{ if $avatar }}
+                        {{ $avatarResized := $avatar.Resize &amp;quot;300x&amp;quot; }}
+                        &amp;lt;img src=&amp;quot;{{ $avatarResized.RelPermalink }}&amp;quot; width=&amp;quot;{{ $avatarResized.Width }}&amp;quot;
+                            height=&amp;quot;{{ $avatarResized.Height }}&amp;quot; class=&amp;quot;site-logo&amp;quot; loading=&amp;quot;lazy&amp;quot; alt=&amp;quot;Avatar&amp;quot;&amp;gt;
+                    {{ else }}
+                        {{ errorf &amp;quot;Failed loading avatar from %q&amp;quot; . }}
+                    {{ end }}
+                {{ end }}
+                &amp;lt;/a&amp;gt;
+                {{ with $.Site.Params.sidebar.emoji }}
+                    &amp;lt;span class=&amp;quot;emoji&amp;quot;&amp;gt;{{ . }}&amp;lt;/span&amp;gt;
+                {{ end }}
+            &amp;lt;/figure&amp;gt;
+            {{ end }}
+        {{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;修改博客背景颜色&#34;&gt;修改博客背景颜色&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;assets\scss\variables.scss&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;--body-background: #f6f6f6;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;指定首页分类标签颜色&#34;&gt;指定首页分类标签颜色&lt;/h3&gt;
+&lt;p&gt;位置：&lt;code&gt;content\categories&lt;/code&gt;，创建分类同名文件夹后，在文件夹内创建&lt;code&gt;_index.md&lt;/code&gt;文件，写入frontmatter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: &amp;quot;做猫贵在折腾&amp;quot; //分类名称
+description: &amp;quot;简介 Blablabla&amp;quot; //不需要可以删了
+image: &amp;quot;ffxiv_20210830_230509_817.png&amp;quot; //分类题图，不需要也可以删了
+style:
+    background: &amp;quot;#80aba9&amp;quot; //分类标签底色
+    color: &amp;quot;#fff&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;配置各类图标&#34;&gt;配置各类图标&lt;/h3&gt;
+&lt;p&gt;图标放在：&lt;code&gt;/assets/icons&lt;/code&gt;，svg格式，配置方式参考&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/configuration/custom-menu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;文档&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;其他参考&#34;&gt;其他参考&lt;/h3&gt;
+&lt;p&gt;其他我站修改及Hugo博客搭建教程可参见以下文章，作者代码水平为0，写作时间跨度较大，参考时务必注意：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/hugo-build-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 一起动手搭建个人博客吧&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/f9f0ec87/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 看中 Stack 主题的归档功能，搬家并做修改&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/a08f1963/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 另一篇 Stack 主题装修记录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/comment/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 为 Blog 增加评论区&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/47a5331b/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 以正确姿势自动添加文章最后更新时间&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2021/cf2cf0fb/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 在文章中插入轮播图片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2022/stack-theme-furnish03/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo | 第三篇 Stack 主题装修记录，堂堂再临！&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;如果您喜欢或使用这个魔改版主题成功搭建了自己的个人博客，欢迎到我的&lt;a class=&#34;link&#34; href=&#34;https://mantyke.icu/2022/stack-theme-mod/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;个人博客&lt;/a&gt;中留言告诉我，我会很开心的！&lt;/p&gt;
+&lt;br&gt;
+</description>
         </item>
         
     </channel>
