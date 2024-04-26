@@ -4,6 +4,7 @@
     <title>Posts on Wish&#39;s Blog</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link>http://localhost:1313/post/</link>
 =======
     <link>https://wish2333.github.io/post/</link>
@@ -11,12 +12,21 @@
 =======
     <link>http://localhost:1313/post/</link>
 >>>>>>> 1b6c2bd (create)
+=======
+    <link>http://localhost:1313/post/</link>
+=======
+    <link>https://wish2333.github.io/post/</link>
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
     <description>Recent content in Posts on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Mar 2022 00:00:00 +0000</lastBuildDate>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Cold and Warmth of the Police Station</title>
@@ -25,6 +35,7 @@
       <guid>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</guid>
 =======
     <atom:link href="https://wish2333.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+<<<<<<< HEAD
 =======
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
 >>>>>>> 1b6c2bd (create)
@@ -38,12 +49,23 @@
 =======
       <guid>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+    <item>
+      <title>The Cold and Warmth of the Police Station</title>
+      <link>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</link>
+      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</guid>
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>Introduction On March 11th, the documentary &amp;ldquo;Guarding Liberation West 3&amp;rdquo;, co-produced by the Changsha Public Security Bureau and Bilibili, came to a successful conclusion, amassing over 200 million views and sparking heated discussions. Throughout the series, it featured both bizarre incidents that left viewers laughing and crying, as well as thrilling on-site arrests, showcasing both the stern and rigorous law enforcement procedures and heartwarming grassroots services. Behind the hustle and</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
       <link>http://localhost:1313/1988/markdown-syntax-guide/</link>
       <pubDate>Fri, 11 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/markdown-syntax-guide/</guid>
@@ -51,18 +73,25 @@
       <link>https://wish2333.github.io/1988/markdown-syntax-guide/</link>
       <pubDate>Fri, 11 Mar 1988 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/1988/markdown-syntax-guide/</guid>
+<<<<<<< HEAD
 >>>>>>> c8aa6f5 (update)
 =======
       <link>http://localhost:1313/1988/markdown-syntax-guide/</link>
       <pubDate>Fri, 11 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/markdown-syntax-guide/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Placeholder Text</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
       <link>http://localhost:1313/1988/placeholder-text/</link>
       <pubDate>Wed, 09 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/placeholder-text/</guid>
@@ -70,18 +99,25 @@
       <link>https://wish2333.github.io/1988/placeholder-text/</link>
       <pubDate>Wed, 09 Mar 1988 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/1988/placeholder-text/</guid>
+<<<<<<< HEAD
 >>>>>>> c8aa6f5 (update)
 =======
       <link>http://localhost:1313/1988/placeholder-text/</link>
       <pubDate>Wed, 09 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/placeholder-text/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Math Typesetting</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
       <link>http://localhost:1313/1988/math-typesetting/</link>
       <pubDate>Tue, 08 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/math-typesetting/</guid>
@@ -89,18 +125,25 @@
       <link>https://wish2333.github.io/1988/math-typesetting/</link>
       <pubDate>Tue, 08 Mar 1988 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/1988/math-typesetting/</guid>
+<<<<<<< HEAD
 >>>>>>> c8aa6f5 (update)
 =======
       <link>http://localhost:1313/1988/math-typesetting/</link>
       <pubDate>Tue, 08 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/math-typesetting/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emoji Support</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
       <link>http://localhost:1313/1988/emoji-support/</link>
       <pubDate>Sat, 05 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/emoji-support/</guid>
@@ -108,18 +151,25 @@
       <link>https://wish2333.github.io/1988/emoji-support/</link>
       <pubDate>Sat, 05 Mar 1988 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/1988/emoji-support/</guid>
+<<<<<<< HEAD
 >>>>>>> c8aa6f5 (update)
 =======
       <link>http://localhost:1313/1988/emoji-support/</link>
       <pubDate>Sat, 05 Mar 1988 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1988/emoji-support/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo | Hugo-stack-theme主题魔改版</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2ed23 (update)
       <link>http://localhost:1313/1988/stack-theme-mod/</link>
       <pubDate>Sat, 13 Feb 1988 03:02:52 +0800</pubDate>
       <guid>http://localhost:1313/1988/stack-theme-mod/</guid>
@@ -127,12 +177,16 @@
       <link>https://wish2333.github.io/1988/stack-theme-mod/</link>
       <pubDate>Sat, 13 Feb 1988 03:02:52 +0800</pubDate>
       <guid>https://wish2333.github.io/1988/stack-theme-mod/</guid>
+<<<<<<< HEAD
 >>>>>>> c8aa6f5 (update)
 =======
       <link>http://localhost:1313/1988/stack-theme-mod/</link>
       <pubDate>Sat, 13 Feb 1988 03:02:52 +0800</pubDate>
       <guid>http://localhost:1313/1988/stack-theme-mod/</guid>
 >>>>>>> 1b6c2bd (create)
+=======
+>>>>>>> f575dda (update)
+>>>>>>> dc2ed23 (update)
       <description>Github仓库地址：Mantyke/stack-theme-mod 本主题由CaiJimmy制作并发布，这个仓库是由Mantyke修改的魔改</description>
     </item>
   </channel>
