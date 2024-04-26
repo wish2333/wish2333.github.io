@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ACGN on Wish&#39;s Blog</title>
-    <link>http://localhost:1313/tags/acgn/</link>
+    <link>https://wish2333.github.io/tags/acgn/</link>
     <description>Recent content in ACGN on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/acgn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wish2333.github.io/tags/acgn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Radio Drama Script Based on Kazuha</title>
-      <link>http://localhost:1313/2021/radio-drama-script-base-kazuha/</link>
+      <link>https://wish2333.github.io/2021/radio-drama-script-base-kazuha/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2021/radio-drama-script-base-kazuha/</guid>
+      <guid>https://wish2333.github.io/2021/radio-drama-script-base-kazuha/</guid>
       <description>Seagulls silent, traveler&amp;rsquo;s sentiment; red leaves aflame, heart of benevolence and righteousness. Setting Disclaimer: This is a derivative creation, all copyrights belong to miHoYo. All plot elements are purely fictional and unrelated to any historical figures or nations. Introduction In a time of extreme instability across the globe, the General suddenly issued a Sword Hunt Decree, ordering the confiscation of swords carried by civilians, which incited discontent among various samurai</description>
     </item>
   </channel>
