@@ -2,61 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archiving Old Manuscripts on Wish&#39;s Blog</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <link>http://localhost:1313/categories/archivingold/</link>
-=======
     <link>https://wish2333.github.io/categories/archivingold/</link>
->>>>>>> c8aa6f5 (update)
-=======
-    <link>http://localhost:1313/categories/archivingold/</link>
->>>>>>> 1b6c2bd (create)
-=======
-    <link>http://localhost:1313/categories/archivingold/</link>
-=======
-    <link>https://wish2333.github.io/categories/archivingold/</link>
->>>>>>> f575dda (update)
->>>>>>> dc2ed23 (update)
     <description>Recent content in Archiving Old Manuscripts on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Mar 2022 00:00:00 +0000</lastBuildDate>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dc2ed23 (update)
-    <atom:link href="http://localhost:1313/categories/archivingold/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Cold and Warmth of the Police Station</title>
-      <link>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</link>
-      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</guid>
-=======
     <atom:link href="https://wish2333.github.io/categories/archivingold/index.xml" rel="self" type="application/rss+xml" />
-<<<<<<< HEAD
-=======
-    <atom:link href="http://localhost:1313/categories/archivingold/index.xml" rel="self" type="application/rss+xml" />
->>>>>>> 1b6c2bd (create)
-    <item>
-      <title>The Cold and Warmth of the Police Station</title>
-      <link>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</link>
-      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
-<<<<<<< HEAD
-      <guid>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</guid>
->>>>>>> c8aa6f5 (update)
-=======
-      <guid>http://localhost:1313/2022/the-cold-and-warmth-of-the-police-station/</guid>
->>>>>>> 1b6c2bd (create)
-=======
     <item>
       <title>The Cold and Warmth of the Police Station</title>
       <link>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</link>
       <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</guid>
->>>>>>> f575dda (update)
->>>>>>> dc2ed23 (update)
       <description>Introduction On March 11th, the documentary &amp;ldquo;Guarding Liberation West 3&amp;rdquo;, co-produced by the Changsha Public Security Bureau and Bilibili, came to a successful conclusion, amassing over 200 million views and sparking heated discussions. Throughout the series, it featured both bizarre incidents that left viewers laughing and crying, as well as thrilling on-site arrests, showcasing both the stern and rigorous law enforcement procedures and heartwarming grassroots services. Behind the hustle and</description>
     </item>
   </channel>
