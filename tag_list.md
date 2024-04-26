@@ -1,0 +1,21 @@
+tags:
+    - Public Account
+    - Article
+    - Video
+    - Audio
+    - Radio Drama
+    - Code
+    - Statistics
+    - AI
+    - Website
+    - Music
+    - Reading
+    - Film
+    - Photography
+    - Design
+    - Media Literacy
+    - Sociology
+    - ACGN
+    - Technology
+    - Technique
+    - Other
