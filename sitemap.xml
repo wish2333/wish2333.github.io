@@ -1,100 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://wish2333.github.io/about/</loc>
-    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/archives/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/links/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/page/</loc>
-    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/</loc>
-    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/article/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2024/tourism-communication/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/media-literacy/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/post/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/research/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2023/social-spatial-inequality-within-dingfuzhuang/</loc>
-    <lastmod>2023-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/sociology/</loc>
-    <lastmod>2023-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2023/the-creative-process-of-dingfuzhuang/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2023/health-information/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/archivingold/</loc>
-    <lastmod>2022-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/public-account/</loc>
-    <lastmod>2022-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2022/the-cold-and-warmth-of-the-police-station/</loc>
-    <lastmod>2022-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/acgn/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/audio/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/radio-drama/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/2021/radio-drama-script-base-kazuha/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/1988/markdown-syntax-guide/</loc>
-    <lastmod>1988-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/1988/placeholder-text/</loc>
-    <lastmod>1988-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/1988/math-typesetting/</loc>
-    <lastmod>1988-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/1988/emoji-support/</loc>
-    <lastmod>1988-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/tags/hugo/</loc>
-    <lastmod>1988-02-13T03:02:52+08:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/1988/stack-theme-mod/</loc>
-    <lastmod>1988-02-13T03:02:52+08:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/randomremarks/</loc>
-  </url><url>
-    <loc>https://wish2333.github.io/search/</loc>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/techniquesandworks/</loc>
-  </url><url>
-    <loc>https://wish2333.github.io/categories/technology/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://wish2333.github.io/en/sitemap.xml</loc>
+    
+      <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://wish2333.github.io/zh/sitemap.xml</loc>
+    
+      <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

@@ -1,0 +1,26 @@
+tags:
+    - Public Account 公众号原创
+    - Article 文章
+    - Video 视频
+    - Audio 音频
+    - Radio Drama 广播剧
+    - Code 代码
+    - Statistics 统计
+    - AI 人工智能
+    - Website 网站
+    - Music 音乐
+    - Reading 阅读
+    - Film 电影
+    - Photography 摄影
+    - Design 设计
+    - Media Literacy 传播学
+    - Sociology 社会学
+    - ACGN ACGN
+    - Technology 技术
+    - Technique 技巧
+    - creative 创意
+    - life 生活
+    - Travel 旅行
+    - Fashion 时尚
+    - Food 美食
+    - Other 其他

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Wish的博客小站</title>
+    <link>https://wish2333.github.io/zh/page/</link>
+    <description>Recent content in Pages on Wish的博客小站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wish2333.github.io/zh/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://wish2333.github.io/zh/about/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&#xA;Hugo makes use of a variety of open source projects including:&#xA;https://github.com/yuin/goldmark https://github.</description>
+    </item>
+    <item>
+      <title>Archives</title>
+      <link>https://wish2333.github.io/zh/archives/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Friends</title>
+      <link>https://wish2333.github.io/zh/links/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/links/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>https://wish2333.github.io/zh/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/search/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

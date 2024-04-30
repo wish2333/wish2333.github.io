@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Wish&#39;s Blog</title>
+    <link>https://wish2333.github.io/en/page/</link>
+    <description>Recent content in Pages on Wish&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wish2333.github.io/en/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://wish2333.github.io/en/about/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&#xA;Hugo makes use of a variety of open source projects including:&#xA;https://github.com/yuin/goldmark https://github.</description>
+    </item>
+    <item>
+      <title>Archives</title>
+      <link>https://wish2333.github.io/en/archives/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Friends</title>
+      <link>https://wish2333.github.io/en/links/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/links/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>https://wish2333.github.io/en/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/search/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
