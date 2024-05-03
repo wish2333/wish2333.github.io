@@ -24,3 +24,5 @@ tags:
     - Fashion 时尚
     - Food 美食
     - Other 其他
+    - Editing 剪辑
+    - Automation 自动化

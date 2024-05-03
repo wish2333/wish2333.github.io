@@ -6,6 +6,14 @@
     <description>Recent content in Technology on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
+    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/en/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webclass-AutoCut based on Free Software</title>
+      <link>https://wish2333.github.io/en/2023/webclass-autocut-free/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2023/webclass-autocut-free/</guid>
+      <description>Application Scenarios Online Course Editing: Legacy Courses: Batch update of intros and outros across varied formats (encoding, resolution, frame rate, audio format). New Course Recordings: Processing raw files, focusing on noise reduction, removal of blank segments, and adding standardized intros and outros. Rapid Slicing &amp;amp; Content Review: Based on scripts, for swift editing and review, crucial for content flagged for modification. Requirements Breakdown Legacy Courses: Objective: Replace (delete + add),</description>
+    </item>
   </channel>
 </rss>

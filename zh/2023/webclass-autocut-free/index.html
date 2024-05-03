@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='当在网课剪辑终于到大量旧素材需要替换片头片尾重新发布，新素材需要快速剪辑空白处以便迅速上传发布时，本人对于自动化流程的探索，和对替换片头尾的批处理过程时，可能出现的问题的发现与解决经验'><title>网课剪辑：自动化流程-基于免费软件</title>
+
+<link rel='canonical' href='https://wish2333.github.io/zh/2023/webclass-autocut-free/'>
+
+<link rel="stylesheet" href="/scss/style.min.6517850caba89a2a85a28ee9a9a6c9c90eee27d20dc756974a59f38a245bffcb.css"><meta property='og:title' content='网课剪辑：自动化流程-基于免费软件'>
+<meta property='og:description' content='当在网课剪辑终于到大量旧素材需要替换片头片尾重新发布，新素材需要快速剪辑空白处以便迅速上传发布时，本人对于自动化流程的探索，和对替换片头尾的批处理过程时，可能出现的问题的发现与解决经验'>
+<meta property='og:url' content='https://wish2333.github.io/zh/2023/webclass-autocut-free/'>
+<meta property='og:site_name' content='Wish的博客小站'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='代码' /><meta property='article:tag' content='剪辑' /><meta property='article:tag' content='视频' /><meta property='article:tag' content='人工智能' /><meta property='article:tag' content='音频' /><meta property='article:tag' content='自动化' /><meta property='article:published_time' content='2023-12-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-12-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://wish2333.github.io/zh/2023/webclass-autocut-free/img1.jpg' />
+<meta name="twitter:title" content="网课剪辑：自动化流程-基于免费软件">
+<meta name="twitter:description" content="当在网课剪辑终于到大量旧素材需要替换片头片尾重新发布，新素材需要快速剪辑空白处以便迅速上传发布时，本人对于自动化流程的探索，和对替换片头尾的批处理过程时，可能出现的问题的发现与解决经验"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://wish2333.github.io/zh/2023/webclass-autocut-free/img1.jpg' />
+  
+
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script> 
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap"; 
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    <!-- 
+        extended
+     -->
+    on-phone--column extended
+">
+    
+<div id="article-toolbar">
+    <a href="https://wish2333.github.io/" class="back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+        <span>Back</span>
+    </a>
+</div>
+    <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/zh/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hucb12de420b3a0303c7711fbb7e9d3a27_274487_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">W</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/zh">Wish的博客小站</a></h1>
+        <h2 class="site-description">Adhering to my stance, expressing my thoughts.</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://space.bilibili.com/18775396'
+                            target="_blank"
+                            title="Bilibili"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069480542" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6139" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M306.005333 117.632L444.330667 256h135.296l138.368-138.325333a42.666667 42.666667 0 0 1 60.373333 60.373333L700.330667 256H789.333333A149.333333 149.333333 0 0 1 938.666667 405.333333v341.333334a149.333333 149.333333 0 0 1-149.333334 149.333333h-554.666666A149.333333 149.333333 0 0 1 85.333333 746.666667v-341.333334A149.333333 149.333333 0 0 1 234.666667 256h88.96L245.632 177.962667a42.666667 42.666667 0 0 1 60.373333-60.373334zM789.333333 341.333333h-554.666666a64 64 0 0 0-63.701334 57.856L170.666667 405.333333v341.333334a64 64 0 0 0 57.856 63.701333L234.666667 810.666667h554.666666a64 64 0 0 0 63.701334-57.856L853.333333 746.666667v-341.333334A64 64 0 0 0 789.333333 341.333333zM341.333333 469.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666666-42.666667z m341.333334 0a42.666667 42.666667 0 0 1 42.666666 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666667-42.666667z" p-id="6140" fill="currentColor"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='mailto:wishtxfs@163.com'
+                            target="_blank"
+                            title="Email-wishtxfs@163.com"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069502330" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7178" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M1024.00144 220.64v574.32c0 5.76-0.736 11.456-1.824 17.072v0.064l-0.224 0.944A84.336 84.336 0 0 1 939.29744 880H101.08944a102.72 102.72 0 0 1-82.512-40.832 95.904 95.904 0 0 1-18.56-57.248V236.256a74.08 74.08 0 0 1 52.064-70.784l0.736-0.208 0.208-0.08A127.648 127.648 0 0 1 89.66544 160h883.424c1.328 0.512 2.64 1.232 4.032 1.44 25.52 4.32 40.592 19.152 45.344 44.496v0.08c0.88 4.816 1.536 9.712 1.536 14.608zM512.00144 591.232l451.152-379.472c-66.272-3.888-888.48-1.728-897.84 2.368L512.00144 591.2v0.064z m133.856-45.152l-114.112 96.144c-13.76 11.52-25.6 11.664-39.2 0.208l-48.272-40.752-63.84-53.936L81.02544 825.28l1.024 2.304h873.328L645.79344 546.08h0.064z m-304.864-31.68L51.79344 270.032v512.48l289.28-268.096h-0.08z m344.352-1.648l287.088 260.96V270.944L685.34544 512.768z" fill="currentColor" p-id="7179"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://github.com/wish2333/wish2333.github.io'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='/index.xml'
+                            target="_blank"
+                            title="RSS"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069541355" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9229" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M281.6 883.2c0 38.4-12.8 70.4-38.4 96-25.6 25.6-57.6 38.4-96 38.4s-70.4-12.8-96-38.4-38.4-57.6-38.4-96 12.8-70.4 38.4-96c25.6-25.6 57.6-38.4 96-38.4s70.4 12.8 96 38.4c25.6 25.6 38.4 60.8 38.4 96z m368 89.6c0 12.8-3.2 25.6-12.8 35.2-9.6 9.6-19.2 16-32 16h-96c-12.8 0-22.4-3.2-32-12.8-9.6-6.4-12.8-19.2-12.8-28.8-9.6-108.8-54.4-201.6-131.2-280s-169.6-121.6-280-131.2c-12.8 0-22.4-6.4-28.8-12.8-6.4-9.6-12.8-19.2-12.8-32v-96c0-12.8 6.4-25.6 16-32 9.6-9.6 19.2-12.8 32-12.8h3.2c76.8 6.4 150.4 25.6 217.6 57.6 70.4 32 131.2 76.8 185.6 131.2 54.4 54.4 96 115.2 131.2 185.6s46.4 136 52.8 212.8z m366.4 0c0 12.8-3.2 25.6-12.8 32-9.6 9.6-19.2 12.8-32 12.8h-102.4c-12.8 0-22.4-3.2-32-12.8-9.6-9.6-12.8-19.2-12.8-28.8-6.4-102.4-28.8-198.4-73.6-292.8-41.6-92.8-96-172.8-166.4-240-67.2-67.2-147.2-121.6-240-166.4S152 208 49.6 201.6c-12.8 0-22.4-6.4-28.8-12.8-6.4-6.4-12.8-19.2-12.8-32V54.4c0-12.8 3.2-25.6 12.8-32 9.6-9.6 19.2-12.8 32-12.8h3.2C180.8 16 300.8 44.8 416 96s214.4 121.6 304 212.8 160 188.8 211.2 305.6c49.6 113.6 78.4 233.6 84.8 358.4z" fill="currentColor" p-id="9230"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/zh/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/zh/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/zh/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>friends</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/zh/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/zh/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+    <ul>
+        
+        <li><a href="/en/">English</a></li>
+        
+        <li><a href="/zh/">简体中文</a></li>
+        
+    </ul>
+</aside>
+
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/zh/2023/webclass-autocut-free/">
+                <img src="/zh/2023/webclass-autocut-free/img1_hu19607f4d1aca4123c69ec5b6506c9fca_615282_800x0_resize_q75_box.jpg"
+                        srcset="/zh/2023/webclass-autocut-free/img1_hu19607f4d1aca4123c69ec5b6506c9fca_615282_800x0_resize_q75_box.jpg 800w, /zh/2023/webclass-autocut-free/img1_hu19607f4d1aca4123c69ec5b6506c9fca_615282_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post 网课剪辑：自动化流程-基于免费软件" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/zh/categories/%E6%8A%80%E6%9C%AF/" >
+                技术
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/zh/2023/webclass-autocut-free/">网课剪辑：自动化流程-基于免费软件</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        当在网课剪辑终于到大量旧素材需要替换片头片尾重新发布，新素材需要快速剪辑空白处以便迅速上传发布时，本人对于自动化流程的探索，和对替换片头尾的批处理过程时，可能出现的问题的发现与解决经验
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 16, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-words">
+                    3940字
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="应用场景">应用场景</h2>
+<p><strong>网课剪辑：</strong></p>
+<ul>
+<li>大批次旧网课需要替换片头片尾，这些网课格式（编码、分辨率、帧率、音频格式等）均不一致</li>
+<li>大批次新网课录制源文件需要处理，主要需要进行声音降噪统一、空白内容删除、添加片头片尾</li>
+<li>基于文稿的快速切片流程以及内容检查（部分课程因内容被举报而需要剪辑）</li>
+</ul>
+<h2 id="需求拆分">需求拆分</h2>
+<p><strong>旧网课</strong></p>
+<ul>
+<li>需求：替换=删除+添加， 格式统一</li>
+<li>难点：每批次网课格式不一、片头片尾长度不统一→不能所有一起处理，只能一批批处理</li>
+</ul>
+<p><strong>新网课</strong></p>
+<ul>
+<li>需求：音频处理，空白内容删除，添加片头片尾</li>
+<li>难点：空白内容自动识别</li>
+</ul>
+<p><strong>快速切片及检查</strong></p>
+<ul>
+<li>需求：快速检查=语音转文字+快速剪辑</li>
+</ul>
+<h2 id="环境选择">环境选择</h2>
+<p><strong>片头片尾处理</strong></p>
+<p><a class="link" href="https://github.com/BtbN/FFmpeg-Builds/releases"  target="_blank" rel="noopener"
+    >FFmpeg</a></p>
+<p><strong>音频批处理</strong></p>
+<p><a class="link" href="https://github.com/audacity"  target="_blank" rel="noopener"
+    >Audacity+免费vst</a></p>
+<p><strong>空白内容处理</strong></p>
+<p><a class="link" href="https://autocut.video/"  target="_blank" rel="noopener"
+    >自动剪辑神器</a></p>
+<p><strong>快速切片及检查</strong></p>
+<p><a class="link" href="https://www.capcut.cn/?from=thosefree.com"  target="_blank" rel="noopener"
+    >语音转文字方案1：剪映专业版</a></p>
+<p><a class="link" href="https://github.com/CheshireCC/faster-whisper-GUI"  target="_blank" rel="noopener"
+    >语音转文字方案2：FastWhisperGUI</a></p>
+<p><a class="link" href="https://github.com/mifi/lossless-cut"  target="_blank" rel="noopener"
+    >快速剪辑：Losslesscut</a></p>
+<p><a class="link" href="https://github.com/mli/autocut"  target="_blank" rel="noopener"
+    >根据字幕剪辑视频方案1：Autocut（命令行，不推荐）</a></p>
+<p><a class="link" href="https://www.bilibili.com/video/BV13p421D7np/?spm_id_from=333.999.0.0&amp;vd_source=104a753ca6818d1d4321ff17eb7d4d6f"  target="_blank" rel="noopener"
+    >根据字幕剪辑视频方案2：MediaToolkit（GUI，推荐）</a></p>
+<h2 id="ffmpeg">FFmpeg</h2>
+<p>FFmpeg 是一个开源的音视频处理工具，诞生已22年。它可以用来处理音视频的编解码、格式转换、剪辑、合并、抽取、压缩、解压缩、滤镜、字幕等等。它可以在 Windows、Linux、Mac 等多种平台上使用。</p>
+<p><strong>FFmpeg GUI</strong></p>
+<p>令人欣喜的是，我们现阶段并不需要完全使用命令行执行ffmpeg，而是使用一些GUI图形界面实现，以下介绍一些好用的开源软件</p>
+<p>losslesscut</p>
+<ul>
+<li>开源地址：https://github.com/mifi/lossless-cut</li>
+<li>切割专用，无批处理</li>
+<li>可以给一条视频标记许多片段并无损而快速地导出</li>
+</ul>
+<p>QuickCut</p>
+<ul>
+<li>开源地址：https://gitee.com/haujet/QuickCut</li>
+<li>压缩视频、转码视频、倒放视频、合并片段、根据字幕裁切片段、自动配字幕、自动剪辑……功能非常多</li>
+<li>没有针对批处理优化</li>
+</ul>
+<p>格式工厂</p>
+<ul>
+<li>不开源，不要下载最新版本（有流氓后台）</li>
+<li>但是旧版本是可以用的</li>
+</ul>
+<p>FFmpeg Batch AV Converter</p>
+<ul>
+<li>开源地址：https://github.com/eibol/ffmpeg_batch</li>
+<li>可以批量剪切开头、结尾（按时长）并且可以批量添加片头片尾，但是批处理剪切可能出问题</li>
+</ul>
+<h2 id="片头片尾批处理">片头片尾批处理</h2>
+<p>测试多款FFmpeg GUI，要么功能不完善，要么自定义性太低，要么可能运行出错，最终没有一款能够令人满意的软件成品。不过，FFmpeg毕竟是命令行软件，批量化处理可以通过写脚本实现，以下是一些已经实现好的脚本。</p>
+<ul>
+<li>
+<p>【bat文件+ffmpeg】实现视频批量分割、转格式、合并</p>
+<p>不需要其他运行库</p>
+<p><a class="link" href="https://www.bilibili.com/video/BV16M4y1d7KT/?spm_id_from=333.880.my_history.page.click&amp;vd_source=104a753ca6818d1d4321ff17eb7d4d6f"  target="_blank" rel="noopener"
+    >bat文件+ffmpeg</a></p>
+</li>
+<li>
+<p>[Windows] 视频批量去片头片尾（FFmpeg+shell脚本）</p>
+<p>需要额外安装git bash tool</p>
+<p><a class="link" href="https://www.52pojie.cn/thread-1822814-1-1.html"  target="_blank" rel="noopener"
+    >https://www.52pojie.cn/thread-1822814-1-1.html</a></p>
+</li>
+<li>
+<p>基于FFMPEG+Python实现大视频分隔+水印+合并片头片尾</p>
+<p>需要额外安装 python</p>
+<p><a class="link" href="https://blog.csdn.net/ahhqdyh/article/details/104744906"  target="_blank" rel="noopener"
+    >https://blog.csdn.net/ahhqdyh/article/details/104744906</a></p>
+</li>
+</ul>
+<p>最终根据最简化原则选用bat文件+ffmpeg编写脚本方案，参考网络资源，结合生成式人工智能辅助代码编写</p>
+<h3 id="实操流程视频切割">实操流程：视频切割</h3>
+<p>视频切割的实现难点在于FFmpeg并无由后向前的检索功能，需要获取全长之后计算结束时间，再进行切割，功能较为简单，但是实践上市面上各种GUI在批处理我这些格式不太规范的网课时常常出现问题（猜测有可能是动态帧率、音频或者GUI封装等问题，会有报错的情况，更多的是正常运行但输出的视频有片段缺失、音画错位等问题），最终还是脚本运行能够完全正确地应对所有视频。</p>
+<pre><code class="language-bat">@echo off&amp;title MP4 批量掐头去尾（运行版）
+setlocal enabledelayedexpansion
+echo 该脚本可以批量将目录内MP4文件，从头尾裁减固定时间。（如将多个视频，开头剪3s，结尾剪5s）
+echo 如需批量指定视频的开始结束时间，请打开另一个脚本。（如指定多个视频，都从1分12秒开始，到5分27秒结束）
+echo 如果您是从其他地方获取的该脚本，请先看一下b站视频，有详细介绍，谢谢。https://www.bilibili.com/video/BV1ic411N7ny/
+echo 该脚本基于ffmpeg，请确保您已将ffmpeg添加到环境。
+echo 时间作差部分依靠 @随风 @https://pokes.blog.csdn.net/
+echo 获取视频文件时长借鉴 @亦良Cool @https://blog.csdn.net/annita2019/article/details/128747458
+echo 作者虎啸ROAR b站：https://space.bilibili.com/19075528 个人网站：https://www.luotianyi.blue
+
+rem 提示用户输入开头裁剪的时间，或者跳过
+echo 若当前选项为0，可直接按回车
+set /p sh=请输入开头切割的 小时部分（如开头无需切割，输入-1）:
+if &quot;%sh%&quot; == &quot;-1&quot; goto zs  
+if not &quot;%sh%&quot; == &quot;-1&quot; goto os
+:zs
+set st=00:00:00.00
+echo 开头裁剪时长 %st%
+goto end
+exit
+:os
+rem 用户输入小时、分钟、秒和毫秒，设置开头裁剪时间
+set sh=00
+set /p sm=请输入开头切割的 分钟部分:
+if &quot;%sm%&quot; == &quot;&quot;  set sm=00
+set /p ss=请输入开头切割的 秒部分:
+if &quot;%ss%&quot; == &quot;&quot;  set ss=00
+set /p sms=请输入开头切割的 毫秒部分:
+if &quot;%sms%&quot; == &quot;&quot;  set sms=00
+set st=%sh%:%sm%:%ss%.%sms%
+echo 开头裁剪时长 %st%
+goto end
+exit
+
+:end
+rem 提示用户输入结尾裁剪的时间，或者跳过
+set /p eh=请输入结尾切割的 小时部分（如结尾无需切割，输入-1）:
+if &quot;%eh%&quot; == &quot;-1&quot; ( goto ze) else ( goto oe)
+exit
+
+:ze
+set et=00:00:00.00
+echo 结尾裁剪时长 %et%
+goto fin
+exit
+:oe
+rem 用户输入小时、分钟、秒和毫秒，设置结尾裁剪时间
+set eh=00
+set /p em=请输入开头切割的 分钟部分:
+if &quot;%em%&quot; == &quot;&quot;  set em=00
+set /p es=请输入开头切割的 秒部分:
+if &quot;%es%&quot; == &quot;&quot;  set es=00
+set /p ems=请输入开头切割的 毫秒部分:
+if &quot;%ems%&quot; == &quot;&quot;  set ems=00
+set et=%eh%:%em%:%es%.%ems%
+echo 结尾裁剪时长 %et%
+goto fin
+exit
+:fin
+
+rem set st=0
+rem set et=00:00:02.80 
+rem 创建结果目录
+cd /d %~dp0
+md result
+
+rem 对每个MP4文件进行裁剪
+for /f &quot;delims=&quot; %%i in ('dir /b /s /a-d *.mp4') do (
+rem 获取视频持续时间
+for /f &quot;tokens=2 delims=, &quot; %%a in ('ffmpeg -i &quot;%%i&quot; 2^&gt;^&amp;1 ^| find &quot;Duration:&quot;') do (
+    set str=%%a
+)
+rem 设置裁剪结束时间为输入的结束时间
+set time=%et%:!str!
+set t=!time!
+call :time0 &quot;!t!&quot; &quot;!time!&quot; ok
+echo  本视频开始时间为 %st%  结束时间为：!ok!
+rem 执行裁剪操作
+ffmpeg -ss %st% -to !ok! -accurate_seek -i &quot;%%~si&quot; -c:v copy -c:a copy &quot;result\%%~ni.mp4&quot;
+)
+
+pause
+
+rem 将输入的时间转换为ffmpeg可识别的格式
+:time0  
+@echo off&amp;setlocal&amp;set /a n=0
+for /f &quot;tokens=1-8 delims=.: &quot; %%a in (&quot;%~1:%~2&quot;) do (
+set /a n+=10%%a%%100*360000+10%%b%%100*6000+10%%c%%100*100+10%%d%%100
+set /a n-=10%%e%%100*360000+10%%f%%100*6000+10%%g%%100*100+10%%h%%100)
+set /a s=n/360000,n=n%%360000,f=n/6000,n=n%%6000,m=n/100,n=n%%100
+set &quot;ok=%s%:%f%:%m%.%n%&quot;
+endlocal&amp;set %~3=%ok:-=%
+</code></pre>
+<h3 id="实操流程视频合并">实操流程：视频合并</h3>
+<p>视频合并按理来说是更容易实现的，但是全网看下来没有直接可用的参考，于是当时完全不懂编程的我通过GPT边学边写探索出了完全不会出问题的视频合并方案。</p>
+<p>编写时出现的问题：FFmpeg提供了两种合并方式，针对MPEG格式的concat协议直接连接和通用的concat分离器连接，均可以采用无损和重新编码方式进行连接。但是经过测试，规格不同的视频合并后可能会有无法预测的结果。</p>
+<p>最终选用使用 FFmpeg concat <strong>过滤器（filter_complex）</strong> 重新编码（有损），即在拼接重新编码之前，先统一编码格式各项参数。虽然需要消耗时间，但是最为保险。经过测试，发现统一以下五个要素后在我的项目中即可应对所有视频：视频帧率、分辨率、像素宽高比（怎么会有人不选1:1导致这里会不一致啊喂(#`O′)）和音频采样率、音频通道数。</p>
+<pre><code class="language-bat">rem 此为核心内容
+
+for %a in (&quot;*.mp4&quot;) do
+ffmpeg -i &quot;.\input\op.mp4&quot; -i %a -i .\output\ed.mp4&quot; -filter_complex &quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&quot; -map &quot;[vout]&quot; -map &quot;[aout]&quot; -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2 &quot;!output_file!&quot;
+</code></pre>
+<pre><code class="language-bat">rem 此为封装使用的文件源码
+
+@echo off
+setlocal enabledelayedexpansion
+
+rem 设置输入文件夹和输出文件夹路径
+set input_folder=input
+set output_folder=output
+
+rem 检查输出文件夹是否存在，如果不存在则创建
+if not exist !output_folder! mkdir !output_folder!
+
+rem 遍历当前目录的所有mp4文件
+for %%a in (*.mp4) do (
+    set input_file=%%a
+    set output_file=!output_folder!\%%~na.mp4
+
+    rem 使用FFmpeg进行连接，调整编码参数
+    ffmpeg -i &quot;!input_folder!\op.mp4&quot; -i &quot;!input_file!&quot; -i &quot;!input_folder!\ed.mp4&quot; -filter_complex &quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&quot; -map &quot;[vout]&quot; -map &quot;[aout]&quot; -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2 &quot;!output_file!&quot;
+
+    echo !output_file! created.
+)
+
+echo All files processed.
+endlocal
+
+rem 这个命令的解释如下：
+rem 这个FFmpeg命令是用来合并视频文件的。具体来说，它首先会在当前目录下查找所有的mp4文件（使用通配符&quot;*.mp4&quot;来匹配），然后针对每一个文件执行以下操作：
+rem 执行ffmpeg命令，将当前目录下的op.mp4（在input目录下）作为第一个输入文件，将当前遍历到的mp4文件作为第二个输入文件，将当前目录下的ed.mp4（在input目录下）作为第三个输入文件。
+使用-filter_complex进行过滤操作。三个文件分别表示为[0:0], [0:1]；[1:0], [1:1]；[2:0], [2:1]，然后使用concat过滤器将它们拼接起来。n=3表示有三个输入流，v=1表示合并视频流，a=1表示合并音频流，合并后的视频流和音频流分别为[v]和[a]。
+rem 使用-map选项将拼接后的视频流和音频流分别映射到输出文件中。
+rem 设置视频编码器为libx264，使用预设，设置视频码率为800000，帧率为30。
+rem 设置音频编码器为aac，音频码率为192k，音频采样率为44100，声道数为2。
+rem 将合并后的视频和频流输出至output目录下，输出的文件名与原文件相同但扩展名为.mp4。
+</code></pre>
+<p>重新编码部分根据实际情况可选用的参数如下</p>
+<pre><code class="language-ffmpeg">-c:v h264_nvenc -preset fast -b:v 800000 -r 30 
+-c:v h264_nvenc -preset fast -crf 23 -c:a copy
+-c:v h264_qsv -global_quality:v 22
+-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 256k
+-c:v libx264 -preset veryfast -b:v 800000 -r 30 -c:a aac -b:a 256k
+-c:v libx264 -preset veryfast -b:v 800000 -vf &quot;scale=1280:-1&quot; -c:a copy
+</code></pre>
+<h2 id="空白内容处理">空白内容处理</h2>
+<p><strong>使用场景</strong></p>
+<p>对长视频进行气口（停顿、等待、卡壳）部分切除</p>
+<p><strong>实现原理</strong></p>
+<p>利用声音振幅识别气口片段，可以导出xml文件以得到进一步检查、复原和修改的空间</p>
+<p><strong>方案1：自动剪辑神器</strong></p>
+<p>完整的成品软件，经过多次迭代，功能已经比较完善</p>
+<p><strong>方案2：FFmpeg静音检测</strong></p>
+<pre><code class="language-ffmpeg">ffmpeg -i input.mp4 -af silencedetect=noise=-30dB:d=0.5 -vn -sn -dn -f null /dev/null
+
+# -af：silencedetect 的作用是获取音频的最大音量、平均音量以及音量直方图。它只支持 AV_SAMPLE_FMT_S16 、 AV_SAMPLE_FMT_S32 、 AV_SAMPLE_FMT_FLT 和 AV_SAMPLE_FMT_DBL 这四种格式——如果不是当然 FFmpeg 能够自动转换
+# 多大音量认为是静音由参数 noise 确定，默认是 -60dB 或 0.001；多长的连续时长认为是静音由参数 duration 确定，默认是 2 秒。参数 mono 为非 0 表示各个声道分别检测，默认是合并在一起检测
+# 合并在一起检测：比如认为 2 秒连续无声(或小声)认为是静音，那么其中一个声道达标，另一个声道在该时段内不达标也不认为是静音
+# -vn、 -sn 和 -dn 告知 FFmpeg 忽略非音频流。能够在分析时避免不必要的操作从而更快速.
+# 注意：在 Windows 中使用需将 /dev/null 替换为 NUL
+
+# 对于多声道音频，可以指定各个声道分别检测：
+ffmpeg -i input.mp3 -af &quot;silencedetect=mono=1&quot; -vn -sn -dn -f null /dev/null
+</code></pre>
+<h2 id="快速切片及检查">快速切片及检查</h2>
+<p>这个我就不展开细说了，列举一些需要注意的地方</p>
+<ul>
+<li>语音转文字得到的只是参考，主要用于定位，找到需要剪辑的时间点</li>
+<li>也有通过字幕剪切视频的功能实现，但是具体的实现效果差强人意</li>
+<li>更推荐在字幕找好时间点后到Losslesscut进行剪辑，无损导出速度快</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/zh/tags/%E4%BB%A3%E7%A0%81/">代码</a>
+        
+            <a href="/zh/tags/%E5%89%AA%E8%BE%91/">剪辑</a>
+        
+            <a href="/zh/tags/%E8%A7%86%E9%A2%91/">视频</a>
+        
+            <a href="/zh/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
+        
+            <a href="/zh/tags/%E9%9F%B3%E9%A2%91/">音频</a>
+        
+            <a href="/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+  
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+</script>
+
+    <section class="copyright">
+        &copy; 
+        
+        2024 <a href="https://stack-theme-mod.vercel.app/"> Wish's Blog </a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
+      共书写了62.6k字·共 12篇文章</br><span><p>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a><br />
+         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
+    </section>
+
+<script>
+var s1 = '2024-04-25';
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+</script>
+    
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/zh/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#应用场景">应用场景</a></li>
+    <li><a href="#需求拆分">需求拆分</a></li>
+    <li><a href="#环境选择">环境选择</a></li>
+    <li><a href="#ffmpeg">FFmpeg</a></li>
+    <li><a href="#片头片尾批处理">片头片尾批处理</a>
+      <ol>
+        <li><a href="#实操流程视频切割">实操流程：视频切割</a></li>
+        <li><a href="#实操流程视频合并">实操流程：视频合并</a></li>
+      </ol>
+    </li>
+    <li><a href="#空白内容处理">空白内容处理</a></li>
+    <li><a href="#快速切片及检查">快速切片及检查</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+        
+            <section class="widget categories">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+  
+        </div> 
+        <h2 class="widget-title section-title">Categories</h2>
+    <div class="widget-categories--list">
+<div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <div class="category-list">
+            <div class="category-list-item"><a href="https://wish2333.github.io/zh/categories/archivingold/" class="category-list-link">archivingold<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://wish2333.github.io/zh/categories/research/" class="category-list-link">research<span class="category-list-count">4</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://wish2333.github.io/zh/categories/%E6%8A%80%E6%9C%AF/" class="category-list-link">技术<span class="category-list-count">1</a>
+            </span></div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Archives</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/zh/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/zh/archives/#2023">
+                        
+                            <span class="year">2023</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/zh/archives/#2022">
+                        
+                            <span class="year">2022</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/zh/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/zh/archives/#1988">
+                        
+                            <span class="year">1988</span>
+                            <span class="count">5</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/zh/tags/%E6%96%87%E7%AB%A0/" class="font_size_5">
+                文章
+            </a>
+        
+            <a href="/zh/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" class="font_size_3">
+                社会学
+            </a>
+        
+            <a href="/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/" class="font_size_2">
+                传播学
+            </a>
+        
+            <a href="/zh/tags/%E9%9F%B3%E9%A2%91/" class="font_size_2">
+                音频
+            </a>
+        
+            <a href="/zh/tags/acgn/" class="font_size_1">
+                ACGN
+            </a>
+        
+            <a href="/zh/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
+            <a href="/zh/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="font_size_1">
+                人工智能
+            </a>
+        
+            <a href="/zh/tags/%E4%BB%A3%E7%A0%81/" class="font_size_1">
+                代码
+            </a>
+        
+            <a href="/zh/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%9F%E5%88%9B/" class="font_size_1">
+                公众号原创
+            </a>
+        
+            <a href="/zh/tags/%E5%89%AA%E8%BE%91/" class="font_size_1">
+                剪辑
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

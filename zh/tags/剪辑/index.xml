@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>剪辑 on Wish的博客小站</title>
+    <link>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</link>
+    <description>Recent content in 剪辑 on Wish的博客小站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网课剪辑：自动化流程-基于免费软件</title>
+      <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2023/webclass-autocut-free/</guid>
+      <description>应用场景 网课剪辑： 大批次旧网课需要替换片头片尾，这些网课格式（编码、分辨率、帧率、音频格式等）均不一致 大批次新网课录制源文件需要处理，主要需</description>
+    </item>
+  </channel>
+</rss>

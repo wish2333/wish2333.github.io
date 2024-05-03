@@ -127,6 +127,282 @@ Dingfuzhuang is situated along the horizontal axis of Beijing, and within the ur
 </description>
         </item>
         <item>
+        <title>Webclass-AutoCut based on Free Software</title>
+        <link>https://wish2333.github.io/en/2023/webclass-autocut-free/</link>
+        <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2023/webclass-autocut-free/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2023/webclass-autocut-free/img1.jpg" alt="Featured image of post Webclass-AutoCut based on Free Software" /&gt;&lt;h2 id=&#34;application-scenarios&#34;&gt;Application Scenarios&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Online Course Editing:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Legacy Courses:&lt;/strong&gt; Batch update of intros and outros across varied formats (encoding, resolution, frame rate, audio format).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Course Recordings:&lt;/strong&gt; Processing raw files, focusing on noise reduction, removal of blank segments, and adding standardized intros and outros.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rapid Slicing &amp;amp; Content Review:&lt;/strong&gt; Based on scripts, for swift editing and review, crucial for content flagged for modification.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;requirements-breakdown&#34;&gt;Requirements Breakdown&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Legacy Courses:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Objective:&lt;/strong&gt; Replace (delete + add), standardize formats.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Challenge:&lt;/strong&gt; Inconsistent formats and intro/outro durations across batches, necessitating batch-by-batch processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;New Courses:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Objective:&lt;/strong&gt; Audio enhancement, blank segment removal, intro/outro addition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Challenge:&lt;/strong&gt; Automated detection of blank content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fast Slicing &amp;amp; Inspection:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Objective:&lt;/strong&gt; Swift inspection via speech-to-text + rapid editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tool-selection&#34;&gt;Tool Selection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Intro/Outro Handling&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/BtbN/FFmpeg-Builds/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FFmpeg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Audio Batch Processing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/audacity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Audacity+FreeVST&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;空白内容处理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://autocut.video/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Auto-Edit Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;快速切片及检查&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.capcut.cn/?from=thosefree.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Speech-to-Text Solutions1:Capcut&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CheshireCC/faster-whisper-GUI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Speech-to-Text Solutions2:FastWhisperGUI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mifi/lossless-cut&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Rapid Editing :Losslesscut&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mli/autocut&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Subtitle Guided Editing1:Autocut（命令行，不推荐）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV13p421D7np/?spm_id_from=333.999.0.0&amp;amp;vd_source=104a753ca6818d1d4321ff17eb7d4d6f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Subtitle Guided Editing2:MediaToolkit（GUI，推荐）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ffmpeg&#34;&gt;FFmpeg&lt;/h2&gt;
+&lt;p&gt;FFmpeg is an open-source audio and video processing toolkit that has been around for 22 years. It is capable of handling tasks such as encoding, decoding, format conversion, editing, merging, extracting, compressing, decompressing, filtering, and subtitle handling for multimedia files. Compatible with various platforms including Windows, Linux, and macOS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FFmpeg GUI Applications&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fortunately, we&amp;rsquo;re not confined to solely using command lines with FFmpeg anymore, as there are now several open-source graphical user interface (GUI) alternatives. Here are some noteworthy ones:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LosslessCut&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source Code:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/mifi/lossless-cut&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/mifi/lossless-cut&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Specifically designed for video trimming without batch processing capabilities.&lt;/li&gt;
+&lt;li&gt;Allows marking multiple segments within a video and exporting them losslessly and swiftly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;QuickCut&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source Code:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/haujet/QuickCut&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gitee.com/haujet/QuickCut&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Offers features like video compression, transcoding, reversing, concatenating clips, cutting based on subtitles, auto-subtitling, and automated editing.&lt;/li&gt;
+&lt;li&gt;Not optimized for batch processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Format Factory&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; Not open-source, and it&amp;rsquo;s advised not to download the latest version due to unwanted background activities.&lt;/li&gt;
+&lt;li&gt;However, older versions remain functional.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;FFmpeg Batch AV Converter&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source Code:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/eibol/ffmpeg_batch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/eibol/ffmpeg_batch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enables batch trimming of video beginnings and endings based on duration, along with adding intro and outro sequences, although batch trimming might encounter issues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;batch-processing-of-intros-and-outros&#34;&gt;Batch Processing of Intros and Outros&lt;/h2&gt;
+&lt;p&gt;After testing numerous FFmpeg GUIs, many were found lacking in functionality, customization, or reliability, leaving no entirely satisfactory off-the-shelf software solution. Given FFmpeg&amp;rsquo;s command-line nature, however, batch processing can be achieved through scripting. Here are some pre-existing scripts and resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[Bat File + FFmpeg] Batch Video Splitting, Format Conversion, and Merging&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires no additional runtime libraries.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV16M4y1d7KT/?spm_id_from=333.880.my_history.page.click&amp;amp;vd_source=104a753ca6818d1d4321ff17eb7d4d6f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link to the video tutorial&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Windows] Batch Removal of Video Intros and Outros (FFmpeg + Shell Script)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires installing the Git Bash tool.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.52pojie.cn/thread-1822814-1-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Original Post&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Implementing Large Video Segmentation, Watermarking, and Intro/Outro Merging Using FFMPEG + Python&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires installing Python.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/ahhqdyh/article/details/104744906&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Article Link&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately, opting for the simplest approach led to choosing the Bat File + FFmpeg script solution. By referencing online resources and leveraging AI-generated code assistance, a tailored script was developed to fulfill the requirements.&lt;/p&gt;
+&lt;h3 id=&#34;video-trimming-workflow&#34;&gt;Video Trimming Workflow&lt;/h3&gt;
+&lt;p&gt;Challenges in video trimming stem from FFmpeg&amp;rsquo;s lack of reverse search capability, necessitating total video duration calculation for endpoint determination. Despite being straightforward, numerous GUIs falter when batch processing non-standard online course videos, potentially due to dynamic frame rates, audio inconsistencies, or GUI implementation issues, leading to errors or output videos with missing segments and audio-video sync problems. Ultimately, custom scripts proved most reliable for comprehensive video compatibility.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;@echo off&amp;amp;title MP4 批量掐头去尾（运行版）
+setlocal enabledelayedexpansion
+echo 该脚本可以批量将目录内MP4文件，从头尾裁减固定时间。（如将多个视频，开头剪3s，结尾剪5s）
+echo 如需批量指定视频的开始结束时间，请打开另一个脚本。（如指定多个视频，都从1分12秒开始，到5分27秒结束）
+echo 如果您是从其他地方获取的该脚本，请先看一下b站视频，有详细介绍，谢谢。https://www.bilibili.com/video/BV1ic411N7ny/
+echo 该脚本基于ffmpeg，请确保您已将ffmpeg添加到环境。
+echo 时间作差部分依靠 @随风 @https://pokes.blog.csdn.net/
+echo 获取视频文件时长借鉴 @亦良Cool @https://blog.csdn.net/annita2019/article/details/128747458
+echo 作者虎啸ROAR b站：https://space.bilibili.com/19075528 个人网站：https://www.luotianyi.blue
+
+rem 提示用户输入开头裁剪的时间，或者跳过
+echo 若当前选项为0，可直接按回车
+set /p sh=请输入开头切割的 小时部分（如开头无需切割，输入-1）:
+if &amp;quot;%sh%&amp;quot; == &amp;quot;-1&amp;quot; goto zs  
+if not &amp;quot;%sh%&amp;quot; == &amp;quot;-1&amp;quot; goto os
+:zs
+set st=00:00:00.00
+echo 开头裁剪时长 %st%
+goto end
+exit
+:os
+rem 用户输入小时、分钟、秒和毫秒，设置开头裁剪时间
+set sh=00
+set /p sm=请输入开头切割的 分钟部分:
+if &amp;quot;%sm%&amp;quot; == &amp;quot;&amp;quot;  set sm=00
+set /p ss=请输入开头切割的 秒部分:
+if &amp;quot;%ss%&amp;quot; == &amp;quot;&amp;quot;  set ss=00
+set /p sms=请输入开头切割的 毫秒部分:
+if &amp;quot;%sms%&amp;quot; == &amp;quot;&amp;quot;  set sms=00
+set st=%sh%:%sm%:%ss%.%sms%
+echo 开头裁剪时长 %st%
+goto end
+exit
+
+:end
+rem 提示用户输入结尾裁剪的时间，或者跳过
+set /p eh=请输入结尾切割的 小时部分（如结尾无需切割，输入-1）:
+if &amp;quot;%eh%&amp;quot; == &amp;quot;-1&amp;quot; ( goto ze) else ( goto oe)
+exit
+
+:ze
+set et=00:00:00.00
+echo 结尾裁剪时长 %et%
+goto fin
+exit
+:oe
+rem 用户输入小时、分钟、秒和毫秒，设置结尾裁剪时间
+set eh=00
+set /p em=请输入开头切割的 分钟部分:
+if &amp;quot;%em%&amp;quot; == &amp;quot;&amp;quot;  set em=00
+set /p es=请输入开头切割的 秒部分:
+if &amp;quot;%es%&amp;quot; == &amp;quot;&amp;quot;  set es=00
+set /p ems=请输入开头切割的 毫秒部分:
+if &amp;quot;%ems%&amp;quot; == &amp;quot;&amp;quot;  set ems=00
+set et=%eh%:%em%:%es%.%ems%
+echo 结尾裁剪时长 %et%
+goto fin
+exit
+:fin
+
+rem set st=0
+rem set et=00:00:02.80 
+rem 创建结果目录
+cd /d %~dp0
+md result
+
+rem 对每个MP4文件进行裁剪
+for /f &amp;quot;delims=&amp;quot; %%i in (&#39;dir /b /s /a-d *.mp4&#39;) do (
+rem 获取视频持续时间
+for /f &amp;quot;tokens=2 delims=, &amp;quot; %%a in (&#39;ffmpeg -i &amp;quot;%%i&amp;quot; 2^&amp;gt;^&amp;amp;1 ^| find &amp;quot;Duration:&amp;quot;&#39;) do (
+    set str=%%a
+)
+rem 设置裁剪结束时间为输入的结束时间
+set time=%et%:!str!
+set t=!time!
+call :time0 &amp;quot;!t!&amp;quot; &amp;quot;!time!&amp;quot; ok
+echo  本视频开始时间为 %st%  结束时间为：!ok!
+rem 执行裁剪操作
+ffmpeg -ss %st% -to !ok! -accurate_seek -i &amp;quot;%%~si&amp;quot; -c:v copy -c:a copy &amp;quot;result\%%~ni.mp4&amp;quot;
+)
+
+pause
+
+rem 将输入的时间转换为ffmpeg可识别的格式
+:time0  
+@echo off&amp;amp;setlocal&amp;amp;set /a n=0
+for /f &amp;quot;tokens=1-8 delims=.: &amp;quot; %%a in (&amp;quot;%~1:%~2&amp;quot;) do (
+set /a n+=10%%a%%100*360000+10%%b%%100*6000+10%%c%%100*100+10%%d%%100
+set /a n-=10%%e%%100*360000+10%%f%%100*6000+10%%g%%100*100+10%%h%%100)
+set /a s=n/360000,n=n%%360000,f=n/6000,n=n%%6000,m=n/100,n=n%%100
+set &amp;quot;ok=%s%:%f%:%m%.%n%&amp;quot;
+endlocal&amp;amp;set %~3=%ok:-=%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;video-concatenation-workflow&#34;&gt;Video Concatenation Workflow&lt;/h3&gt;
+&lt;p&gt;Video concatenation is easier theoretically, yet available references were scarce. As a programming novice, I utilized GPT-assisted learning to devise a failsafe concatenation strategy. FFmpeg offers two concatenation methods: direct concatenation for MPEG via concat protocol and universal concat demuxer, both supporting lossless and re-encoding. Testing revealed unpredictable outcomes when merging differently formatted videos.&lt;/p&gt;
+&lt;p&gt;The solution involved employing FFmpeg&amp;rsquo;s &lt;strong&gt;filter_complex&lt;/strong&gt; for re-encoding (lossy), preceded by uniform encoding settings adjustment to ensure consistency. This, while time-consuming, guaranteed reliability. Uniformity across frame rate, resolution, aspect ratio (ensuring 1:1 to avoid mismatches), audio sample rate, and channel count was crucial.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;rem 此为核心内容
+
+for %a in (&amp;quot;*.mp4&amp;quot;) do
+ffmpeg -i &amp;quot;.\input\op.mp4&amp;quot; -i %a -i .\output\ed.mp4&amp;quot; -filter_complex &amp;quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&amp;quot; -map &amp;quot;[vout]&amp;quot; -map &amp;quot;[aout]&amp;quot; -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2 &amp;quot;!output_file!&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;rem 此为封装使用的文件源码
+
+@echo off
+setlocal enabledelayedexpansion
+
+rem 设置输入文件夹和输出文件夹路径
+set input_folder=input
+set output_folder=output
+
+rem 检查输出文件夹是否存在，如果不存在则创建
+if not exist !output_folder! mkdir !output_folder!
+
+rem 遍历当前目录的所有mp4文件
+for %%a in (*.mp4) do (
+    set input_file=%%a
+    set output_file=!output_folder!\%%~na.mp4
+
+    rem 使用FFmpeg进行连接，调整编码参数
+    ffmpeg -i &amp;quot;!input_folder!\op.mp4&amp;quot; -i &amp;quot;!input_file!&amp;quot; -i &amp;quot;!input_folder!\ed.mp4&amp;quot; -filter_complex &amp;quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&amp;quot; -map &amp;quot;[vout]&amp;quot; -map &amp;quot;[aout]&amp;quot; -c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2 &amp;quot;!output_file!&amp;quot;
+
+    echo !output_file! created.
+)
+
+echo All files processed.
+endlocal
+
+rem 这个命令的解释如下：
+rem 这个FFmpeg命令是用来合并视频文件的。具体来说，它首先会在当前目录下查找所有的mp4文件（使用通配符&amp;quot;*.mp4&amp;quot;来匹配），然后针对每一个文件执行以下操作：
+rem 执行ffmpeg命令，将当前目录下的op.mp4（在input目录下）作为第一个输入文件，将当前遍历到的mp4文件作为第二个输入文件，将当前目录下的ed.mp4（在input目录下）作为第三个输入文件。
+使用-filter_complex进行过滤操作。三个文件分别表示为[0:0], [0:1]；[1:0], [1:1]；[2:0], [2:1]，然后使用concat过滤器将它们拼接起来。n=3表示有三个输入流，v=1表示合并视频流，a=1表示合并音频流，合并后的视频流和音频流分别为[v]和[a]。
+rem 使用-map选项将拼接后的视频流和音频流分别映射到输出文件中。
+rem 设置视频编码器为libx264，使用预设，设置视频码率为800000，帧率为30。
+rem 设置音频编码器为aac，音频码率为192k，音频采样率为44100，声道数为2。
+rem 将合并后的视频和频流输出至output目录下，输出的文件名与原文件相同但扩展名为.mp4。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Re-encoding parameters were tailored to specific needs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-ffmpeg&#34;&gt;-c:v h264_nvenc -preset fast -b:v 800000 -r 30 
+-c:v h264_nvenc -preset fast -crf 23 -c:a copy
+-c:v h264_qsv -global_quality:v 22
+-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 256k
+-c:v libx264 -preset veryfast -b:v 800000 -r 30 -c:a aac -b:a 256k
+-c:v libx264 -preset veryfast -b:v 800000 -vf &amp;quot;scale=1280:-1&amp;quot; -c:a copy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;handling-silent-segments&#34;&gt;Handling Silent Segments&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Application Scenario:&lt;/strong&gt; Removing pauses, waits, or stutters from long videos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Implementation Principle:&lt;/strong&gt; Audio amplitude detection identifies silent parts, with XML export for further review, restoration, or edits.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution 1: Automated Editing Tool&lt;/strong&gt; A mature software product, iteratively refined for comprehensive functionality.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution 2: FFmpeg Silence Detection&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-ffmpeg&#34;&gt;ffmpeg -i input.mp4 -af silencedetect=noise=-30dB:d=0.5 -vn -sn -dn -f null /dev/null
+
+# -af with silencedetect measures volume levels; compatible with specific audio formats.
+# noise sets the quiet threshold (default -60dB); d defines silence duration (default 2 seconds).
+# -vn, -sn, -dn ignore non-audio streams for efficiency.
+# On Windows, replace /dev/null with NUL.
+# For multi-channel audio, specify per-channel detection: ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot;
+
+# For multi-channel audio, it is possible to specify detection for each channel individually.
+
+ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f null /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;rapid-slicing--inspection&#34;&gt;Rapid Slicing &amp;amp; Inspection&lt;/h2&gt;
+&lt;p&gt;Details are omitted, but key points include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transcribed text serves primarily for timestamp reference.&lt;/li&gt;
+&lt;li&gt;Subtitle-based video trimming yields mixed results.&lt;/li&gt;
+&lt;li&gt;Preferred approach: use Losslesscut for precise, lossless cuts after subtitle-guided timing.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>The Process of Research in Dingfuzhuang Community</title>
         <link>https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/</link>
         <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
