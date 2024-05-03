@@ -157,8 +157,18 @@
     <loc>https://wish2333.github.io/zh/tags/%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wish2333.github.io/zh/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://wish2333.github.io/zh/categories/technology/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/categories/technology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/categories/technology/"
+                />
   </url><url>
     <loc>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
@@ -372,18 +382,6 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="https://wish2333.github.io/zh/categories/techniquesandworks/"
-                />
-  </url><url>
-    <loc>https://wish2333.github.io/zh/categories/technology/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/categories/technology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/categories/technology/"
                 />
   </url><url>
     <loc>https://wish2333.github.io/zh/categories/randomremarks/</loc>
