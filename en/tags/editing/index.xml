@@ -6,8 +6,15 @@
     <description>Recent content in Editing on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/en/tags/editing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
+      <link>https://wish2333.github.io/en/2024/ffpygui-preversion/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2024/ffpygui-preversion/</guid>
+      <description>Github：VideoExtractAndConcat Project Overview This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users</description>
+    </item>
     <item>
       <title>Webclass-AutoCut based on Free Software</title>
       <link>https://wish2333.github.io/en/2023/webclass-autocut-free/</link>

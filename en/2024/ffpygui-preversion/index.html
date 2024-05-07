@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.'><title>FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
+
+<link rel='canonical' href='https://wish2333.github.io/en/2024/ffpygui-preversion/'>
+
+<link rel="stylesheet" href="/scss/style.min.4d911d93f4e514efe06659fa7e255f93804e3a55ade09ef37d3ee76b079e6dcf.css"><meta property='og:title' content='FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video'>
+<meta property='og:description' content='This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.'>
+<meta property='og:url' content='https://wish2333.github.io/en/2024/ffpygui-preversion/'>
+<meta property='og:site_name' content='Wish&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Code' /><meta property='article:tag' content='Editing' /><meta property='article:tag' content='Video' /><meta property='article:tag' content='Automation' /><meta property='article:published_time' content='2024-05-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-05-07T00:00:00&#43;00:00'/><meta property='og:image' content='https://wish2333.github.io/en/2024/ffpygui-preversion/img0.jpg' />
+<meta name="twitter:title" content="FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video">
+<meta name="twitter:description" content="This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://wish2333.github.io/en/2024/ffpygui-preversion/img0.jpg' />
+  
+
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script> 
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;700&display=swap"; 
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+
+    </head>
+    <body class="
+    article-page
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    <!-- 
+        extended
+     -->
+    on-phone--column extended
+">
+    
+<div id="article-toolbar">
+    <a href="https://wish2333.github.io/" class="back-home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+        <span>Back</span>
+    </a>
+</div>
+    <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hucb12de420b3a0303c7711fbb7e9d3a27_274487_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">W</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/en">Wish&#39;s Blog</a></h1>
+        <h2 class="site-description">Adhering to my stance, expressing my thoughts.</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://space.bilibili.com/18775396'
+                            target="_blank"
+                            title="Bilibili"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069480542" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6139" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M306.005333 117.632L444.330667 256h135.296l138.368-138.325333a42.666667 42.666667 0 0 1 60.373333 60.373333L700.330667 256H789.333333A149.333333 149.333333 0 0 1 938.666667 405.333333v341.333334a149.333333 149.333333 0 0 1-149.333334 149.333333h-554.666666A149.333333 149.333333 0 0 1 85.333333 746.666667v-341.333334A149.333333 149.333333 0 0 1 234.666667 256h88.96L245.632 177.962667a42.666667 42.666667 0 0 1 60.373333-60.373334zM789.333333 341.333333h-554.666666a64 64 0 0 0-63.701334 57.856L170.666667 405.333333v341.333334a64 64 0 0 0 57.856 63.701333L234.666667 810.666667h554.666666a64 64 0 0 0 63.701334-57.856L853.333333 746.666667v-341.333334A64 64 0 0 0 789.333333 341.333333zM341.333333 469.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666666-42.666667z m341.333334 0a42.666667 42.666667 0 0 1 42.666666 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666667-42.666667z" p-id="6140" fill="currentColor"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='mailto:wishtxfs@163.com'
+                            target="_blank"
+                            title="Email-wishtxfs@163.com"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069502330" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7178" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M1024.00144 220.64v574.32c0 5.76-0.736 11.456-1.824 17.072v0.064l-0.224 0.944A84.336 84.336 0 0 1 939.29744 880H101.08944a102.72 102.72 0 0 1-82.512-40.832 95.904 95.904 0 0 1-18.56-57.248V236.256a74.08 74.08 0 0 1 52.064-70.784l0.736-0.208 0.208-0.08A127.648 127.648 0 0 1 89.66544 160h883.424c1.328 0.512 2.64 1.232 4.032 1.44 25.52 4.32 40.592 19.152 45.344 44.496v0.08c0.88 4.816 1.536 9.712 1.536 14.608zM512.00144 591.232l451.152-379.472c-66.272-3.888-888.48-1.728-897.84 2.368L512.00144 591.2v0.064z m133.856-45.152l-114.112 96.144c-13.76 11.52-25.6 11.664-39.2 0.208l-48.272-40.752-63.84-53.936L81.02544 825.28l1.024 2.304h873.328L645.79344 546.08h0.064z m-304.864-31.68L51.79344 270.032v512.48l289.28-268.096h-0.08z m344.352-1.648l287.088 260.96V270.944L685.34544 512.768z" fill="currentColor" p-id="7179"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://github.com/wish2333/wish2333.github.io'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='/index.xml'
+                            target="_blank"
+                            title="RSS"
+                        >
+                            
+                            
+                                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1714069541355" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9229" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M281.6 883.2c0 38.4-12.8 70.4-38.4 96-25.6 25.6-57.6 38.4-96 38.4s-70.4-12.8-96-38.4-38.4-57.6-38.4-96 12.8-70.4 38.4-96c25.6-25.6 57.6-38.4 96-38.4s70.4 12.8 96 38.4c25.6 25.6 38.4 60.8 38.4 96z m368 89.6c0 12.8-3.2 25.6-12.8 35.2-9.6 9.6-19.2 16-32 16h-96c-12.8 0-22.4-3.2-32-12.8-9.6-6.4-12.8-19.2-12.8-28.8-9.6-108.8-54.4-201.6-131.2-280s-169.6-121.6-280-131.2c-12.8 0-22.4-6.4-28.8-12.8-6.4-9.6-12.8-19.2-12.8-32v-96c0-12.8 6.4-25.6 16-32 9.6-9.6 19.2-12.8 32-12.8h3.2c76.8 6.4 150.4 25.6 217.6 57.6 70.4 32 131.2 76.8 185.6 131.2 54.4 54.4 96 115.2 131.2 185.6s46.4 136 52.8 212.8z m366.4 0c0 12.8-3.2 25.6-12.8 32-9.6 9.6-19.2 12.8-32 12.8h-102.4c-12.8 0-22.4-3.2-32-12.8-9.6-9.6-12.8-19.2-12.8-28.8-6.4-102.4-28.8-198.4-73.6-292.8-41.6-92.8-96-172.8-166.4-240-67.2-67.2-147.2-121.6-240-166.4S152 208 49.6 201.6c-12.8 0-22.4-6.4-28.8-12.8-6.4-6.4-12.8-19.2-12.8-32V54.4c0-12.8 3.2-25.6 12.8-32 9.6-9.6 19.2-12.8 32-12.8h3.2C180.8 16 300.8 44.8 416 96s214.4 121.6 304 212.8 160 188.8 211.2 305.6c49.6 113.6 78.4 233.6 84.8 358.4z" fill="currentColor" p-id="9230"></path></svg>
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/en/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/en/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/en/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>friends</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/en/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/en/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+    <ul>
+        
+        <li><a href="/en/">English</a></li>
+        
+        <li><a href="/zh/">简体中文</a></li>
+        
+    </ul>
+</aside>
+
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/en/2024/ffpygui-preversion/">
+                <img src="/en/2024/ffpygui-preversion/img0_hu1359827b4e1943553b0356861dce2ad2_41607_800x0_resize_q75_box.jpg"
+                        srcset="/en/2024/ffpygui-preversion/img0_hu1359827b4e1943553b0356861dce2ad2_41607_800x0_resize_q75_box.jpg 800w, /en/2024/ffpygui-preversion/img0_hu1359827b4e1943553b0356861dce2ad2_41607_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="350" 
+                        loading="lazy"
+                        alt="Featured image of post FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/en/categories/technology/" style="background-color: #2a9d8f; color: #fff;">
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/en/2024/ffpygui-preversion/">FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 07, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-words">
+                    4178字
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Github：<a class="link" href="https://github.com/wish2333/VideoExtractAndConcat"  target="_blank" rel="noopener"
+    >VideoExtractAndConcat</a></p>
+<p><strong>Project Overview</strong></p>
+<p>This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.</p>
+<h2 id="brief-workflow-outline">Brief Workflow Outline:</h2>
+<h3 id="environment-setup">Environment Setup</h3>
+<p>Install necessary software and libraries: Ensure Python environment is properly configured, install PySide6, and ffmpeg.</p>
+<h3 id="interface-design-using-qt-designer">Interface Design (Using Qt Designer)</h3>
+<h4 id="main-interface-design">Main Interface Design</h4>
+<p>Design includes buttons for file selection (to choose video files), input fields for time trimming (for intro and outro removal times or direct cropping period), output path selection button, preview window (optional), start processing button, and progress bar. Convert the .ui file into .py.</p>
+<h3 id="writing-core-logic-code">Writing Core Logic Code</h3>
+<ul>
+<li><strong>Read Video Information:</strong> Use ffmpeg to fetch video duration and other basic information.</li>
+<li><strong>Time Processing:</strong> Based on user inputs, compute actual trimming command parameters (primarily end time).</li>
+<li><strong>Invoke ffmpeg:</strong> Construct and execute ffmpeg command-line instructions for video slicing and joining.</li>
+<li><strong>Progress Feedback:</strong> Implement logic to update progress bars, showcasing video processing advancement (may involve parsing ffmpeg output).</li>
+<li><strong>Error Handling:</strong> Catch and handle errors during ffmpeg execution, providing user-friendly alerts.</li>
+</ul>
+<h3 id="binding-interface-with-logic-code">Binding Interface with Logic Code</h3>
+<p>Utilize PySide&rsquo;s signals and slots mechanism to connect interface elements (e.g., button click events) to backend processing logic.</p>
+<h3 id="testing--debugging">Testing &amp; Debugging</h3>
+<p>Thoroughly test the software for accurate video trimming and concatenation, responsive UI, and effective error handling mechanisms.</p>
+<h3 id="optimization--aesthetics">Optimization &amp; Aesthetics</h3>
+<p>Adjust layout based on test feedback for an improved user experience; consider incorporating multithreading to enhance program responsiveness, especially when dealing with large files.</p>
+<h3 id="packaging--deployment">Packaging &amp; Deployment</h3>
+<p>Package the application into an executable file (using tools like PyInstaller) for easy distribution and deployment, ensuring it runs smoothly on systems without a development environment.</p>
+<h2 id="interface-design">Interface Design</h2>
+<p>Employ Qt Designer for interface design, including creating UI elements, layout adjustments, and setting component properties.</p>
+<pre><code>pyside6-uic input.ui -o output.py
+</code></pre>
+<h2 id="from-mainpy-import-ui">From main.py import ui</h2>
+<pre><code class="language-python">from PyQt5.QtWidgets import QApplication
+from output import Ui_MainWindow  # 假设转换后生成的文件名为output.py
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+       super().__init__()
+        self.setupUi(self)  # 初始化界面
+        # 进一步设置信号槽和其他逻辑...
+
+if &quot;__name__&quot; == &quot;__main__&quot;:
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    app.exec_()
+</code></pre>
+<h2 id="core-logic-code-implementation">Core Logic Code Implementation</h2>
+<h3 id="setting-ffmpeg-path-in-configpy">Setting FFmpeg Path (in config.py)</h3>
+<pre><code class="language-python">import os
+
+class ffpath:
+    # 相对路径
+    ffmpeg_path_relative = '.\\FFmpeg\\bin\\ffmpeg.exe'
+    ffprobe_path_relative = '.\\FFmpeg\\bin\\ffprobe.exe'
+
+    # 转换为绝对路径
+    ffmpeg_path = os.path.abspath(ffmpeg_path_relative)
+    ffprobe_path = os.path.abspath(ffprobe_path_relative)
+</code></pre>
+<h3 id="initializing-ffmpeg-in-ffmpegapipy">Initializing FFmpeg (in ffmpegApi.py)</h3>
+<pre><code class="language-python">import subprocess
+import os
+#import time
+# 从config.py中拿到ffmpeg.exe和ffprobe.exe的绝对路径
+from config import ffpath
+
+class FFmpeg:
+
+    # 初始化函数，用于初始化实例的ffmpeg_path属性
+    def __init__(self, ffmpeg_path):
+        self.ffmpeg_path = ffmpeg_path
+</code></pre>
+<h3 id="defining-run-method-to-invoke-cmd-in-ffmpegapipy">Defining run Method to Invoke cmd (in ffmpegApi.py)</h3>
+<p>While <code>subprocess.Popen</code> accepts a list, due to potential spaces and paths in FFmpeg commands that could lead to errors, we input as a string for reliability.</p>
+<pre><code class="language-python">    # 定义run方法来执行FFmpeg命令
+    def run(self, cmd):
+        &quot;&quot;&quot;
+        执行给定的FFmpeg命令，并返回其输出。
+
+        参数:
+        - cmd: 一个列表，包含要执行的FFmpeg命令及其参数。
+
+        返回值:
+        - 执行命令的标准输出（字符串）。
+
+        抛出:
+        - Exception: 如果命令执行失败（返回码非0），则抛出包含错误信息的异常。
+        &quot;&quot;&quot;
+        cmd = [self.ffmpeg_path] + cmd
+        cmd_str = ' '.join(cmd)
+        print(f&quot;尝试执行：{cmd_str}&quot;)
+        p = subprocess.Popen(cmd_str, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = p.communicate()
+        if p.returncode != 0:
+            print(f&quot;命令执行失败，错误信息：{err.decode('utf-8')}&quot;)
+            raise Exception(err.decode('utf-8'))
+</code></pre>
+<h3 id="video-trimming-in-ffmpegapipy">Video Trimming (in ffmpegApi.py)</h3>
+<p>definition of extract_video function:</p>
+<pre><code class="language-python">def extract_video(self, input_folder, start_time, end, output_folder, encoder='-c:v copy -c:a copy'):
+    &quot;&quot;&quot;
+    获得FFmpeg命令的逻辑，给出具体的FFmpeg命令并传入run函数中运行
+    
+    参数：
+    folder：输入输出文件夹参数须为绝对路径字符串
+    start_time, end：片头片尾的持续时间参数须为H:mm:ss:fff格式的字符串
+    encoder参数须为字符串，默认为'-c:v copy -c:a copy'复制流
+    &quot;&quot;&quot;
+</code></pre>
+<p>Under <code>extract_video</code>, define <code>time_calculate</code> to handle tail durations, given FFmpeg&rsquo;s inherent start-to-end trimming approach, requiring timestamp calculation based on the specified outro duration.</p>
+<pre><code class="language-python">        def time_calculate(duration, end):
+            # 转换为浮点数进行计算
+            hours, minutes, seconds_milliseconds = end.split(':')
+            seconds, milliseconds = seconds_milliseconds.split('.')
+            hours = float(hours)
+            minutes = float(minutes)
+            end_float = hours * 3600 + minutes * 60 + float(seconds)
+            end_float += float(milliseconds) / 1000
+            end_time_float = duration - end_float
+            print(&quot;结束时间点为：&quot;, end_time_float)
+            # 浮点数结果转换为字符串格式
+            m, s = divmod(end_time_float, 60)
+            h, m = divmod(m, 60)
+            end_time = &quot;%02d:%02d:%06.3f&quot; % (h, m, s)
+            print(&quot;结束时间点为：&quot;, end_time)
+            return end_time
+</code></pre>
+<p>Core in the <code>extract_video</code> function is using <code>-accurate_seek</code>, which, while not perfectly accurate, avoids errors, suitable for bulk operations. For precise single video edits, consider tools like LosslessCut.</p>
+<pre><code class="language-python">        # 遍历文件夹中的所有mp4视频文件
+        for file in os.listdir(input_folder):
+            if file.endswith('.mp4'):
+                input_file = os.path.join(input_folder, file)
+                # 检测输出文件夹是否存在，不存在则创建
+                if not os.path.exists(output_folder):
+                    os.makedirs(output_folder)
+                output_file = os.path.join(output_folder, file)
+                # 读取视频的总时长（调用config.py中ffpath类的ffprobe_path），传入run函数中运行
+                cmd1 = [ffpath.ffprobe_path, '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', input_file]
+                print(&quot;执行：&quot; + ' '.join(cmd1))
+                result = subprocess.run(cmd1, capture_output=True, text=True)
+                duration = float(result.stdout.strip())
+                print(&quot;视频总秒数为：&quot;, duration)
+                # 调用time_calculate函数将end时间转换为秒数浮点数计算后返回结束时间字符串
+                end_time = time_calculate(duration, end)
+                # 调用ffmpeg命令行工具，对视频进行截取
+                cmd = ['-ss', start_time, '-to', end_time, '-accurate_seek', '-i', f'&quot;{input_file}&quot;',  encoder, f'&quot;{output_file}&quot;']
+                # 打印最终输入命令行的cmd指令，从列表转换为字符串
+                # print(&quot;执行：&quot; + r'Q:\Git\FFmpeg-python\02FFmpegTest\FFmpeg\bin\ffmpeg.exe ' + ' '.join(cmd))
+                self.run(cmd)
+                print(file + '视频截取完成')
+            else:
+                print(file + '不是mp4文件，跳过')
+</code></pre>
+<h3 id="merging-videos-in-ffmpegapipy">Merging Videos (in ffmpegApi.py)</h3>
+<p>Define <code>merge_video</code> function, where the heart lies in the <code>-filter_complex</code> flag for unifying video formats pre-encoding. Time-consuming but reliable, it&rsquo;s aimed at error prevention in batch processing. Based on practical experiences, standardizing frame rate, resolution, and pixel aspect ratio across videos is crucial.</p>
+<pre><code class="language-python">def merge_video(self, input_folder, input_file1, input_file2, output_folder, encoder='-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2'):
+     &quot;&quot;&quot;
+    获得FFmpeg命令的逻辑，给出具体的FFmpeg命令并传入run函数中运行
+    
+    参数：
+    folder：输入输出文件夹参数须为绝对路径字符串
+    input_file：片头片尾参数须为绝对路径字符串
+    encoder参数须为字符串，默认为'-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2'重新编码
+    &quot;&quot;&quot;
+    
+        # 遍历文件夹中的所有mp4视频文件
+        for file in os.listdir(input_folder):
+            if file.endswith('.mp4'):
+                input_file = os.path.join(input_folder, file)
+                # 检测输出文件夹是否存在，不存在则创建
+                if not os.path.exists(output_folder):
+                    os.makedirs(output_folder)
+                output_file = os.path.join(output_folder, file)
+                # 调用ffmpeg命令行工具，对视频进行合并
+                cmd = [
+                    '-i', f'&quot;{input_file1}&quot;', 
+                    '-i', f'&quot;{input_file}&quot;', 
+                    '-i', f'&quot;{input_file2}&quot;', 
+                    '-filter_complex', 
+                    '&quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&quot; -map &quot;[vout]&quot; -map &quot;[aout]&quot;', encoder, f'&quot;{output_file}&quot;']
+                # 打印最终输入命令行的cmd指令，从列表转换为字符串
+                # print(&quot;执行：&quot; + r'Q:\Git\FFmpeg-python\02FFmpegTest\FFmpeg\bin\ffmpeg.exe ' + ' '.join(cmd))
+                self.run(cmd)
+                print(file + '视频合并完成')
+            else:
+                print(file + '不是mp4文件，跳过')
+</code></pre>
+<h3 id="debugging-code-in-ffmpegapipy">Debugging Code (in ffmpegApi.py)</h3>
+<pre><code class="language-python"># 调用extract_video函数，对视频进行截取
+input_folder = r'Q:\Git\FFmpeg-python\02FFmpegTest\input'
+output_folder = r'Q:\Git\FFmpeg-python\02FFmpegTest\output1'
+start_time = '00:00:01.000'
+end = '00:00:03.500'
+ffmpeg.extract_video(input_folder, start_time, end, output_folder)
+print('视频截取完成')
+
+# 调用merge_video函数，对视频进行合并
+input_folder = r'Q:\Git\FFmpeg-python\02FFmpegTest\output1'
+output_folder = r'Q:\Git\FFmpeg-python\02FFmpegTest\output2'
+input_file1 = r'Q:\Git\FFmpeg-python\02FFmpegTest\input\1\op.mp4'
+input_file2 = r'Q:\Git\FFmpeg-python\02FFmpegTest\input\1\ed.mp4'
+ffmpeg.merge_video(input_folder, input_file1, input_file2, output_folder)
+print('视频合并完成')
+</code></pre>
+<h2 id="pyside-ui--logic-binding-in-mainpy">Pyside UI &amp; Logic Binding (in main.py)</h2>
+<h3 id="import-third-party-libraries-and-custom-python-libraries">Import Third-party Libraries and Custom Python Libraries</h3>
+<pre><code class="language-python">from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog
+from Ui_VideoEditor import Ui_MainWindow
+from ffmpegApi import FFmpeg
+from config import ffpath
+
+# 导入ffmpeg路径
+init1 = print(&quot;初始化ffmpeg路径为：&quot;, ffpath.ffmpeg_path)
+init2 = print(&quot;初始化ffprobe路径为：&quot;, ffpath.ffprobe_path)
+</code></pre>
+<h3 id="class-of-mainwindow">Class of MainWindow</h3>
+<pre><code class="language-python">class MainWindow(QMainWindow, Ui_MainWindow):
+    # 初始化窗口
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.bind()
+        # 打开控制台窗口
+        # TODO：未完成
+</code></pre>
+<h3 id="definition-of-bind-function">definition of bind function</h3>
+<pre><code class="language-python">    # 绑定事件槽
+    def bind(self):
+        # 设置按钮的信号槽
+        self.importBn1.clicked.connect(self.import_video_folder1)
+        self.importBn2.clicked.connect(self.import_video_file1)
+        self.importBn3.clicked.connect(self.import_video_file2)
+        self.importBn4.clicked.connect(self.import_video_folder2)
+        self.exportBn1.clicked.connect(self.export_video_folder1)
+        self.exportBn2.clicked.connect(self.export_video_folder2)
+        self.pushButton1.clicked.connect(self.process_extract)
+        self.pushButton2.clicked.connect(self.process_concat)
+        self.pushButtonF.clicked.connect(self.adjust_ffmpeg_path)
+</code></pre>
+<h3 id="adjust_ffmpeg_path-function">adjust_ffmpeg_path function</h3>
+<pre><code class="language-python">    def adjust_ffmpeg_path(self):
+        ffmpeg_folder = QFileDialog.getExistingDirectory(
+            self, &quot;选择bin文件夹&quot;, &quot;./&quot;)
+        ffpath.ffmpeg_path = f&quot;{ffmpeg_folder}\\ffmpeg.exe&quot;
+        ffpath.ffprobe_path = f&quot;{ffmpeg_folder}\\ffprobe.exe&quot;
+        if ffpath.ffmpeg_path:
+            self.textEdit.append(f&quot;ffmpeg路径修改为：{ffpath.ffmpeg_path}；{ffpath.ffprobe_path}&quot;)
+            print(ffpath.ffmpeg_path)
+</code></pre>
+<h3 id="extract_video-function">extract_video function</h3>
+<pre><code class="language-python">    # 切割流程
+    # 点击导入视频文件夹按钮，弹出文件选择对话框，选择视频文件夹，选择完成后显示在文本框中
+    def import_video_folder1(self):
+        self.folder_path1 = QFileDialog.getExistingDirectory(
+            self, &quot;选择视频文件夹&quot;, &quot;./&quot;)
+        if self.folder_path1:
+            self.textEdit.append(f&quot;切割：输入文件夹为{self.folder_path1}&quot;)
+    # 点击导出切割文件夹按钮，弹出文件选择对话框，选择文件夹，选择完成后显示在文本框中
+    def export_video_folder1(self):
+        self.folder1_path = QFileDialog.getExistingDirectory(
+            self, &quot;选择导出文件夹&quot;, &quot;./&quot;)
+        if self.folder1_path:
+            self.textEdit.append(f&quot;切割：输出文件夹为{self.folder1_path}&quot;)
+    # 点击切割按钮，调用FFmpegApi的extract_video函数，切割视频
+    def process_extract(self):
+        # 检测程序是否输入了视频文件夹
+        if not hasattr(self, 'folder_path1'):
+            self.textEdit.append(&quot;切割：请先输入视频文件夹&quot;)
+            return
+        if not hasattr(self, 'folder1_path'):
+            self.textEdit.append(&quot;切割：请先输入视频文件夹&quot;)
+            return
+        # 开始切割视频
+        # 读取片头时间和片尾时间，以及编码格式
+        start_time = self.time1.text()
+        end_time = self.time2.text()
+        encoder = self.line.text()
+        if self.folder_path1 and self.folder1_path:
+            # 实例化FFmpegApi
+            ffmpeg_instance = FFmpeg(ffpath.ffmpeg_path)
+            # 调用extract_video函数
+            ffmpeg_instance.extract_video(self.folder_path1, start_time, end_time,self.folder1_path, encoder)
+            self.textEdit.append(&quot;视频切割完成&quot;)
+        else:
+            self.textEdit.append(&quot;切割：请先输入视频文件夹&quot;)
+</code></pre>
+<h3 id="concat_video-function">concat_video function</h3>
+<pre><code class="language-python">    # 合并流程
+    # 点击导入视频文件夹按钮，弹出文件选择对话框，选择视频文件夹，选择完成后显示在文本框中
+    def import_video_folder2(self):
+        self.folder_path2 = QFileDialog.getExistingDirectory(
+            self, &quot;选择视频文件夹&quot;, &quot;./&quot;)
+        if self.folder_path2:
+            self.textEdit.append(f&quot;合并：输入文件夹为{self.folder_path2}&quot;)
+    # 点击导入片头视频文件按钮，弹出文件选择对话框，选择视频文件，选择完成后添加到文本框中且不覆盖前面的文字内容
+    def import_video_file1(self):
+        self.file1_path, _ = QFileDialog.getOpenFileName(
+            self, &quot;选择视频文件&quot;, &quot;./&quot;, &quot;视频文件 (*.mp4)&quot;)
+        if self.file1_path:
+            self.textEdit.append(f&quot;合并：输入片头文件为{self.file1_path}&quot;)
+
+    # 点击导入片尾视频文件按钮，弹出文件选择对话框，选择视频文件，选择完成后添加到文本框中且不覆盖前面的文字内容
+    def import_video_file2(self):
+        self.file2_path, _ = QFileDialog.getOpenFileName(
+            self, &quot;选择视频文件&quot;, &quot;./&quot;, &quot;视频文件 (*.mp4)&quot;)
+        if self.file2_path:
+            self.textEdit.append(f&quot;合并：输入片尾文件为{self.file2_path}&quot;)
+
+    # 点击导出合并文件夹按钮，弹出文件选择对话框，选择文件夹，选择完成后显示在文本框中
+    def export_video_folder2(self):
+        self.folder2_path = QFileDialog.getExistingDirectory(
+            self, &quot;选择导出文件夹&quot;, &quot;./&quot;)
+        if self.folder2_path:
+            self.textEdit.append(f&quot;合并：输出文件夹为{self.folder2_path}&quot;)
+    # 点击开始合并按钮，调用FFmpegApi的merge_video函数，合并视频
+    def process_concat(self):
+        # 检测程序是否输入了视频文件夹
+        if not hasattr(self, 'folder_path2'):
+            self.textEdit.append(&quot;合并：请先输入视频文件夹&quot;)
+            return
+        if not hasattr(self, 'file1_path'):
+            self.textEdit.append(&quot;合并：请先输入片头视频文件&quot;)
+            return
+        if not hasattr(self, 'file2_path'):
+            self.textEdit.append(&quot;合并：请先输入片尾视频文件&quot;)
+            return
+        if not hasattr(self, 'folder2_path'):
+            self.textEdit.append(&quot;合并：请先输入导出文件夹&quot;)
+            return
+        # 开始合并视频
+        # 读取片头时间和片尾时间，以及编码格式
+        encoder = self.line2.text()
+        if self.folder_path2 and self.file1_path and self.file2_path and self.folder2_path:
+            # 实例化FFmpegApi
+            ffmpeg_instance = FFmpeg(ffpath.ffmpeg_path)
+            # 调用merge_video函数
+            ffmpeg_instance.merge_video(self.folder_path2, self.file1_path, self.file2_path, self.folder2_path, encoder)
+            self.textEdit.append(&quot;视频合并完成&quot;)
+        else:
+            self.textEdit.append(&quot;合并：请先输入视频文件夹&quot;)
+</code></pre>
+<h3 id="running-code">running code</h3>
+<pre><code class="language-python"># 运行窗口程序
+if __name__ == '__main__':
+    app = QApplication([])
+    window = MainWindow()  # 创建窗口对象
+    window.show()  # 显示窗口
+    app.exec_()  # 运行程序
+</code></pre>
+<h2 id="optimization-beautification-packaging--deployment">Optimization, Beautification, Packaging &amp; Deployment</h2>
+<p>Tasks in progress include:</p>
+<ul>
+<li>Performance Optimization</li>
+<li>Abort Processing</li>
+<li>Console Invocation Enablement</li>
+<li>Redirecting FFmpeg runtime output to console</li>
+<li>Handling merging of two distinct video segments (currently requires both intro and outro)</li>
+<li>GUI Enhancement</li>
+<li>Package Dependencies</li>
+<li>Encapsulation as BAT or EXE</li>
+<li>Others</li>
+</ul>
+<h2 id="user-guide-as-of-20240507">User Guide (as of 20240507)</h2>
+<p>Download the release package, extract, and run the EXE!</p>
+<h2 id="user-guide-as-of-20240506">User Guide (as of 20240506)</h2>
+<ol>
+<li>
+<p>Set up Python environment and install third-party library pyside6:</p>
+<pre><code>pip install pyside6
+</code></pre>
+</li>
+<li>
+<p>Place FFmpeg in the main.py directory structured as follows:</p>
+<pre><code>├── FFmpeg     # Note capitalization
+│   └── bin
+│   └── ...
+├── main.py     # Main script
+├── ...
+</code></pre>
+<p>This structure is optional but requires manual path setup within the app.</p>
+</li>
+<li>
+<p>Run main.py:</p>
+<pre><code>python main.py
+</code></pre>
+</li>
+<li>
+<p>Alternatively, without installing pyside6 or GUI, directly invoke ffmpegApi.py as detailed in the <a class="link" href="https://tongyi.aliyun.com/qianwen/DETAIL.md"  target="_blank" rel="noopener"
+    >DETAIL.md</a> debugging section.</p>
+</li>
+</ol>
+<h2 id="update-log">Update Log</h2>
+<h3 id="created-20240506-1911">Created 20240506-1911</h3>
+<p>Source code uploaded, addressing batch intro and outro processing.</p>
+<p><strong>Current Issues</strong></p>
+<ul>
+<li>Mandates both intro and outro, lacking direct concatenation of two videos.</li>
+<li>Packaging not yet achieved, pending further exploration.</li>
+<li>To be determined.</li>
+</ul>
+<h3 id="released-20240507-1904">Released 20240507-1904</h3>
+<p>Packaged version available for elegant execution, albeit noting the substantial size of the PyInstaller output, prompting consideration of alternative packaging techniques.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/en/tags/code/">Code</a>
+        
+            <a href="/en/tags/editing/">Editing</a>
+        
+            <a href="/en/tags/video/">Video</a>
+        
+            <a href="/en/tags/automation/">Automation</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/en/2023/webclass-autocut-free/">
+        
+        
+            <div class="article-image">
+                <img src="/en/2023/webclass-autocut-free/img1.0d7b40912f23ff84bd1d82ccf6071c32_hu19607f4d1aca4123c69ec5b6506c9fca_615282_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Webclass-AutoCut based on Free Software"
+                        data-key="webclass-autocut-free" 
+                        data-hash="md5-DXtAkS8j/4S9HYLM9gccMg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Webclass-AutoCut based on Free Software</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+  
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function(e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+</script>
+
+    <section class="copyright">
+        &copy; 
+        
+        2024 <a href="https://stack-theme-mod.vercel.app/"> Wish's Blog </a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
+      共书写了41k字·共 15篇文章</br><span><p>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a><br />
+         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">© Licensed Under CC BY-NC-SA 4.0</a>
+    </section>
+
+<script>
+var s1 = '2024-04-25';
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+</script>
+    
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/en/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#brief-workflow-outline">Brief Workflow Outline:</a>
+      <ol>
+        <li><a href="#environment-setup">Environment Setup</a></li>
+        <li><a href="#interface-design-using-qt-designer">Interface Design (Using Qt Designer)</a>
+          <ol>
+            <li><a href="#main-interface-design">Main Interface Design</a></li>
+          </ol>
+        </li>
+        <li><a href="#writing-core-logic-code">Writing Core Logic Code</a></li>
+        <li><a href="#binding-interface-with-logic-code">Binding Interface with Logic Code</a></li>
+        <li><a href="#testing--debugging">Testing &amp; Debugging</a></li>
+        <li><a href="#optimization--aesthetics">Optimization &amp; Aesthetics</a></li>
+        <li><a href="#packaging--deployment">Packaging &amp; Deployment</a></li>
+      </ol>
+    </li>
+    <li><a href="#interface-design">Interface Design</a></li>
+    <li><a href="#from-mainpy-import-ui">From main.py import ui</a></li>
+    <li><a href="#core-logic-code-implementation">Core Logic Code Implementation</a>
+      <ol>
+        <li><a href="#setting-ffmpeg-path-in-configpy">Setting FFmpeg Path (in config.py)</a></li>
+        <li><a href="#initializing-ffmpeg-in-ffmpegapipy">Initializing FFmpeg (in ffmpegApi.py)</a></li>
+        <li><a href="#defining-run-method-to-invoke-cmd-in-ffmpegapipy">Defining run Method to Invoke cmd (in ffmpegApi.py)</a></li>
+        <li><a href="#video-trimming-in-ffmpegapipy">Video Trimming (in ffmpegApi.py)</a></li>
+        <li><a href="#merging-videos-in-ffmpegapipy">Merging Videos (in ffmpegApi.py)</a></li>
+        <li><a href="#debugging-code-in-ffmpegapipy">Debugging Code (in ffmpegApi.py)</a></li>
+      </ol>
+    </li>
+    <li><a href="#pyside-ui--logic-binding-in-mainpy">Pyside UI &amp; Logic Binding (in main.py)</a>
+      <ol>
+        <li><a href="#import-third-party-libraries-and-custom-python-libraries">Import Third-party Libraries and Custom Python Libraries</a></li>
+        <li><a href="#class-of-mainwindow">Class of MainWindow</a></li>
+        <li><a href="#definition-of-bind-function">definition of bind function</a></li>
+        <li><a href="#adjust_ffmpeg_path-function">adjust_ffmpeg_path function</a></li>
+        <li><a href="#extract_video-function">extract_video function</a></li>
+        <li><a href="#concat_video-function">concat_video function</a></li>
+        <li><a href="#running-code">running code</a></li>
+      </ol>
+    </li>
+    <li><a href="#optimization-beautification-packaging--deployment">Optimization, Beautification, Packaging &amp; Deployment</a></li>
+    <li><a href="#user-guide-as-of-20240507">User Guide (as of 20240507)</a></li>
+    <li><a href="#user-guide-as-of-20240506">User Guide (as of 20240506)</a></li>
+    <li><a href="#update-log">Update Log</a>
+      <ol>
+        <li><a href="#created-20240506-1911">Created 20240506-1911</a></li>
+        <li><a href="#released-20240507-1904">Released 20240507-1904</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+        
+            <section class="widget categories">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+  
+        </div> 
+        <h2 class="widget-title section-title">Categories</h2>
+    <div class="widget-categories--list">
+<div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <div class="category-list">
+            <div class="category-list-item"><a href="https://wish2333.github.io/en/categories/archivingold/" class="category-list-link">archivingold<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://wish2333.github.io/en/categories/research/" class="category-list-link">research<span class="category-list-count">4</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://wish2333.github.io/en/categories/techniquesandworks/" class="category-list-link">techniquesandworks<span class="category-list-count">2</a>
+            </span></div>
+            <div class="category-list-item"><a href="https://wish2333.github.io/en/categories/technology/" class="category-list-link">technology<span class="category-list-count">2</a>
+            </span></div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Archives</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/en/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/en/archives/#2023">
+                        
+                            <span class="year">2023</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/en/archives/#2022">
+                        
+                            <span class="year">2022</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/en/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/en/archives/#1988">
+                        
+                            <span class="year">1988</span>
+                            <span class="count">5</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/en/tags/article/" class="font_size_6">
+                Article
+            </a>
+        
+            <a href="/en/tags/video/" class="font_size_4">
+                Video
+            </a>
+        
+            <a href="/en/tags/acgn/" class="font_size_3">
+                ACGN
+            </a>
+        
+            <a href="/en/tags/media-literacy/" class="font_size_3">
+                Media Literacy
+            </a>
+        
+            <a href="/en/tags/audio/" class="font_size_2">
+                Audio
+            </a>
+        
+            <a href="/en/tags/automation/" class="font_size_2">
+                Automation
+            </a>
+        
+            <a href="/en/tags/code/" class="font_size_2">
+                Code
+            </a>
+        
+            <a href="/en/tags/editing/" class="font_size_2">
+                Editing
+            </a>
+        
+            <a href="/en/tags/sociology/" class="font_size_2">
+                Sociology
+            </a>
+        
+            <a href="/en/tags/ai/" class="font_size_1">
+                AI
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

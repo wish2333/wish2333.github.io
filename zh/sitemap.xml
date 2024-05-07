@@ -2,21 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wish2333.github.io/zh/tags/acgn/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/tags/acgn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/tags/acgn/"
-                />
-  </url><url>
     <loc>https://wish2333.github.io/zh/categories/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -28,8 +15,21 @@
                 href="https://wish2333.github.io/zh/categories/"
                 />
   </url><url>
+    <loc>https://wish2333.github.io/zh/2024/ffpygui-preversion/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/2024/ffpygui-preversion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/2024/ffpygui-preversion/"
+                />
+  </url><url>
     <loc>https://wish2333.github.io/zh/post/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://wish2333.github.io/zh/tags/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://wish2333.github.io/zh/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -65,6 +65,44 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="https://wish2333.github.io/zh/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/zh/tags/%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/zh/categories/technology/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/categories/technology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/categories/technology/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/zh/tags/acgn/</loc>
+    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/tags/acgn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/tags/acgn/"
                 />
   </url><url>
     <loc>https://wish2333.github.io/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</loc>
@@ -95,9 +133,6 @@
                 hreflang="zh-CN"
                 href="https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/"
                 />
-  </url><url>
-    <loc>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wish2333.github.io/zh/tags/%E7%BB%9F%E8%AE%A1/</loc>
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
@@ -215,25 +250,6 @@
                 href="https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/"
                 />
   </url><url>
-    <loc>https://wish2333.github.io/zh/tags/%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/zh/categories/technology/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/categories/technology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/categories/technology/"
-                />
-  </url><url>
-    <loc>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wish2333.github.io/zh/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -251,9 +267,6 @@
                 />
   </url><url>
     <loc>https://wish2333.github.io/zh/tags/%E9%9F%B3%E9%A2%91/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/</loc>

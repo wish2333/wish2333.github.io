@@ -2,6 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wish2333.github.io/en/tags/automation/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/en/categories/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/tags/code/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/en/tags/editing/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/en/2024/ffpygui-preversion/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/2024/ffpygui-preversion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/2024/ffpygui-preversion/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/post/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/post/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/tags/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/categories/technology/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/categories/technology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/categories/technology/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/tags/video/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/en/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/"
+                />
+  </url><url>
     <loc>https://wish2333.github.io/en/tags/acgn/</loc>
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -13,19 +103,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://wish2333.github.io/en/tags/acgn/"
-                />
-  </url><url>
-    <loc>https://wish2333.github.io/en/categories/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/categories/"
                 />
   </url><url>
     <loc>https://wish2333.github.io/en/2024/cplogy-initial-operation-report/</loc>
@@ -44,34 +121,8 @@
     <loc>https://wish2333.github.io/en/tags/media-literacy/</loc>
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wish2333.github.io/en/post/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/post/"
-                />
-  </url><url>
     <loc>https://wish2333.github.io/en/tags/statistics/</loc>
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/tags/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/tags/"
-                />
   </url><url>
     <loc>https://wish2333.github.io/en/categories/techniquesandworks/</loc>
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
@@ -84,22 +135,6 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://wish2333.github.io/en/categories/techniquesandworks/"
-                />
-  </url><url>
-    <loc>https://wish2333.github.io/en/tags/video/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/</loc>
-    <lastmod>2024-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/"
                 />
   </url><url>
     <loc>https://wish2333.github.io/en/about/</loc>
@@ -220,28 +255,6 @@
   </url><url>
     <loc>https://wish2333.github.io/en/tags/audio/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/tags/automation/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/tags/code/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/tags/editing/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wish2333.github.io/en/categories/technology/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://wish2333.github.io/zh/categories/technology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://wish2333.github.io/en/categories/technology/"
-                />
   </url><url>
     <loc>https://wish2333.github.io/en/2023/webclass-autocut-free/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>

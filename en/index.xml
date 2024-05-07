@@ -6,7 +6,417 @@
         <description>Recent content on Wish&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-US</language>
-        <lastBuildDate>Sat, 04 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
+        <link>https://wish2333.github.io/en/2024/ffpygui-preversion/</link>
+        <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2024/ffpygui-preversion/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2024/ffpygui-preversion/img0.jpg" alt="Featured image of post FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video" /&gt;&lt;p&gt;Github：&lt;a class=&#34;link&#34; href=&#34;https://github.com/wish2333/VideoExtractAndConcat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VideoExtractAndConcat&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Project Overview&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.&lt;/p&gt;
+&lt;h2 id=&#34;brief-workflow-outline&#34;&gt;Brief Workflow Outline:&lt;/h2&gt;
+&lt;h3 id=&#34;environment-setup&#34;&gt;Environment Setup&lt;/h3&gt;
+&lt;p&gt;Install necessary software and libraries: Ensure Python environment is properly configured, install PySide6, and ffmpeg.&lt;/p&gt;
+&lt;h3 id=&#34;interface-design-using-qt-designer&#34;&gt;Interface Design (Using Qt Designer)&lt;/h3&gt;
+&lt;h4 id=&#34;main-interface-design&#34;&gt;Main Interface Design&lt;/h4&gt;
+&lt;p&gt;Design includes buttons for file selection (to choose video files), input fields for time trimming (for intro and outro removal times or direct cropping period), output path selection button, preview window (optional), start processing button, and progress bar. Convert the .ui file into .py.&lt;/p&gt;
+&lt;h3 id=&#34;writing-core-logic-code&#34;&gt;Writing Core Logic Code&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Read Video Information:&lt;/strong&gt; Use ffmpeg to fetch video duration and other basic information.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time Processing:&lt;/strong&gt; Based on user inputs, compute actual trimming command parameters (primarily end time).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Invoke ffmpeg:&lt;/strong&gt; Construct and execute ffmpeg command-line instructions for video slicing and joining.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Progress Feedback:&lt;/strong&gt; Implement logic to update progress bars, showcasing video processing advancement (may involve parsing ffmpeg output).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error Handling:&lt;/strong&gt; Catch and handle errors during ffmpeg execution, providing user-friendly alerts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;binding-interface-with-logic-code&#34;&gt;Binding Interface with Logic Code&lt;/h3&gt;
+&lt;p&gt;Utilize PySide&amp;rsquo;s signals and slots mechanism to connect interface elements (e.g., button click events) to backend processing logic.&lt;/p&gt;
+&lt;h3 id=&#34;testing--debugging&#34;&gt;Testing &amp;amp; Debugging&lt;/h3&gt;
+&lt;p&gt;Thoroughly test the software for accurate video trimming and concatenation, responsive UI, and effective error handling mechanisms.&lt;/p&gt;
+&lt;h3 id=&#34;optimization--aesthetics&#34;&gt;Optimization &amp;amp; Aesthetics&lt;/h3&gt;
+&lt;p&gt;Adjust layout based on test feedback for an improved user experience; consider incorporating multithreading to enhance program responsiveness, especially when dealing with large files.&lt;/p&gt;
+&lt;h3 id=&#34;packaging--deployment&#34;&gt;Packaging &amp;amp; Deployment&lt;/h3&gt;
+&lt;p&gt;Package the application into an executable file (using tools like PyInstaller) for easy distribution and deployment, ensuring it runs smoothly on systems without a development environment.&lt;/p&gt;
+&lt;h2 id=&#34;interface-design&#34;&gt;Interface Design&lt;/h2&gt;
+&lt;p&gt;Employ Qt Designer for interface design, including creating UI elements, layout adjustments, and setting component properties.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pyside6-uic input.ui -o output.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;from-mainpy-import-ui&#34;&gt;From main.py import ui&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from PyQt5.QtWidgets import QApplication
+from output import Ui_MainWindow  # 假设转换后生成的文件名为output.py
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+       super().__init__()
+        self.setupUi(self)  # 初始化界面
+        # 进一步设置信号槽和其他逻辑...
+
+if &amp;quot;__name__&amp;quot; == &amp;quot;__main__&amp;quot;:
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    app.exec_()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;core-logic-code-implementation&#34;&gt;Core Logic Code Implementation&lt;/h2&gt;
+&lt;h3 id=&#34;setting-ffmpeg-path-in-configpy&#34;&gt;Setting FFmpeg Path (in config.py)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
+
+class ffpath:
+    # 相对路径
+    ffmpeg_path_relative = &#39;.\\FFmpeg\\bin\\ffmpeg.exe&#39;
+    ffprobe_path_relative = &#39;.\\FFmpeg\\bin\\ffprobe.exe&#39;
+
+    # 转换为绝对路径
+    ffmpeg_path = os.path.abspath(ffmpeg_path_relative)
+    ffprobe_path = os.path.abspath(ffprobe_path_relative)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;initializing-ffmpeg-in-ffmpegapipy&#34;&gt;Initializing FFmpeg (in ffmpegApi.py)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import subprocess
+import os
+#import time
+# 从config.py中拿到ffmpeg.exe和ffprobe.exe的绝对路径
+from config import ffpath
+
+class FFmpeg:
+
+    # 初始化函数，用于初始化实例的ffmpeg_path属性
+    def __init__(self, ffmpeg_path):
+        self.ffmpeg_path = ffmpeg_path
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;defining-run-method-to-invoke-cmd-in-ffmpegapipy&#34;&gt;Defining run Method to Invoke cmd (in ffmpegApi.py)&lt;/h3&gt;
+&lt;p&gt;While &lt;code&gt;subprocess.Popen&lt;/code&gt; accepts a list, due to potential spaces and paths in FFmpeg commands that could lead to errors, we input as a string for reliability.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    # 定义run方法来执行FFmpeg命令
+    def run(self, cmd):
+        &amp;quot;&amp;quot;&amp;quot;
+        执行给定的FFmpeg命令，并返回其输出。
+
+        参数:
+        - cmd: 一个列表，包含要执行的FFmpeg命令及其参数。
+
+        返回值:
+        - 执行命令的标准输出（字符串）。
+
+        抛出:
+        - Exception: 如果命令执行失败（返回码非0），则抛出包含错误信息的异常。
+        &amp;quot;&amp;quot;&amp;quot;
+        cmd = [self.ffmpeg_path] + cmd
+        cmd_str = &#39; &#39;.join(cmd)
+        print(f&amp;quot;尝试执行：{cmd_str}&amp;quot;)
+        p = subprocess.Popen(cmd_str, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = p.communicate()
+        if p.returncode != 0:
+            print(f&amp;quot;命令执行失败，错误信息：{err.decode(&#39;utf-8&#39;)}&amp;quot;)
+            raise Exception(err.decode(&#39;utf-8&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;video-trimming-in-ffmpegapipy&#34;&gt;Video Trimming (in ffmpegApi.py)&lt;/h3&gt;
+&lt;p&gt;definition of extract_video function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def extract_video(self, input_folder, start_time, end, output_folder, encoder=&#39;-c:v copy -c:a copy&#39;):
+    &amp;quot;&amp;quot;&amp;quot;
+    获得FFmpeg命令的逻辑，给出具体的FFmpeg命令并传入run函数中运行
+    
+    参数：
+    folder：输入输出文件夹参数须为绝对路径字符串
+    start_time, end：片头片尾的持续时间参数须为H:mm:ss:fff格式的字符串
+    encoder参数须为字符串，默认为&#39;-c:v copy -c:a copy&#39;复制流
+    &amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Under &lt;code&gt;extract_video&lt;/code&gt;, define &lt;code&gt;time_calculate&lt;/code&gt; to handle tail durations, given FFmpeg&amp;rsquo;s inherent start-to-end trimming approach, requiring timestamp calculation based on the specified outro duration.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;        def time_calculate(duration, end):
+            # 转换为浮点数进行计算
+            hours, minutes, seconds_milliseconds = end.split(&#39;:&#39;)
+            seconds, milliseconds = seconds_milliseconds.split(&#39;.&#39;)
+            hours = float(hours)
+            minutes = float(minutes)
+            end_float = hours * 3600 + minutes * 60 + float(seconds)
+            end_float += float(milliseconds) / 1000
+            end_time_float = duration - end_float
+            print(&amp;quot;结束时间点为：&amp;quot;, end_time_float)
+            # 浮点数结果转换为字符串格式
+            m, s = divmod(end_time_float, 60)
+            h, m = divmod(m, 60)
+            end_time = &amp;quot;%02d:%02d:%06.3f&amp;quot; % (h, m, s)
+            print(&amp;quot;结束时间点为：&amp;quot;, end_time)
+            return end_time
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Core in the &lt;code&gt;extract_video&lt;/code&gt; function is using &lt;code&gt;-accurate_seek&lt;/code&gt;, which, while not perfectly accurate, avoids errors, suitable for bulk operations. For precise single video edits, consider tools like LosslessCut.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;        # 遍历文件夹中的所有mp4视频文件
+        for file in os.listdir(input_folder):
+            if file.endswith(&#39;.mp4&#39;):
+                input_file = os.path.join(input_folder, file)
+                # 检测输出文件夹是否存在，不存在则创建
+                if not os.path.exists(output_folder):
+                    os.makedirs(output_folder)
+                output_file = os.path.join(output_folder, file)
+                # 读取视频的总时长（调用config.py中ffpath类的ffprobe_path），传入run函数中运行
+                cmd1 = [ffpath.ffprobe_path, &#39;-v&#39;, &#39;error&#39;, &#39;-show_entries&#39;, &#39;format=duration&#39;, &#39;-of&#39;, &#39;default=noprint_wrappers=1:nokey=1&#39;, input_file]
+                print(&amp;quot;执行：&amp;quot; + &#39; &#39;.join(cmd1))
+                result = subprocess.run(cmd1, capture_output=True, text=True)
+                duration = float(result.stdout.strip())
+                print(&amp;quot;视频总秒数为：&amp;quot;, duration)
+                # 调用time_calculate函数将end时间转换为秒数浮点数计算后返回结束时间字符串
+                end_time = time_calculate(duration, end)
+                # 调用ffmpeg命令行工具，对视频进行截取
+                cmd = [&#39;-ss&#39;, start_time, &#39;-to&#39;, end_time, &#39;-accurate_seek&#39;, &#39;-i&#39;, f&#39;&amp;quot;{input_file}&amp;quot;&#39;,  encoder, f&#39;&amp;quot;{output_file}&amp;quot;&#39;]
+                # 打印最终输入命令行的cmd指令，从列表转换为字符串
+                # print(&amp;quot;执行：&amp;quot; + r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\FFmpeg\bin\ffmpeg.exe &#39; + &#39; &#39;.join(cmd))
+                self.run(cmd)
+                print(file + &#39;视频截取完成&#39;)
+            else:
+                print(file + &#39;不是mp4文件，跳过&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;merging-videos-in-ffmpegapipy&#34;&gt;Merging Videos (in ffmpegApi.py)&lt;/h3&gt;
+&lt;p&gt;Define &lt;code&gt;merge_video&lt;/code&gt; function, where the heart lies in the &lt;code&gt;-filter_complex&lt;/code&gt; flag for unifying video formats pre-encoding. Time-consuming but reliable, it&amp;rsquo;s aimed at error prevention in batch processing. Based on practical experiences, standardizing frame rate, resolution, and pixel aspect ratio across videos is crucial.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def merge_video(self, input_folder, input_file1, input_file2, output_folder, encoder=&#39;-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2&#39;):
+     &amp;quot;&amp;quot;&amp;quot;
+    获得FFmpeg命令的逻辑，给出具体的FFmpeg命令并传入run函数中运行
+    
+    参数：
+    folder：输入输出文件夹参数须为绝对路径字符串
+    input_file：片头片尾参数须为绝对路径字符串
+    encoder参数须为字符串，默认为&#39;-c:v libx264 -preset veryfast -crf 23 -c:a aac -b:a 192k -ar 44100 -ac 2&#39;重新编码
+    &amp;quot;&amp;quot;&amp;quot;
+    
+        # 遍历文件夹中的所有mp4视频文件
+        for file in os.listdir(input_folder):
+            if file.endswith(&#39;.mp4&#39;):
+                input_file = os.path.join(input_folder, file)
+                # 检测输出文件夹是否存在，不存在则创建
+                if not os.path.exists(output_folder):
+                    os.makedirs(output_folder)
+                output_file = os.path.join(output_folder, file)
+                # 调用ffmpeg命令行工具，对视频进行合并
+                cmd = [
+                    &#39;-i&#39;, f&#39;&amp;quot;{input_file1}&amp;quot;&#39;, 
+                    &#39;-i&#39;, f&#39;&amp;quot;{input_file}&amp;quot;&#39;, 
+                    &#39;-i&#39;, f&#39;&amp;quot;{input_file2}&amp;quot;&#39;, 
+                    &#39;-filter_complex&#39;, 
+                    &#39;&amp;quot;[0:v]fps=30,scale=1280:720,setsar=1[v0];[1:v]fps=30,scale=1280:720,setsar=1[v1];[2:v]fps=30,scale=1280:720,setsar=1[v2];[0:a]aformat=sample_rates=44100:channel_layouts=stereo[a0];[1:a]aformat=sample_rates=44100:channel_layouts=stereo[a1];[2:a]aformat=sample_rates=44100:channel_layouts=stereo[a2];[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[vout][aout]&amp;quot; -map &amp;quot;[vout]&amp;quot; -map &amp;quot;[aout]&amp;quot;&#39;, encoder, f&#39;&amp;quot;{output_file}&amp;quot;&#39;]
+                # 打印最终输入命令行的cmd指令，从列表转换为字符串
+                # print(&amp;quot;执行：&amp;quot; + r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\FFmpeg\bin\ffmpeg.exe &#39; + &#39; &#39;.join(cmd))
+                self.run(cmd)
+                print(file + &#39;视频合并完成&#39;)
+            else:
+                print(file + &#39;不是mp4文件，跳过&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;debugging-code-in-ffmpegapipy&#34;&gt;Debugging Code (in ffmpegApi.py)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 调用extract_video函数，对视频进行截取
+input_folder = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\input&#39;
+output_folder = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\output1&#39;
+start_time = &#39;00:00:01.000&#39;
+end = &#39;00:00:03.500&#39;
+ffmpeg.extract_video(input_folder, start_time, end, output_folder)
+print(&#39;视频截取完成&#39;)
+
+# 调用merge_video函数，对视频进行合并
+input_folder = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\output1&#39;
+output_folder = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\output2&#39;
+input_file1 = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\input\1\op.mp4&#39;
+input_file2 = r&#39;Q:\Git\FFmpeg-python\02FFmpegTest\input\1\ed.mp4&#39;
+ffmpeg.merge_video(input_folder, input_file1, input_file2, output_folder)
+print(&#39;视频合并完成&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;pyside-ui--logic-binding-in-mainpy&#34;&gt;Pyside UI &amp;amp; Logic Binding (in main.py)&lt;/h2&gt;
+&lt;h3 id=&#34;import-third-party-libraries-and-custom-python-libraries&#34;&gt;Import Third-party Libraries and Custom Python Libraries&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog
+from Ui_VideoEditor import Ui_MainWindow
+from ffmpegApi import FFmpeg
+from config import ffpath
+
+# 导入ffmpeg路径
+init1 = print(&amp;quot;初始化ffmpeg路径为：&amp;quot;, ffpath.ffmpeg_path)
+init2 = print(&amp;quot;初始化ffprobe路径为：&amp;quot;, ffpath.ffprobe_path)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;class-of-mainwindow&#34;&gt;Class of MainWindow&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class MainWindow(QMainWindow, Ui_MainWindow):
+    # 初始化窗口
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.bind()
+        # 打开控制台窗口
+        # TODO：未完成
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;definition-of-bind-function&#34;&gt;definition of bind function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    # 绑定事件槽
+    def bind(self):
+        # 设置按钮的信号槽
+        self.importBn1.clicked.connect(self.import_video_folder1)
+        self.importBn2.clicked.connect(self.import_video_file1)
+        self.importBn3.clicked.connect(self.import_video_file2)
+        self.importBn4.clicked.connect(self.import_video_folder2)
+        self.exportBn1.clicked.connect(self.export_video_folder1)
+        self.exportBn2.clicked.connect(self.export_video_folder2)
+        self.pushButton1.clicked.connect(self.process_extract)
+        self.pushButton2.clicked.connect(self.process_concat)
+        self.pushButtonF.clicked.connect(self.adjust_ffmpeg_path)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;adjust_ffmpeg_path-function&#34;&gt;adjust_ffmpeg_path function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    def adjust_ffmpeg_path(self):
+        ffmpeg_folder = QFileDialog.getExistingDirectory(
+            self, &amp;quot;选择bin文件夹&amp;quot;, &amp;quot;./&amp;quot;)
+        ffpath.ffmpeg_path = f&amp;quot;{ffmpeg_folder}\\ffmpeg.exe&amp;quot;
+        ffpath.ffprobe_path = f&amp;quot;{ffmpeg_folder}\\ffprobe.exe&amp;quot;
+        if ffpath.ffmpeg_path:
+            self.textEdit.append(f&amp;quot;ffmpeg路径修改为：{ffpath.ffmpeg_path}；{ffpath.ffprobe_path}&amp;quot;)
+            print(ffpath.ffmpeg_path)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;extract_video-function&#34;&gt;extract_video function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    # 切割流程
+    # 点击导入视频文件夹按钮，弹出文件选择对话框，选择视频文件夹，选择完成后显示在文本框中
+    def import_video_folder1(self):
+        self.folder_path1 = QFileDialog.getExistingDirectory(
+            self, &amp;quot;选择视频文件夹&amp;quot;, &amp;quot;./&amp;quot;)
+        if self.folder_path1:
+            self.textEdit.append(f&amp;quot;切割：输入文件夹为{self.folder_path1}&amp;quot;)
+    # 点击导出切割文件夹按钮，弹出文件选择对话框，选择文件夹，选择完成后显示在文本框中
+    def export_video_folder1(self):
+        self.folder1_path = QFileDialog.getExistingDirectory(
+            self, &amp;quot;选择导出文件夹&amp;quot;, &amp;quot;./&amp;quot;)
+        if self.folder1_path:
+            self.textEdit.append(f&amp;quot;切割：输出文件夹为{self.folder1_path}&amp;quot;)
+    # 点击切割按钮，调用FFmpegApi的extract_video函数，切割视频
+    def process_extract(self):
+        # 检测程序是否输入了视频文件夹
+        if not hasattr(self, &#39;folder_path1&#39;):
+            self.textEdit.append(&amp;quot;切割：请先输入视频文件夹&amp;quot;)
+            return
+        if not hasattr(self, &#39;folder1_path&#39;):
+            self.textEdit.append(&amp;quot;切割：请先输入视频文件夹&amp;quot;)
+            return
+        # 开始切割视频
+        # 读取片头时间和片尾时间，以及编码格式
+        start_time = self.time1.text()
+        end_time = self.time2.text()
+        encoder = self.line.text()
+        if self.folder_path1 and self.folder1_path:
+            # 实例化FFmpegApi
+            ffmpeg_instance = FFmpeg(ffpath.ffmpeg_path)
+            # 调用extract_video函数
+            ffmpeg_instance.extract_video(self.folder_path1, start_time, end_time,self.folder1_path, encoder)
+            self.textEdit.append(&amp;quot;视频切割完成&amp;quot;)
+        else:
+            self.textEdit.append(&amp;quot;切割：请先输入视频文件夹&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;concat_video-function&#34;&gt;concat_video function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    # 合并流程
+    # 点击导入视频文件夹按钮，弹出文件选择对话框，选择视频文件夹，选择完成后显示在文本框中
+    def import_video_folder2(self):
+        self.folder_path2 = QFileDialog.getExistingDirectory(
+            self, &amp;quot;选择视频文件夹&amp;quot;, &amp;quot;./&amp;quot;)
+        if self.folder_path2:
+            self.textEdit.append(f&amp;quot;合并：输入文件夹为{self.folder_path2}&amp;quot;)
+    # 点击导入片头视频文件按钮，弹出文件选择对话框，选择视频文件，选择完成后添加到文本框中且不覆盖前面的文字内容
+    def import_video_file1(self):
+        self.file1_path, _ = QFileDialog.getOpenFileName(
+            self, &amp;quot;选择视频文件&amp;quot;, &amp;quot;./&amp;quot;, &amp;quot;视频文件 (*.mp4)&amp;quot;)
+        if self.file1_path:
+            self.textEdit.append(f&amp;quot;合并：输入片头文件为{self.file1_path}&amp;quot;)
+
+    # 点击导入片尾视频文件按钮，弹出文件选择对话框，选择视频文件，选择完成后添加到文本框中且不覆盖前面的文字内容
+    def import_video_file2(self):
+        self.file2_path, _ = QFileDialog.getOpenFileName(
+            self, &amp;quot;选择视频文件&amp;quot;, &amp;quot;./&amp;quot;, &amp;quot;视频文件 (*.mp4)&amp;quot;)
+        if self.file2_path:
+            self.textEdit.append(f&amp;quot;合并：输入片尾文件为{self.file2_path}&amp;quot;)
+
+    # 点击导出合并文件夹按钮，弹出文件选择对话框，选择文件夹，选择完成后显示在文本框中
+    def export_video_folder2(self):
+        self.folder2_path = QFileDialog.getExistingDirectory(
+            self, &amp;quot;选择导出文件夹&amp;quot;, &amp;quot;./&amp;quot;)
+        if self.folder2_path:
+            self.textEdit.append(f&amp;quot;合并：输出文件夹为{self.folder2_path}&amp;quot;)
+    # 点击开始合并按钮，调用FFmpegApi的merge_video函数，合并视频
+    def process_concat(self):
+        # 检测程序是否输入了视频文件夹
+        if not hasattr(self, &#39;folder_path2&#39;):
+            self.textEdit.append(&amp;quot;合并：请先输入视频文件夹&amp;quot;)
+            return
+        if not hasattr(self, &#39;file1_path&#39;):
+            self.textEdit.append(&amp;quot;合并：请先输入片头视频文件&amp;quot;)
+            return
+        if not hasattr(self, &#39;file2_path&#39;):
+            self.textEdit.append(&amp;quot;合并：请先输入片尾视频文件&amp;quot;)
+            return
+        if not hasattr(self, &#39;folder2_path&#39;):
+            self.textEdit.append(&amp;quot;合并：请先输入导出文件夹&amp;quot;)
+            return
+        # 开始合并视频
+        # 读取片头时间和片尾时间，以及编码格式
+        encoder = self.line2.text()
+        if self.folder_path2 and self.file1_path and self.file2_path and self.folder2_path:
+            # 实例化FFmpegApi
+            ffmpeg_instance = FFmpeg(ffpath.ffmpeg_path)
+            # 调用merge_video函数
+            ffmpeg_instance.merge_video(self.folder_path2, self.file1_path, self.file2_path, self.folder2_path, encoder)
+            self.textEdit.append(&amp;quot;视频合并完成&amp;quot;)
+        else:
+            self.textEdit.append(&amp;quot;合并：请先输入视频文件夹&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;running-code&#34;&gt;running code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 运行窗口程序
+if __name__ == &#39;__main__&#39;:
+    app = QApplication([])
+    window = MainWindow()  # 创建窗口对象
+    window.show()  # 显示窗口
+    app.exec_()  # 运行程序
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;optimization-beautification-packaging--deployment&#34;&gt;Optimization, Beautification, Packaging &amp;amp; Deployment&lt;/h2&gt;
+&lt;p&gt;Tasks in progress include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance Optimization&lt;/li&gt;
+&lt;li&gt;Abort Processing&lt;/li&gt;
+&lt;li&gt;Console Invocation Enablement&lt;/li&gt;
+&lt;li&gt;Redirecting FFmpeg runtime output to console&lt;/li&gt;
+&lt;li&gt;Handling merging of two distinct video segments (currently requires both intro and outro)&lt;/li&gt;
+&lt;li&gt;GUI Enhancement&lt;/li&gt;
+&lt;li&gt;Package Dependencies&lt;/li&gt;
+&lt;li&gt;Encapsulation as BAT or EXE&lt;/li&gt;
+&lt;li&gt;Others&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;user-guide-as-of-20240507&#34;&gt;User Guide (as of 20240507)&lt;/h2&gt;
+&lt;p&gt;Download the release package, extract, and run the EXE!&lt;/p&gt;
+&lt;h2 id=&#34;user-guide-as-of-20240506&#34;&gt;User Guide (as of 20240506)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set up Python environment and install third-party library pyside6:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install pyside6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Place FFmpeg in the main.py directory structured as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;├── FFmpeg     # Note capitalization
+│   └── bin
+│   └── ...
+├── main.py     # Main script
+├── ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This structure is optional but requires manual path setup within the app.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run main.py:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alternatively, without installing pyside6 or GUI, directly invoke ffmpegApi.py as detailed in the &lt;a class=&#34;link&#34; href=&#34;https://tongyi.aliyun.com/qianwen/DETAIL.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DETAIL.md&lt;/a&gt; debugging section.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;update-log&#34;&gt;Update Log&lt;/h2&gt;
+&lt;h3 id=&#34;created-20240506-1911&#34;&gt;Created 20240506-1911&lt;/h3&gt;
+&lt;p&gt;Source code uploaded, addressing batch intro and outro processing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Current Issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mandates both intro and outro, lacking direct concatenation of two videos.&lt;/li&gt;
+&lt;li&gt;Packaging not yet achieved, pending further exploration.&lt;/li&gt;
+&lt;li&gt;To be determined.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;released-20240507-1904&#34;&gt;Released 20240507-1904&lt;/h3&gt;
+&lt;p&gt;Packaged version available for elegant execution, albeit noting the substantial size of the PyInstaller output, prompting consideration of alternative packaging techniques.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>CPlogy-Initial Operation Report</title>
         <link>https://wish2333.github.io/en/2024/cplogy-initial-operation-report/</link>
         <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
@@ -15,6 +425,8 @@
         <description>&lt;img src="https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2.jpg" alt="Featured image of post CPlogy-Initial Operation Report" /&gt;&lt;h2 id=&#34;basic-information&#34;&gt;Basic Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Platform: Bilibili&lt;/li&gt;
+&lt;li&gt;Account: &lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/18775396/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wish_2333&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Key Account Metrics Shift: Followers increased from 285 to 315, Submissions rose from 47 to 48, Total Views surged from 45,000 to 75,000, Likes jumped from 1,400 to 2,000, Coins went up from 696 to 751, Comments expanded from 277 to 405, Favorites climbed from 1,185 to 1,597, Shares marginally grew from 542 to 552.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;positioning--tone&#34;&gt;Positioning &amp;amp; Tone&lt;/h2&gt;

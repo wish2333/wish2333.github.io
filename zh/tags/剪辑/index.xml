@@ -6,8 +6,15 @@
     <description>Recent content in 剪辑 on Wish的博客小站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FFmpeg&#43;Python GUI：实现批量头尾处理</title>
+      <link>https://wish2333.github.io/zh/2024/ffpygui-preversion/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/ffpygui-preversion/</guid>
+      <description>开源地址：VideoExtractAndConcat 项目概述 本项目旨在开发一个用户友好的图形界面应用程序，用于视频片头和片尾的快速切割与合并</description>
+    </item>
     <item>
       <title>网课剪辑：自动化流程-基于免费软件</title>
       <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
