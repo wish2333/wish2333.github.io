@@ -6,34 +6,34 @@
     <description>Recent content in Tags on Wish的博客小站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>传播学</title>
+      <link>https://wish2333.github.io/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>调查研究</title>
+      <link>https://wish2333.github.io/zh/tags/%E8%B0%83%E6%9F%A5%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E8%B0%83%E6%9F%A5%E7%A0%94%E7%A9%B6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>文章</title>
+      <link>https://wish2333.github.io/zh/tags/%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E6%96%87%E7%AB%A0/</guid>
+      <description></description>
+    </item>
     <item>
       <title>代码</title>
       <link>https://wish2333.github.io/zh/tags/%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/tags/%E4%BB%A3%E7%A0%81/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>剪辑</title>
-      <link>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>视频</title>
-      <link>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>自动化</title>
-      <link>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
@@ -44,20 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>传播学</title>
-      <link>https://wish2333.github.io/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>统计</title>
-      <link>https://wish2333.github.io/zh/tags/%E7%BB%9F%E8%AE%A1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E7%BB%9F%E8%AE%A1/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>创意</title>
       <link>https://wish2333.github.io/zh/tags/%E5%88%9B%E6%84%8F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -65,10 +51,31 @@
       <description></description>
     </item>
     <item>
-      <title>文章</title>
-      <link>https://wish2333.github.io/zh/tags/%E6%96%87%E7%AB%A0/</link>
+      <title>视频</title>
+      <link>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wish2333.github.io/zh/tags/%E6%96%87%E7%AB%A0/</guid>
+      <guid>https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>剪辑</title>
+      <link>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E5%89%AA%E8%BE%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化</title>
+      <link>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>统计</title>
+      <link>https://wish2333.github.io/zh/tags/%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/tags/%E7%BB%9F%E8%AE%A1/</guid>
       <description></description>
     </item>
     <item>

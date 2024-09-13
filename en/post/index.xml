@@ -6,10 +6,38 @@
     <description>Recent content in Posts on Wish&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/en/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
+      <title>【Conference Paper】Research on the theme evolution of gender and economic public opinion in time series.</title>
+      <link>https://wish2333.github.io/en/2024/fatcat/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2024/fatcat/</guid>
+      <description>The manuscript has been accepted for the 30th AMIC conference. I will be attending and presenting on September 24-26. The link will be provided once the conference proceedings and abstracts are published.&#xA;The official website of the conference&#xA;View the paper (CN)</description>
+    </item>
+    <item>
+      <title>【Programming】Web Crawling Practice: Utilizing Open Source Projects to Retrieve Weibo Posts.</title>
+      <link>https://wish2333.github.io/en/2024/crawler-weibo/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2024/crawler-weibo/</guid>
+      <description>https://github.com/dataabc/weiboSpider https://github.com/dataabc/weibo-crawler https://github.com/dataabc/weibo-search Operating Environment Programming Language: Python 3 To install Python, please visit: Python Official Website During the installation process, remember to select &amp;ldquo;Add to PATH&amp;rdquo; Operating Systems: Windows/Linux/macOS weiboSpider Program Installation - Source Code Installation Extract and navigate to the program directory $ pip install -r requirements.txt If encountering errors during the installation of dependencies, please open the requirements.txt file and remove the specified version numbers at the</description>
+    </item>
+    <item>
+      <title>【Academic Research】Empirical Research Design: A Study on the Motivations of Young Adults&#39; Participation in Narrative Creation and Interpretation.</title>
+      <link>https://wish2333.github.io/en/2024/catmeme/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2024/catmeme/</guid>
+      <description>Concept Definition Narrativized Second Creation Short Videos Cultural Remix: Second creation refers to the manner in which internet users, within the online context, utilize the works of others through re-creation to express new viewpoints, giving rise to a form of culture known as &amp;ldquo;remix culture,&amp;rdquo; characterized by the replication, collage, and fusion of elements from different works to create new ones[1]. Second Creation Short Videos: According to the definition provided</description>
+    </item>
+    <item>
+      <title>Animemory001-The Chronicles of ACGN: The Animated Saga</title>
+      <link>https://wish2333.github.io/en/2024/animemory001/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/en/2024/animemory001/</guid>
+      <description>View the script (CN)</description>
+    </item>
+    <item>
+      <title>【Programming】FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
       <link>https://wish2333.github.io/en/2024/ffpygui-preversion/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2024/ffpygui-preversion/</guid>
@@ -27,42 +55,42 @@
       <link>https://wish2333.github.io/en/2024/cplogy01/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2024/cplogy01/</guid>
-      <description>大家好呀，我是你们的新人up主wish，今天我们来锐评一下“MAPPA的又一gay佬番”——无人能敌BUCCHIGIRI。是的，我也愿意这么</description>
+      <description>View the script (CN)</description>
     </item>
     <item>
-      <title>Exploring Practice Paths for Cultural Square Empowerment in Rural Revitalization Under the Context of Cultural and Tourism Communication--An Investigation Based on Feng Village, a National Key Rural Tourism Site in Guangxi, China</title>
+      <title>【Conference Paper】Exploring the practical path of cultural squares empowering rural revitalization under the background of cultural tourism communication.</title>
       <link>https://wish2333.github.io/en/2024/tourism-communication/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2024/tourism-communication/</guid>
-      <description>This article is entirely my original work, completed independently on January 10, 2024. Kindly respect the intellectual property rights. The full Chinese text, appendices, reference citations, and other related content are available in the accompanying PDF document. tourism_communication.pdf Abstract With the proposition of rural revitalization and the rise of cultural and tourism industries, the demand for rural image construction and dissemination has increasingly become prominent. Rural cultural squares, as essential</description>
+      <description>The manuscript has been accepted for the 30th AMIC conference. I will be attending and presenting on September 24-26. The link will be provided once the conference proceedings and abstracts are published.&#xA;The official website of the conference&#xA;View the full paper (CN)</description>
     </item>
     <item>
-      <title>Social Spatial Inequality within The Dingfuzhuang Community</title>
+      <title>【Academic Research】Social Spatial Inequality within The Dingfuzhuang Community</title>
       <link>https://wish2333.github.io/en/2023/social-spatial-inequality-within-dingfuzhuang/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2023/social-spatial-inequality-within-dingfuzhuang/</guid>
       <description>Abstract Through an urban sociological lens, this investigation will delve deeply into the unequal distribution and utilization of social spaces among different areas, neighborhoods, or specific locales within the Dingfuzhuang area of Chaoyang District, Beijing. We aim to identify the concrete manifestations of such inequalities within the particular community, encompassing aspects such as the distribution of infrastructure, allocation of public service facilities, and usage patterns of residential public spaces. Research</description>
     </item>
     <item>
-      <title>Webclass-AutoCut based on Free Software</title>
+      <title>【Post-Production】Webclass-AutoCut based on Free Software</title>
       <link>https://wish2333.github.io/en/2023/webclass-autocut-free/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2023/webclass-autocut-free/</guid>
       <description>Application Scenarios Online Course Editing: Legacy Courses: Batch update of intros and outros across varied formats (encoding, resolution, frame rate, audio format). New Course Recordings: Processing raw files, focusing on noise reduction, removal of blank segments, and adding standardized intros and outros. Rapid Slicing &amp;amp; Content Review: Based on scripts, for swift editing and review, crucial for content flagged for modification. Requirements Breakdown Legacy Courses: Objective: Replace (delete + add),</description>
     </item>
     <item>
-      <title>The Process of Research in Dingfuzhuang Community</title>
+      <title>【Academic Research】The Process of Research in Dingfuzhuang Community</title>
       <link>https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/</guid>
-      <description>理解城市-结课作业 2023-10-28选题：黄淼森 社会空间不平等问题 参考文献 zhihu/p/452072791 zhihu/p/106501422 sohu/a/482049556_121124003 fjyl/file_no=20200910 douban.com/review/14200117/ 选题报告 在报告中，将关注的主题定为“身边的社区存在的社</description>
+      <description>View the document (CN)</description>
     </item>
     <item>
-      <title>A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu</title>
+      <title>【Academic Research】A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu</title>
       <link>https://wish2333.github.io/en/2023/health-information/</link>
       <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/en/2023/health-information/</guid>
-      <description>The present article represents a collaborative effort completed by five co-authors, with my contribution focusing specifically on the literature review and data processing sections. The text below encompasses the content of those segments, while the comprehensive full-text version is attached as a PDF file for your reference. ！Download Full Text Abstract This study focuses on the contemporary representative Internet new media platform</description>
+      <description>The present article represents a collaborative effort completed by five co-authors, with my contribution focusing specifically on the literature review and data processing sections. The text below encompasses the content of those segments, while the comprehensive full-text version is attached as a PDF file for your reference. Abstract This study focuses on the contemporary representative Internet new media platform Xiaohongshu APP, conducting a survey targeting college students in Beijing, employing</description>
     </item>
     <item>
       <title>The Cold and Warmth of the Police Station</title>

@@ -6,10 +6,17 @@
     <description>Recent content in 视频 on Wish的博客小站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/zh/tags/%E8%A7%86%E9%A2%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FFmpeg&#43;Python GUI：实现批量头尾处理</title>
+      <title>Animemory序1-我的ACGN纪事·动画篇</title>
+      <link>https://wish2333.github.io/zh/2024/animemory001/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/animemory001/</guid>
+      <description>自2013年我初次涉足ACGN领域，至今已逾十载。这段旅程中，我品尝了无数精彩绝伦的作品，也偶遇了些许不尽人意之作，它们或许占据了我宝贵的时</description>
+    </item>
+    <item>
+      <title>【编程开发】FFmpeg&#43;Python GUI：实现批量头尾处理</title>
       <link>https://wish2333.github.io/zh/2024/ffpygui-preversion/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2024/ffpygui-preversion/</guid>
@@ -30,7 +37,7 @@
       <description>大家好呀，我是你们的新人up主wish，今天我们来锐评一下“MAPPA的又一gay佬番”——无人能敌BUCCHIGIRI。是的，我也愿意这么</description>
     </item>
     <item>
-      <title>网课剪辑：自动化流程-基于免费软件</title>
+      <title>【后期制作】网课剪辑：自动化流程-基于免费软件</title>
       <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/webclass-autocut-free/</guid>

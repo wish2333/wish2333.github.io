@@ -6,13 +6,238 @@
         <description>Recent content on Wish&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-US</language>
-        <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
+        <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Conference Paper】Research on the theme evolution of gender and economic public opinion in time series.</title>
+        <link>https://wish2333.github.io/en/2024/fatcat/</link>
+        <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2024/fatcat/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2024/fatcat/FatCat.jpg" alt="Featured image of post 【Conference Paper】Research on the theme evolution of gender and economic public opinion in time series." /&gt;&lt;p&gt;The manuscript has been accepted for the 30th AMIC conference. I will be attending and presenting on September 24-26. The link will be provided once the conference proceedings and abstracts are published.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://amic.asia/30th-amic-annual-conference/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The official website of the conference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/files/tourism_communication.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the paper (CN)&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Programming】Web Crawling Practice: Utilizing Open Source Projects to Retrieve Weibo Posts.</title>
+        <link>https://wish2333.github.io/en/2024/crawler-weibo/</link>
+        <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2024/crawler-weibo/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2024/crawler-weibo/Crawler.jpg" alt="Featured image of post 【Programming】Web Crawling Practice: Utilizing Open Source Projects to Retrieve Weibo Posts." /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weiboSpider&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weiboSpider&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weibo-crawler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weibo-crawler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weibo-search&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weibo-search&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;operating-environment&#34;&gt;Operating Environment&lt;/h2&gt;
+&lt;p&gt;Programming Language: Python 3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To install Python, please visit: &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python Official Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;During the installation process, remember to &lt;strong&gt;select&lt;/strong&gt; &amp;ldquo;Add to PATH&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Operating Systems: Windows/Linux/macOS&lt;/p&gt;
+&lt;h2 id=&#34;weibospider&#34;&gt;weiboSpider&lt;/h2&gt;
+&lt;h3 id=&#34;program-installation---source-code-installation&#34;&gt;Program Installation - Source Code Installation&lt;/h3&gt;
+&lt;p&gt;Extract and navigate to the program directory&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If encountering errors during the installation of dependencies, please open the requirements.txt file and remove the specified version numbers at the end.&lt;/p&gt;
+&lt;p&gt;Furthermore, it is recommended for all users to employ embedded Python or virtual environments for installation in order to avoid contaminating their default environment.&lt;/p&gt;
+&lt;h3 id=&#34;executing-the-program&#34;&gt;Executing the Program&lt;/h3&gt;
+&lt;p&gt;For users who opt for &lt;strong&gt;source code installation&lt;/strong&gt;, the following command can be run within the weiboSpider directory. For users who choose &lt;strong&gt;pip installation&lt;/strong&gt;, the following command can be executed in any directory with write permissions.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;$ python -m weibo_spider
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Upon initial execution, a config.json configuration file will be automatically created in the current directory. Once configured, executing the same command will allow you to retrieve Weibo data.&lt;/p&gt;
+&lt;h3 id=&#34;program-configuration&#34;&gt;Program Configuration&lt;/h3&gt;
+&lt;p&gt;For information on program configuration, please refer to the README and docs in the source code.&lt;/p&gt;
+&lt;h2 id=&#34;weibocrawler&#34;&gt;WeiboCrawler&lt;/h2&gt;
+&lt;p&gt;WeiboCrawler is a variant of WeiboSpider, sharing similar underlying logic. Please consult its README for installation instructions.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/upload/weibo-crawler%e8%ae%b2%e4%b9%89.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;weibo-crawler tutorial (CN).pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;weibosearch&#34;&gt;weiboSearch&lt;/h2&gt;
+&lt;p&gt;All configurations of this program are completed in the &amp;ldquo;settings.py&amp;rdquo; file located at &amp;ldquo;weibo-search\weibo\settings.py&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;download-script&#34;&gt;&lt;strong&gt;Download Script&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Unzip the folder.&lt;/p&gt;
+&lt;h3 id=&#34;install-scrapy&#34;&gt;&lt;strong&gt;Install Scrapy&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Install Scrapy.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip install scrapy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there are compatibility issues.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip uninstall Twisted
+pip install Twisted==22.10.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Please verify the successful installation by entering the command in the terminal.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;scrapy version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;install-dependencies&#34;&gt;&lt;strong&gt;Install dependencies&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-configuration-procedure&#34;&gt;&lt;strong&gt;4. Configuration Procedure&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Amend the settings in weibo\settings.py.&lt;/p&gt;
+&lt;p&gt;To comprehend the program settings, please refer to the README and docs in the source code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ensure to configure the cookie, keeping the time span within 5 days, if the time span is extensive, divide the crawling into multiple sessions.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open weibo.cn in your browser and log in.&lt;/li&gt;
+&lt;li&gt;Press F12 and switch to the Network tab.&lt;/li&gt;
+&lt;li&gt;Refresh the page, ensuring the URL does not have any suffix.&lt;/li&gt;
+&lt;li&gt;Locate the cookie section in the request headers of weibo.cn, then copy it into the settings.py file.&lt;/li&gt;
+&lt;li&gt;Remember, you need to retrieve your own cookie before each program run.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-executing-the-program&#34;&gt;&lt;strong&gt;5. Executing the Program&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Navigate to the directory where scrapy.cfg is located in the command line, or right-click and open in the terminal.&lt;/p&gt;
+&lt;p&gt;In the terminal, input:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;scrapy crawl search
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The execution time may be lengthy, but you can interrupt it in advance by pressing Ctrl+C.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Academic Research】Empirical Research Design: A Study on the Motivations of Young Adults&#39; Participation in Narrative Creation and Interpretation.</title>
+        <link>https://wish2333.github.io/en/2024/catmeme/</link>
+        <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2024/catmeme/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2024/catmeme/CatMeme.jpg" alt="Featured image of post 【Academic Research】Empirical Research Design: A Study on the Motivations of Young Adults&#39; Participation in Narrative Creation and Interpretation." /&gt;&lt;h2 id=&#34;concept-definition&#34;&gt;Concept Definition&lt;/h2&gt;
+&lt;h3 id=&#34;narrativized-second-creation-short-videos&#34;&gt;Narrativized Second Creation Short Videos&lt;/h3&gt;
+&lt;p&gt;Cultural Remix:&lt;/p&gt;
+&lt;p&gt;Second creation refers to the manner in which internet users, within the online context, utilize the works of others through re-creation to express new viewpoints, giving rise to a form of culture known as &amp;ldquo;remix culture,&amp;rdquo; characterized by the replication, collage, and fusion of elements from different works to create new ones[1].&lt;/p&gt;
+&lt;p&gt;Second Creation Short Videos:&lt;/p&gt;
+&lt;p&gt;According to the definition provided in the &amp;ldquo;2021 China Short Video Copyright Protection White Paper&amp;rdquo; by the 12426 Copyright Monitoring Center, second creation short videos refer to the creative use of existing video materials, with a duration not exceeding 20 minutes, composed of continuous scenes, background music, subtitles, and other elements, commonly featuring materials from film and television, animation, sports, and gaming works[2].&lt;/p&gt;
+&lt;p&gt;Narrativized Second Creation Short Videos:&lt;/p&gt;
+&lt;p&gt;These videos utilize existing audiovisual materials for creation, with a duration not exceeding 3 minutes[3], composed of continuous scenes, background music, and narrative subtitles.&lt;/p&gt;
+&lt;p&gt;[1] Xiong, Q. &amp;ldquo;Economic Analysis Paradigm of Fair Use Recognition of &amp;lsquo;Second Creation&amp;rsquo; Behavior in Copyright&amp;rdquo; in Contemporary Law, 2024, 38(01):108-120.&lt;/p&gt;
+&lt;p&gt;[2] Zhang, L. &amp;ldquo;Legal and Economic Analysis of Authorization Rules for Second Creation Short Videos&amp;rdquo; in Journal of Gansu Political Science and Law University, 2023(05):62-74.&lt;/p&gt;
+&lt;p&gt;[3] Liu, D., Wan, L., &amp;amp; Peng, Y. &amp;ldquo;Three Minutes on Douyin, Two Hours in the World: Temporal Distortion and User &amp;lsquo;Defense&amp;rsquo; in Short Video Consumption&amp;rdquo; in Journalism and Writing, 2024(02):86-98.&lt;/p&gt;
+&lt;h3 id=&#34;cat-meme-video--verbal&#34;&gt;Cat Meme (Video + Verbal)&lt;/h3&gt;
+&lt;h4 id=&#34;meme-also-known-as-memetics-or-imitational-phenomena&#34;&gt;Meme: Also Known as Memetics or Imitational Phenomena&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Definition: &amp;ldquo;Meme,&amp;rdquo; or memetics, refers to the fundamental cultural unit transmitted through non-genetic means, especially replication, characterized by imitation (replication), variation, and selection, with imitation being the primary mode of transmission for memes.&lt;/li&gt;
+&lt;li&gt;Origin and Evolution:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Phase One: Biological Metaphor Phase. Richard Dawkins first introduced the concept of &amp;ldquo;meme&amp;rdquo; in &amp;ldquo;The Selfish Gene,&amp;rdquo; suggesting that information is transmitted through continual replication, with the basic unit facilitating this process being the replicator. Memes are replicators with the ability to copy themselves in the cultural evolutionary process. Memes primarily rely on self-replication and dissemination of content and form for propagation, leading to unpredictable cultural mutations.&lt;/p&gt;
+&lt;p&gt;Phase Two: Cultural Theory Phase. Belgian scholar Héleène further developed meme theory, proposing that the lifecycle of memes includes stages such as assimilation, memory, expression, and transmission. In essence, after individuals receive and comprehend the content of memes, these memes are stored in the human brain. During the stage of information expression, individuals exhibit two attitudes towards memes: acceptance, leading to active editing and creation of new memes, and rejection, ensuring that old memes remain in individuals&amp;rsquo; minds, creating lasting memories. As individuals engage with meme culture, creating new memes and spreading them, memes infect new individuals, restarting this lifecycle.&lt;/p&gt;
+&lt;p&gt;Phase Three: Internet Memes. Generally, digital content such as text, images, videos, etc., spread rapidly and widely on the internet, falls under the category of internet memes. Huffman views internet memes as &amp;ldquo;popular cultural units spread, imitated, and transformed by internet users, also created and shared by internet users.&amp;rdquo; Coleman defines internet memes as &amp;ldquo;infectious images, videos, and catchphrases that rapidly spread on the internet through continuous imitation and modification by users.&amp;rdquo; These definitions underscore that internet memes inherently exhibit significant variability, surpassing the realm of mere self-replication. The massive and atomized active participation of users is a crucial indicator of how internet memes come into being. Any internet user can become an anonymous creator of internet memes.&lt;/p&gt;
+&lt;h4 id=&#34;internet-meme-specifically-refers-to-memes-disseminated-through-the-internet-as-a-medium&#34;&gt;Internet Meme: Specifically Refers to Memes Disseminated Through the Internet as a Medium&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Definition: These are infectious images, videos, and catchphrases rapidly spreading on the internet through continuous active imitation and modification by a large number of users.&lt;/li&gt;
+&lt;li&gt;Source: Initial meme texts originate from platforms such as Weibo, WeChat, online live streaming, etc., excerpted from events or non-events.&lt;/li&gt;
+&lt;li&gt;Form: After mutation, the structural forms vary widely, especially in GIFs, short videos; diverse grammatical structures, with statements and exclamations each accounting for 50%, leading to significant dissemination effects.&lt;/li&gt;
+&lt;li&gt;Textual Features: Manifestation of subjectivity, projecting subjectivity through self-expression and expressions towards others, e.g., &amp;ldquo;I don&amp;rsquo;t understand, but I am greatly impressed,&amp;rdquo; originating from director Ang Lee&amp;rsquo;s comment on the documentary &amp;ldquo;Bergman Island,&amp;rdquo; expressing his perplexity and astonishment at the documentary; &amp;ldquo;Shuan Q&amp;rdquo; reflects the subject&amp;rsquo;s speechless and mocking emotions towards the object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Cat Meme: The subject of study here pertains to video-based cat memes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Definition: These are infectious videos featuring cats as creative material, rapidly spreading on the internet through continuous active imitation and modification.&lt;/li&gt;
+&lt;li&gt;Uniqueness: Recently, these have gained popularity online, leading to a plethora of second creation videos, resulting in a distinctive phenomenon of dissemination.&lt;/li&gt;
+&lt;li&gt;Example:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BCTCk5/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;是不是你和女朋友旅游现状#猫meme的日常 #猫咪表情包 #恋爱日常 #Le - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BXdQYf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;00后勇闯奇瑞汽车 编导岗区区涨一万粉丝嘛 年轻人会帮助年轻人的对吧&lt;/a&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BXdQYf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;00后整顿职场#猫meme - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BCbSUP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最恐怖的一集 #猫meme #猫咪 #人间真实 #生活 - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;motivation-for-researchchoice-of-topic&#34;&gt;Motivation for Research/Choice of Topic&lt;/h2&gt;
+&lt;p&gt;The use of emojis has become a popular means of online communication among internet users, especially among university students. Recently, there has been a surge in the production of cat memes on the internet, leading to a trend of creating short videos based on these cat memes. The prevalence of these cat meme-based videos as a youth subculture phenomenon revolving around internet symbols holds significant research value.&lt;/p&gt;
+&lt;p&gt;Innovation:&lt;/p&gt;
+&lt;p&gt;While the academic community has established a foundation in the study of emoji dissemination, with clear and in-depth research on their usage, dissemination phenomena, and interaction patterns, there is a lack of research on the use of emojis in the production of derivative videos. The factors influencing the participation of young people in the production or viewing of these derivative videos have not been adequately addressed. Therefore, this study focuses on the interactive behaviors and dissemination phenomena of young users in narrative derivative content, analyzing the motivations of this group.&lt;/p&gt;
+&lt;p&gt;Feasibility:&lt;/p&gt;
+&lt;p&gt;Young people are the primary participants in the production of such derivative content.&lt;/p&gt;
+&lt;p&gt;(If narrowed down to university students—proximity)&lt;/p&gt;
+&lt;h3 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h3&gt;
+&lt;h4 id=&#34;attention-is-needed-on-the-characteristics-and-current-status-of-derivative-content&#34;&gt;Attention is needed on the characteristics and current status of derivative content:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;What narrative elements are present in cat meme derivative videos (such as plot design, character development, emotional construction)?&lt;/li&gt;
+&lt;li&gt;How do cat meme derivative videos reflect characteristics of youth subculture?&lt;/li&gt;
+&lt;li&gt;In what ways do the emoji symbols and language styles in cat meme derivative videos manifest?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;in-empirical-research-the-following-questions-are-to-be-explored&#34;&gt;In empirical research, the following questions are to be explored:&lt;/h4&gt;
+&lt;p&gt;Starting from the perspective of dissemination effects and motivations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What motivates young people to engage in the production of cat meme derivative videos? How do these motivations relate to their social identity, emotional needs, and cultural values?&lt;/li&gt;
+&lt;li&gt;What are the dissemination effects of cat meme derivative videos? Which factors (such as innovativeness, emotional resonance, social engagement) influence the willingness of young people to watch and share them?&lt;/li&gt;
+&lt;li&gt;Are there group differences in the viewing and creation of cat meme derivative videos among young people? How do factors like gender, age, and educational background affect their participation?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Starting from influencing factors and mechanisms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do the characteristics of social networking platforms (such as algorithmic recommendations, interactive mechanisms) influence the popularity and dissemination of cat meme derivative videos?&lt;/li&gt;
+&lt;li&gt;How do the narrative structure and content innovation of cat meme derivative videos promote or restrict their dissemination and acceptance among young people?&lt;/li&gt;
+&lt;li&gt;How do viewing and creation behaviors of cat meme derivative videos form specific chains of interactive rituals within the young community, and how does this ritual promote cultural identity and group cohesion?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Research Purpose and Significance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;research-purpose&#34;&gt;Research Purpose&lt;/h3&gt;
+&lt;p&gt;Through quantitative research, to determine the willingness and motivations of young people to participate in cat meme derivative videos, thereby clarifying the dissemination effects of these videos among young people and potential influencing factors; through qualitative research, from the perspective of youth subculture, to further explore the rapid spread and popularization of cat memes as a new youth subcultural symbol, aiming to delve deeper into the connection between this innovative narrative mode and elements such as youth values, identity, and emotional appeals.&lt;/p&gt;
+&lt;p&gt;Research Significance:&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s society of rapid development in information technology and mobile internet technology, visual culture forms centered around images and videos have become the primary means through which people perceive and understand the world. Young people are faithful producers, consumers, and disseminators of visual culture, and visual culture, with its rich visuality and virtual reality pleasures, is loved by young people and significantly influences them. The spiritual core and value concepts carried by visual culture affect the value orientation and judgment of young people, serving as a force in shaping their values.&lt;/p&gt;
+&lt;p&gt;The emergence of cat meme derivative videos as a favored new visual cultural form among young people warrants study, not only for capturing real-time trends and filling certain practical gaps in youth subculture research academically, but also for making societal contributions by aiding in a better understanding of the cultural and psychological needs of young people, creating spaces of mutual respect, and leaving room for the next wave of innovative developments in youth subculture, thus possessing both research value and necessity.&lt;/p&gt;
+&lt;h2 id=&#34;research-design-research-methods-and-content&#34;&gt;Research Design (Research Methods and Content)&lt;/h2&gt;
+&lt;h3 id=&#34;content-analysis-method&#34;&gt;Content Analysis Method&lt;/h3&gt;
+&lt;p&gt;Corresponding to the research questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What narrative elements are present in cat meme remix videos (such as plot design, character development, emotional construction)?&lt;/li&gt;
+&lt;li&gt;How do cat meme remix videos reflect characteristics of youth subculture?&lt;/li&gt;
+&lt;li&gt;How do the emoticons and language style in cat meme remix videos manifest?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Utilizing the content analysis method to analyze cat meme videos on the Bilibili platform. Sampling videos with the cat meme tag as the overall sampling frame, a certain number of cat meme videos will be selected based on their publication time. After obtaining the videos, they will be coded according to narrative elements, subcultural characteristics, emoticons, and language style as different categories, and the data will be processed.&lt;/p&gt;
+&lt;h3 id=&#34;interview-method&#34;&gt;Interview Method&lt;/h3&gt;
+&lt;p&gt;Corresponding to the research questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What motivates young people to participate in the production of cat meme remix videos? How do these motivations relate to their social identity, emotional needs, and cultural values?&lt;/li&gt;
+&lt;li&gt;Are there group differences in watching and creating cat meme remix videos among young people? How do factors such as gender, age, and educational background influence their participation?&lt;/li&gt;
+&lt;li&gt;How does the narrative structure and content innovation of cat meme remix videos promote or limit their spread and acceptance among young people?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Initially, through in-depth interviews, understanding the personal and social motivations of young people participating in the production of cat meme remix videos, including their social identity, emotional needs, and cultural values. Additionally, conducting focus group discussions on the differences in watching and creating cat meme videos among young groups of different genders, ages, and educational backgrounds, to comprehend the social and cultural factors behind these differences. Simultaneously, discussing how the narrative and innovative content of cat meme remix videos influence the acceptance and dissemination among young people, especially how these factors affect the popularity and acceptance of the videos.&lt;/p&gt;
+&lt;h2 id=&#34;theoretical-framework&#34;&gt;Theoretical Framework&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Interaction Ritual Chains Theory: Proposed by the American sociologist Randall Collins, the Interaction Ritual Chains Theory posits that the study starts with situations, encounters composed of individuals, and micro-situations interlinked to form macro patterns. The network linking local situations is termed an &amp;ldquo;interaction ritual chain.&amp;rdquo; The components of an interaction ritual include: (1) two or more people gathered in the same place, (2) boundaries set for outsiders so participants know who is included and excluded, (3) attention focused on a common object or activity with mutual communication of this focus, and (4) sharing of common emotions or affective experiences. The acquisition of emotional energy is a key reason for individuals engaging in interaction rituals, a core element of interaction ritual chains. Both the creation and viewing of cat meme emoticon remix videos by young groups participate in the interaction ritual of this cultural symbol, craving identity affirmation and emotional resonance from others.&lt;/li&gt;
+&lt;li&gt;Carnival Theory: The fundamental aspects of Bakhtin&amp;rsquo;s Carnival Theory can be summarized by three key terms: carnival, carnivalesque, and carnivalization. Carnival is a folk festival celebration, serving as the starting point and support for carnival theory, with values including the subversion of hierarchies and advocating equal dialogue. The carnivalesque is a symbolic code derived from cultural forms and meanings, categorized into four realms: (1) intimate contact allowed during the carnival, (2) playful banter as a mode of interaction, (3) an attitude of equal intimacy in life, and (4) vulgarity, representing a democratized lifestyle. Possessing characteristics of universality, ritualism, equality, and subversion, carnivalization originates from the carnival itself, with its artistic expression in literature and art termed carnivalization, eliminating any exclusivity and mutual disdain. As a multi-element, multimodal discourse, the meme as a language, with its strong narrative and visual appeal, has become the most favored form of expression among young people, embodying the universal characteristics of carnival, satisfying the public&amp;rsquo;s need for self-expression and political engagement.&lt;/li&gt;
+&lt;li&gt;Dramaturgical Theory: Goffman&amp;rsquo;s Dramaturgical Theory posits that social interactions resemble theatrical performances, where individuals play various roles in daily life and present themselves in different ways. In this theory, the well-known concepts of frontstage and backstage are pivotal. The frontstage is the aspect intentionally displayed to others, while the backstage is where suppressed aspects reside, hidden from the audience&amp;rsquo;s view. Manipulating the frontstage and backstage constitutes &amp;ldquo;impression management.&amp;rdquo; Young groups utilize cat meme emoticons to narrate video content, presenting their &amp;ldquo;ideal&amp;rdquo; selves on the frontstage, while their undisclosed selves remain concealed in the backstage. For both the sender and receiver, the use of memes is not just an expression but also a performance, aiding individuals in shaping their ideal selves more effectively.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Animemory001-The Chronicles of ACGN: The Animated Saga</title>
+        <link>https://wish2333.github.io/en/2024/animemory001/</link>
+        <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/en/2024/animemory001/</guid>
+        <description>&lt;img src="https://wish2333.github.io/en/2024/animemory001/Animemory001.jpg" alt="Featured image of post Animemory001-The Chronicles of ACGN: The Animated Saga" /&gt;
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;//player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1TJ4m1A7op&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/zh/2024/animemory001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the script (CN)&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Programming】FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video</title>
         <link>https://wish2333.github.io/en/2024/ffpygui-preversion/</link>
         <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2024/ffpygui-preversion/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2024/ffpygui-preversion/img0.jpg" alt="Featured image of post FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video" /&gt;&lt;p&gt;Github：&lt;a class=&#34;link&#34; href=&#34;https://github.com/wish2333/VideoExtractAndConcat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://wish2333.github.io/en/2024/ffpygui-preversion/img0.jpg" alt="Featured image of post 【Programming】FFmpeg&#43;Python GUI--Application for the rapid trimming and concatenation of video" /&gt;&lt;p&gt;Github：&lt;a class=&#34;link&#34; href=&#34;https://github.com/wish2333/VideoExtractAndConcat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;VideoExtractAndConcat&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Project Overview&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This project aims to develop a user-friendly Graphical User Interface (GUI) application for the rapid trimming and concatenation of video intros and outros. Integrating a Qt Designer-built interface with the Python programming language and leveraging the powerful ffmpeg tool, users can effortlessly specify video files, set cut points, and execute video processing tasks. The ultimate goal is to enhance video editing efficiency, particularly catering to users who require batch video processing.&lt;/p&gt;
@@ -550,14 +775,14 @@ if __name__ == &#39;__main__&#39;:
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 225; 
-			flex-basis: 541px&#34;
+			flex-grow: 226; 
+			flex-basis: 542px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1.jpg&#34; data-size=&#34;1878x833&#34;&gt;
+	&lt;a href=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1.jpg&#34; data-size=&#34;640x283&#34;&gt;
 		&lt;img src=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1.jpg&#34;
-			width=&#34;1878&#34;
-			height=&#34;833&#34;
-			srcset=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1_hu621b65ec459bb4f1d3e2d41c3b55db05_222552_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1_hu621b65ec459bb4f1d3e2d41c3b55db05_222552_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;640&#34;
+			height=&#34;283&#34;
+			srcset=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1_hue045ae9e1f6748656d2c957241aac87c_73554_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img1_hue045ae9e1f6748656d2c957241aac87c_73554_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;image&#34;&gt;
 	&lt;/a&gt;
@@ -599,11 +824,11 @@ if __name__ == &#39;__main__&#39;:
 			flex-grow: 124; 
 			flex-basis: 298px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2.jpg&#34; data-size=&#34;4145x3330&#34;&gt;
+	&lt;a href=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2.jpg&#34; data-size=&#34;597x480&#34;&gt;
 		&lt;img src=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2.jpg&#34;
-			width=&#34;4145&#34;
-			height=&#34;3330&#34;
-			srcset=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2_hu91b8e53fca5518ae15079617ee5ea137_4950594_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2_hu91b8e53fca5518ae15079617ee5ea137_4950594_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;597&#34;
+			height=&#34;480&#34;
+			srcset=&#34;https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2_hud70d90b1bf27d9f359b53df489731b7e_77138_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/en/2024/cplogy-initial-operation-report/img2_hud70d90b1bf27d9f359b53df489731b7e_77138_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;image&#34;&gt;
 	&lt;/a&gt;
@@ -663,69 +888,30 @@ if __name__ == &#39;__main__&#39;:
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;p&gt;大家好呀，我是你们的新人up主wish，今天我们来锐评一下“MAPPA的又一gay佬番”——无人能敌BUCCHIGIRI。是的，我也愿意这么称呼它，不同于Boy&amp;rsquo;s Love，也不同于乙女，更不是双男主的设计或者是群像剧，我只想用gay佬番这种不伦不类的分类来看待它，因为它本身就不伦不类。要细说这种感受，我想通过将它和两部作品——也就是神之塔和诡秘之主来对比看看。欢迎来到《讲点嗑学》，这里不仅涉及纯爱、扭曲，有CP有CB，也有BL与GL，希望把男孩子的嗑学世界介绍给大家。&lt;/p&gt;
-&lt;p&gt;在这个话题之下，我认为这三部作品的最大共性就是没·有·女·主！或者说是没有能撑得起正宫的女主。在《无人能敌BUCCHIGIRI》里面从第一集开始就充斥着“兄弟你好香”、“GayGay的”弹幕，虽然确实是有所谓女主的，我也暂且称其为女主吧，而且ed也是她的逆后宫专场，当然，对我来说只是类free的男性角色新衣装亮相，媚宅的既是冷冰冰的背景板女主也是那些男角色，就看你是什么样的受众吧，ed里女主的表现远没有正片里的那种反差萌和兄控属性来得有魅力。对男女主CP的讨论更是从一开始的“你没救了”变成“这男主真龟啊”。这也正是我的感受，看到第五集我就看不下去了，于是乎直接跳到第十集去看，以确认这个“龟男主”究竟有没有一点蜕变，结果不仅没有看到男主个人魅力的展现，反而是看到了我看的这些带着腐元素番剧里边，最让我难以接受的人物形象和人物关系。&lt;/p&gt;
-&lt;p&gt;具体的我们先按下不表，我们可以看同季度的《我独自升级》，虽然我只是追着看了动画，准备补全漫画的程度，但是动画里面强行亮相的所谓女主和弹幕一致的态度都表现出它确实也是一部女主缺位的作品。我对《独自升级》尚不完全理解，所以我更希望用《诡秘之主》来进行对比。《诡秘之主》其实在结构上同《我独自升级》类似，都是男主孤独地成长、在各种因素的助推之下不断走向神座的爽文，我认为《诡秘之主》在其最着重描写、也是与男主克莱恩羁绊最深的女性角色——奥黛丽的形象上的确是立地非常好。她是一个充满悲悯而不圣母的人。在塔罗会中，奥黛丽逐渐看到世界的复杂性，不断成长，以至能够独当一面，用自己的力量守卫国家和人民。当发现故乡不再的克莱恩深深陷入迷茫的时候，奥黛丽保持着礼貌的距离，但也始终给予着真切的理解、共情和坚定无比的安慰、支持。这也才铸就了“世界需要正义”的CP。&lt;/p&gt;
-&lt;p&gt;反观无人能敌BUCCHIGIRI，女主与男主的互动只有表面的勾搭，女主比个爱心直接就能控制男主，即使是女主已经向男主展现出来不屑的态度，而男主面对这种轻蔑还是嗯舔上去。这实在是让人难以磕得起来。当然，女主真的很可爱，反差萌也确实很萌，但男主真tm就是个龟男。更让我感到不适的是男主每次跪舔女主的时候总会抛弃兄弟，甚至在过程中不断强调男主的这种区别对待。最为经典的一个场景就是，发小男二被打趴之后，无能的男主脑子里会浮现出小时候他抛弃男二逃跑的回忆，但是仍然龟着，啥都帮不上。而为了女主他直接就喊出“结束处男”化身一拳超人。我想说，你要真每次都这样把男二晾一边，那你就别每次男二被揍都要整一段回忆，搞得好像你很重视似的。其实这种人物设计要放在其他番里面我也就不说什么了，偏偏你就是这么一部女主缺位的gay佬番，你这个番就是想让男角色炒关系的，而其中最直接表达的，既有竹马身份加持，又有愧疚感加持，还有信物加持，而且描述的篇幅也最大，结果反而就是最难吃的，观看的体验真的难以想象的逆天。这也就是无人能敌BUCCHIGIRI的cp、cb都一点磕不起来的原因。实话说，从一开始我就把这番当搞笑番来看，希望能有点兄贵乐子看，和弹幕大家一起哈哈哈下个饭，结果被整得实在无语。男主在第六集开始逐渐可以沟通了，稍微有点好转吧，只能期待男二黑化之后的剧情表现了。当然，曾经我也站在一个旁观者的立场上去同情主角，确实他也不想掺和进这些事情里面来啊。。。这些配角们却一股脑地把主角给卷进来，从这个角度上来说，男主除了女主以外并无其他动力好像也有一些理由。但是看到男主为了女主直接背刺男二加入了魅那斗会的时候，这种感觉就完全消失了。&lt;/p&gt;
-&lt;p&gt;在这里容许我稍微偏题一下，从设定来看看非常相似的家庭教师reborn，在前期一样是一副龟样，重色轻友，所有变身的动机都是为了追女主。从这个角度来说，包括这个学校+帮派的背景，我甚至觉得无人能敌BUCCHIGIRI涉嫌严重的借鉴。但是家教的朋友不是竹马啊，在前期也并没有什么羁绊，简单来说就是你认我作老大，但你谁啊？女主也没有对男主有这样的轻蔑，真的是一个小天使，在未来篇也可以看到女主的人物弧光，镇定而坚强。而且男主在第26画获得手套之后就实现了完全的蜕变，并在后面的指环争夺战逐渐加深了和同伴的羁绊，不断进化，在未来也成长成了牺牲自己而守护整个family的独当一面的老大了。这也就是基本上推荐入坑的家教粉们都会推荐从第20画黑曜篇开始看的原因。但是为什么我没法给无人能敌BUCCHIGIRI这样的容忍度，就是男二的buff太强了，女主也因为硬凹反差萌而出现了缺位。况且你是一个季度的原创番，也没有这样的篇幅去展开更加立体的人物刻画了，基本可以说截到目前为止，无人能敌BUCCHIGIRI这波借鉴真的大失败。&lt;/p&gt;
-&lt;p&gt;《神之塔》其实我认为是能够有效对标《无人能敌BUCCHIGIRI》，也最能回答为什么认为《无人能敌BUCCHIGIRI》的男主是个大龟男是合理的。在神之塔里，前期的所谓女主直接就是背叛男主、成就男主机遇的导火索，而各位公主也暂未出场，所以说在剧情内男主夜每天陪伴、一起战斗的人就是昆和雷克，在剧情外大家也不认蕾哈尔的女主地位（当时）。在欧美，塔的CP排行榜直接就是夜和昆以及雷克一家子霸榜，当然红莲和各位公主确实也有一些表现，但是终究还是没有夜或者是昆的女主力来得高。（哈哈哈顺序能看得出我的倾向）神之塔和无人能敌BUCCHIGIRI的两位男主在前期也都是为了“女主”而一股脑向前冲的状态，但是显然夜非常直接爬塔中相遇相持的伙伴、尊重给予教导的老师。最重要的是，男主在意识到背叛的真相并得到求证之后，他就不舔了啊。在我看来就是这样，就算你还有着一种惯性，没法下狠手或者没法有一个态度的大转变，但起码你得表现出你意识到并思考如何处理这种背叛的真相的，你要坚持也好、感化也好、反杀也好，这也只能归因于人物性格，而不是让我感觉到人物没脑子，或者说是导演能力不足。&lt;/p&gt;
-&lt;p&gt;其实对我来说，夜昆还是更偏CB向的，但是他俩的互动和对彼此的态度确实很有嗑点。在漫画的前期实际上我是没有看出什么嗑点的，动画里面强行加了一些比较暧昧的眼神和肢体接触，我反而会觉得有点过的嫌疑了。在我看来，两人关系的里程碑就是漫画里的十年一抱，但总会觉得来得有点晚了。在夜被推下之后，两人都在登塔的道路上带着对对方的思念不断地冲，相遇在一团混乱之中，又相别于事件沉寂之前，所以大家也都抱着这样一种意难平的感觉吧。其实这种感觉在世界与正义的cp里边也存在，滚滚向前的历史车轮带着大家不断地向前冲刺，反而使得两人尽管在相互陪伴却都显得那么地令人遗憾。&lt;/p&gt;
-&lt;p&gt;当然，还有一个两部作品的共同点也是可以很好回答为啥无人能敌BUCCHIGIRI达咩哒。那就是男主的个性魅力真的有点“德不配位”的。夜不是因为他性格为人有啥不好，而且很多人投资他也是看中了他的背景，但主要是在前期并没有展现出那么强的人格魅力，就会有那么多对他愿意付出真心的同伴，这还是稍微有点不太合理的。无人能敌BUCCHIGIRI呢，我始终是没办法理解为啥那几个兄弟为啥会那么地有点死心塌地地要争取他相信他，甚至到了令人恶心的状况，就因为设定上被正气之人打了一拳就会陷入爱恋的莫名的魅惑属性吗。那男二又是怎么解释的，就男主他那个灰溜溜逃走和翻脸不认人的样子真yue了吧。这又得说一下家教了，我觉得阿纲绝对是有、并且在很早就表现出了他充足的人格魅力的，而且family的大家对他也都是逐渐从怀疑到接受的，这种精细的把控和人物与人际关系的成长，才是家教的观众们都会在最后一首ED画布响起时泪目的原因。&lt;/p&gt;
-&lt;p&gt;再简单说一下配角，我同意弹幕所说的，配角都比主角要更有弧光，虽然他们即使留级、发疯，但是根本上来说都是有自己的一整套行动逻辑的，而且也起码是有一点脑子的，明白是非曲直，回忆描写比男主还丰富（我到现在都还没懂男主为啥要那么执着于“结束处男”，我身边不乏喊着这样口号的同学，但他们也就只是把它当成一个梗或者一个期望，而不会把它最为最高信条）我觉得比较描写缺失的是粉毛，他跟蓝毛明显是有意要凑一对cp的，但是具体理由好像也没什么表达，看着挺突兀的。&lt;/p&gt;
-&lt;p&gt;讲点嗑学，希望能带你们走进属于我的嗑学世界，那我们下期再见。&lt;/p&gt;
-&lt;p&gt;其实这是我对这一系列的视频的尝试，其实这个系列我策划得也很久了，但是一直下不了决心去做，总感觉我的水平和感受可能都不太足够好，但是总归要走出第一步的。真的会常常希望我的想法是能够分享出来，即使可能最后只有我看吧，也是一种纪念了。在这里我就再预告一个系列和下一期讲点嗑学，系列名叫做Animemory，带着大家一起回顾一下我比较喜欢的番剧。下一期讲点嗑学我们来聊聊那些扭曲的关系中的嗑点，我会以戏言系列为主角来展开一些延伸和对比，欢迎大家点点关注持续收看，我主页里有两个比较低创的MAD，但如果可能也希望大家来看看，那我们就再见啦。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/zh/2024/cplogy01&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the script (CN)&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Exploring Practice Paths for Cultural Square Empowerment in Rural Revitalization Under the Context of Cultural and Tourism Communication--An Investigation Based on Feng Village, a National Key Rural Tourism Site in Guangxi, China</title>
+        <title>【Conference Paper】Exploring the practical path of cultural squares empowering rural revitalization under the background of cultural tourism communication.</title>
         <link>https://wish2333.github.io/en/2024/tourism-communication/</link>
         <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2024/tourism-communication/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2024/tourism-communication/img1.jpg" alt="Featured image of post Exploring Practice Paths for Cultural Square Empowerment in Rural Revitalization Under the Context of Cultural and Tourism Communication--An Investigation Based on Feng Village, a National Key Rural Tourism Site in Guangxi, China" /&gt;&lt;blockquote&gt;
-&lt;p&gt;This article is entirely my &lt;strong&gt;original&lt;/strong&gt; work, completed independently on January 10, 2024. Kindly respect the intellectual property rights. The full Chinese text, appendices, reference citations, and other related content are available in the accompanying PDF document.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;tourism_communication.pdf&#34; &gt;tourism_communication.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;With the proposition of rural revitalization and the rise of cultural and tourism industries, the demand for rural image construction and dissemination has increasingly become prominent. Rural cultural squares, as essential components of novel public spaces, have yet to receive in-depth scrutiny regarding their close relationship with rural revitalization strategies and their roles in cultural and tourism communication. This paper takes rural cultural squares as its research subject and, through an investigation of Feng Village in Guangxi Province, reveals that rural cultural squares have gradually evolved into pivotal public gathering places and objects of cultural and tourism communication in Feng Village. They enrich the villagers&amp;rsquo; cultural lives and serve as a window for tourists to understand the culture of Feng Village. However, issues concerning power representation inherent in the development of cultural squares and their inadequacies in meeting the demands of cultural and tourism communication are also noteworthy.&lt;/p&gt;
-&lt;p&gt;This paper emphasizes the importance of employing strategies from three dimensions – memory empowerment, activity empowerment, and digital empowerment – to enhance the empowering function of cultural squares. By integrating these strategies, rural cultural squares can better contribute to rural revitalization efforts and optimize their role in the broader context of cultural and tourism dissemination.&lt;/p&gt;
-&lt;h2 id=&#34;research-origins&#34;&gt;Research Origins&lt;/h2&gt;
-&lt;p&gt;Rural public cultural spaces serve as the carrier domains where villagers engage in public life and constitute a crucial aspect of rural image construction. With the growing significance of rural cultural and tourism image creation and dissemination, the development and utilization of rural public cultural spaces face mounting challenges. Novel public cultural spaces emphasize the integration of elements such as aesthetic taste, humanistic care, regional characteristics, and social influence, forming a composite of both public and cultural spaces.[1] China&amp;rsquo;s 14th Five-Year Plan for Cultural Development calls for the establishment of such novel public cultural spaces, positioning rural public cultural space construction as a pivotal force driving rural revitalization. This not only aims at enhancing the rural image but also seeks to transmit national cultural confidence and traditional essence through the cultivation of cultural spaces.[2]&lt;/p&gt;
-&lt;p&gt;The Ministry of Culture and Tourism, the National Development and Reform Commission, and the Ministry of Finance, in their opinions on promoting high-quality development of public cultural services, emphasize the innovative expansion of urban and rural public cultural spaces. This involves adapting measures to local conditions and activating excellent rural traditional culture through the construction of thematic spaces like cultural auditoriums, village opera stages, and intangible cultural heritage learning centers.[3] Rural cultural squares, as agglomerations of such thematic spaces, are a significant component in developing new types of rural public cultural spaces, carrying rich regional cultures and exerting considerable social influence.&lt;/p&gt;
-&lt;p&gt;Tourism and communication are inherently intertwined. Entering the 21st century, the Internet medium has widely and profoundly participated in cultural and tourism communication, rendering new characteristics in rural cultural and tourism dissemination within the information environment.[4] Both cultural squares and libraries, museums cannot detach themselves from the practices of communication under the Internet context, making cultural and tourism communication a fundamental backdrop for exploring the development of new public spaces.&lt;/p&gt;
-&lt;p&gt;Rural cultural squares represent the most important venues for villagers&amp;rsquo; cultural activities, constituting the most utilized and densely populated public cultural spaces. They connect traditional customs with local memories, vividly embodying the cultural features of the countryside and surrounding landscapes.[5] In the practice of cultural and tourism communication, rural squares act as windows showcasing the unique charm of Chinese villages and transmitting historical culture, thereby infusing new cultural connotations into national image building. Therefore, a deep understanding of the role cultural squares play in cultural and tourism communication can contribute to constructing a socially influential Chinese rural image and boosting the country&amp;rsquo;s cultural soft power.&lt;/p&gt;
-&lt;p&gt;Against this backdrop, this paper endeavors to explore how cultural squares, as novel public spaces, can empower rural revitalization through cultural and tourism communication practices. What problems arise during this process? How do the driving and interactive roles in cultural tourism affect the construction and development of cultural squares? Have they given rise to new forms of cultural squares? Addressing these questions constitutes an attempt to elevate the empowering capabilities of cultural squares, innovate public cultural spaces, consolidate rural memories, and facilitate cultural and tourism communication.&lt;/p&gt;
-&lt;h2 id=&#34;literature-review-and-theoretical-framework&#34;&gt;Literature Review and Theoretical Framework&lt;/h2&gt;
-&lt;h3 id=&#34;literature-review&#34;&gt;Literature Review&lt;/h3&gt;
-&lt;p&gt;Over the past century since the emergence of sociology, scholars have ceaselessly engaged in the imagination of space. The concept of space has evolved towards more abstract notions of &amp;ldquo;social space&amp;rdquo; following in-depth discussions by French social thinkers. From Bourdieu&amp;rsquo;s &amp;ldquo;fields&amp;rdquo; to Lefebvre&amp;rsquo;s &amp;ldquo;production of space,&amp;rdquo; there is a shared emphasis on the structural nature of social space, while Simmel and subsequent researchers have approached it from the perspective of social interaction, focusing on the influence of social structures and situational interactions on individual behavior.[6] Research in spatial sociology, whether concerning the production-oriented or situational aspects of space, predominantly engages in &amp;ldquo;ontological inquiries&amp;rdquo; about space itself.&lt;/p&gt;
-&lt;h4 id=&#34;spatial-communication-studies&#34;&gt;Spatial Communication Studies&lt;/h4&gt;
-&lt;p&gt;The relationship between communication studies and spatial sociology was first deliberated within the urban ecology framework of the Chicago School. As Chinese communication theory enters a period of reflection and localization, academic practices concerning the connection between communication and rural development have also experienced shifts in direction and approach.[7] Presently, research in communication studies regarding rural public spaces primarily unfolds across three dimensions:&lt;/p&gt;
-&lt;p&gt;a. &lt;strong&gt;Examination of the Publicness of Rural Cultural Spaces and Their Relationship with Rural Governance.&lt;/strong&gt; Ge Mingsi [8] advocates for actively promoting rural &amp;ldquo;new infrastructure,&amp;rdquo; enhancing rural societal mediatization levels, accelerating the cultural construction of county-level integrated media platforms, and innovating the generation of content. Tian Peng [9] argues that the construction of residential areas for rural residents requires breaking free from the constraints of institutional-benefit-driven dynamics and administrative-led practices, reconstructing the integration mechanisms of native societies, allowing farmers to rebuild regional publicness and transition smoothly into social communities. Song Chao et al. [10] address the publicness of rural spaces, proposing an &amp;ldquo;empowerment through media—reconstruction of publicness—restructuring governance&amp;rdquo; analytical framework, viewing county-level integrated media platforms as significant carriers of publicness.&lt;/p&gt;
-&lt;p&gt;b. &lt;strong&gt;Exploration of the Image Construction of Rural Public Spaces.&lt;/strong&gt; Wu Xinyan [11] proposes that the overall image construction of rural public cultural spaces should be guided by the value of cultural confidence, considering spiritual, place-based, and folk craftsmanship cultural spaces. Fu Ting et al. [12], through the study of public reading spaces, suggest that the brand development strategy for rural public spaces requires equal consideration of service demands from various audience groups and the strategic use of multiple channels to enhance brand influence.&lt;/p&gt;
-&lt;p&gt;c. &lt;strong&gt;Focus on the Impact of Online Communication and New Media Development on Rural Public Cultural Spaces.&lt;/strong&gt; Gu Dazhi et al. [13] argue that the impact of new media erodes fragile rural cultures, necessitating the use of rural cultural spaces for the reconstruction and revival of rural public cultural spaces. Ji Guangxu [14], analyzing青少年 offline social disembedding phenomena from the perspective of social affordances, finds that in the production process of rural public spaces, differences exist in the perceptions and practices among activity subjects, highlighting the need to address both the challenges and opportunities brought by the internet to rural public space formation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Moreover, spatial communication studies extend to some unique perspectives.&lt;/strong&gt; Xie Taiping [15], comparing the innovation and diffusion of &amp;ldquo;rural book houses&amp;rdquo; and &amp;ldquo;village square dance,&amp;rdquo; discovers different communication effects due to varying spatial characteristics in rural public space cultural construction. Li Hongyan et al. [16], through research on participants in rural markets, find that embodied communication imbues tension between village community information and market community information. Despite extensive research, current studies on public space communication largely focus on macroscopic examinations, the roles of space in rural governance, and its function as a medium, with less attention devoted to studying the audiences within these spaces.&lt;/p&gt;
-&lt;h4 id=&#34;studies-on-rural-cultural-squares&#34;&gt;Studies on Rural Cultural Squares&lt;/h4&gt;
-&lt;p&gt;Research on typical rural public spaces like cultural auditoriums, village opera stages, and museums is relatively mature. Rural cultural squares, as aggregators of various themes and vital components of new rural public cultural spaces, have increasingly become significant research subjects. Liu Mingtao [17] analyzes rural cultural squares using spatial sociology, suggesting that residents&amp;rsquo; voices and their participatory visions for space are being squeezed and require greater inclusion of resident users. Tian Jingli et al. [18] contend that rural squares should increase rural flavor and uniqueness, respecting the strong desires of villagers and reflecting their aspirations for a better life. Ren Hanchen [19], through the study of Huagu Deng culture in Fengtai County, Anhui Province, finds that rural cultural squares serve as an ideal vessel for continuing regional cultural spirit. Overall, research on rural cultural squares under the background of cultural tourism communication is still in its early stages, though planning practices abound, with a primary focus on landscape design and governance issues. Studies within the context of cultural tourism communication pay more attention to rural cultural identity and its transmission.&lt;/p&gt;
-&lt;p&gt;Through the review of existing literature, it has been observed that research in the fields of communication studies, spatial sociology, and rural public spaces such as cultural squares generally tends to center on &amp;ldquo;ontological explorations&amp;rdquo; of space, focusing primarily on the inherent properties and characteristics of these spaces themselves. However, there is a relative dearth of investigation into the intricate interplay between individuals, space, and communication processes. Consequently, this paper devotes particular attention to the driving forces and interactive logics behind the development and construction of cultural squares in the context of cultural tourism communication. It aims to delve into the empowering practice pathways that take into account feedback from the audience, thereby exploring the dynamic relationships between individuals, the spaces they inhabit, and the act of communication within these environments.&lt;/p&gt;
-&lt;h3 id=&#34;theoretical-framework&#34;&gt;Theoretical Framework&lt;/h3&gt;
-&lt;p&gt;The theoretical framework of this paper draws upon two main sources: (1) the &amp;ldquo;use-experience&amp;rdquo; perspective in spatial sociology, and (2) the Innovation Diffusion Model.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The &amp;ldquo;use-experience&amp;rdquo; perspective in spatial sociology&lt;/strong&gt; is a conceptual framework developed by Chinese scholars, influenced by Lefebvre&amp;rsquo;s theory of spatial production and Giddens&amp;rsquo; structuration theory in their exploration of the &amp;ldquo;action-structure&amp;rdquo; path in spatial research. At its core, this perspective emphasizes people&amp;rsquo;s practical behaviors and perceptual experiences within space. This viewpoint shifts the focus from conventional spatial structures and forms to actual usage and perception of space, emphasizing its practicality. While Lefebvre asserts that space is a product of social practice, the &amp;ldquo;use-experience&amp;rdquo; approach highlights individuals&amp;rsquo; practical engagement and sensory experiences within space. Building on Giddens&amp;rsquo; structuration theory, which attends to the influence of social structures on individual actions, the &amp;ldquo;use-experience&amp;rdquo; theory underscores subjective practices and experiences in space, introducing a stronger subjective dimension. It encompasses three aspects of practical analysis: 1) individuals&amp;rsquo; perception, utilization, and interaction with space; 2) interest groups participating in space governance based on their feelings and emotional investment in space; and 3) individuals&amp;rsquo; communication activities in networked spaces and related usage behaviors.[20]&lt;/p&gt;
-&lt;p&gt;This paper does not neglect the &amp;ldquo;action-structure&amp;rdquo; theoretical pathways formed by spatial practice and structuration theories, but rather employs them to analyze the status quo of rural cultural squares while using the &amp;ldquo;use-experience&amp;rdquo; theory to examine the practices and experiences within these squares, providing a multifaceted consideration of the roles rural cultural squares play in cultural tourism communication.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The Innovation Diffusion Theory&lt;/strong&gt; emerged in the early 1960s from sociologist Everett Rogers, focusing on explaining how new ideas, products, or practices spread throughout society and influence it. Its key concepts include innovation, adopters, communication channels, social systems, and temporal factors. The theory underscores the social nature of information diffusion and focuses on the adoption process of new practices.&lt;/p&gt;
-&lt;p&gt;In the broader context of rural revitalization and cultural tourism communication, the Innovation Diffusion Theory provides a profound and comprehensive perspective for analyzing rural cultural squares. This paper will employ the Innovation Diffusion Theory to analyze the functions and cultural connotations of cultural squares, identify the individuals or organizations adopting and embracing their innovations, investigate the relationship between cultural square&amp;rsquo;s cultural tourism communication, social networks, and cultural inheritance, and explore the most effective pathways for cultural squares in cultural tourism communication.&lt;/p&gt;
-&lt;p&gt;Spatial sociology emphasizes the practicality and subjective experience of social space, whereas communication studies focus on information transmission and social interaction. Within rural squares, these two disciplines intertwine. Through the &amp;ldquo;use-experience&amp;rdquo; theory in spatial sociology, we can deeply analyze individual behavior, perception, and interaction within the square, revealing the mutual shaping of space and social interaction. Under a communication studies lens, we can understand how squares become sites for information transmission, guiding the diffusion of cultural elements. The concepts from spatial sociology offer fresh insights for interpreting the social nature of squares, enabling us to comprehend more fully the multidimensional impacts of rural squares in cultural tourism communication, including social interaction, cultural experiences, and information dissemination.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文为完全由本人独立创作于2024年1月10日，请勿侵权。本文为英文译文，中文原文、附表、参考文献等见附件PDF&lt;/p&gt;
-&lt;/blockquote&gt;
+        <description>&lt;img src="https://wish2333.github.io/en/2024/tourism-communication/img1.jpg" alt="Featured image of post 【Conference Paper】Exploring the practical path of cultural squares empowering rural revitalization under the background of cultural tourism communication." /&gt;&lt;p&gt;The manuscript has been accepted for the 30th AMIC conference. I will be attending and presenting on September 24-26. The link will be provided once the conference proceedings and abstracts are published.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://amic.asia/30th-amic-annual-conference/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The official website of the conference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/zh/2024/tourism-communication&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the full paper (CN)&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Social Spatial Inequality within The Dingfuzhuang Community</title>
+        <title>【Academic Research】Social Spatial Inequality within The Dingfuzhuang Community</title>
         <link>https://wish2333.github.io/en/2023/social-spatial-inequality-within-dingfuzhuang/</link>
         <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2023/social-spatial-inequality-within-dingfuzhuang/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2023/social-spatial-inequality-within-dingfuzhuang/img5.jpg" alt="Featured image of post Social Spatial Inequality within The Dingfuzhuang Community" /&gt;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img5.jpg" alt="Featured image of post 【Academic Research】Social Spatial Inequality within The Dingfuzhuang Community" /&gt;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Through an urban sociological lens, this investigation will delve deeply into the unequal distribution and utilization of social spaces among different areas, neighborhoods, or specific locales within the Dingfuzhuang area of Chaoyang District, Beijing. We aim to identify the concrete manifestations of such inequalities within the particular community, encompassing aspects such as the distribution of infrastructure, allocation of public service facilities, and usage patterns of residential public spaces.&lt;/p&gt;
 &lt;h2 id=&#34;research-background&#34;&gt;Research Background&lt;/h2&gt;
 &lt;h3 id=&#34;social-space&#34;&gt;Social Space&lt;/h3&gt;
@@ -794,15 +980,17 @@ Dingfuzhuang is situated along the horizontal axis of Beijing, and within the ur
 &lt;li&gt;秩序、利润与日常生活——公共空间生产及其困境，杨宇振，2018&lt;/li&gt;
 &lt;li&gt;社会空间和社会变迁——转型期城市研究的“社会—空间”转向，钟晓华，2013&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the document (CN)&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Webclass-AutoCut based on Free Software</title>
+        <title>【Post-Production】Webclass-AutoCut based on Free Software</title>
         <link>https://wish2333.github.io/en/2023/webclass-autocut-free/</link>
         <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2023/webclass-autocut-free/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2023/webclass-autocut-free/img1.jpg" alt="Featured image of post Webclass-AutoCut based on Free Software" /&gt;&lt;h2 id=&#34;application-scenarios&#34;&gt;Application Scenarios&lt;/h2&gt;
+        <description>&lt;img src="https://wish2333.github.io/en/2023/webclass-autocut-free/img1.jpg" alt="Featured image of post 【Post-Production】Webclass-AutoCut based on Free Software" /&gt;&lt;h2 id=&#34;application-scenarios&#34;&gt;Application Scenarios&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Online Course Editing:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Legacy Courses:&lt;/strong&gt; Batch update of intros and outros across varied formats (encoding, resolution, frame rate, audio format).&lt;/li&gt;
@@ -1073,625 +1261,24 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 </description>
         </item>
         <item>
-        <title>The Process of Research in Dingfuzhuang Community</title>
+        <title>【Academic Research】The Process of Research in Dingfuzhuang Community</title>
         <link>https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/</link>
         <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/img1.png" alt="Featured image of post The Process of Research in Dingfuzhuang Community" /&gt;&lt;h1 id=&#34;理解城市-结课作业&#34;&gt;理解城市-结课作业&lt;/h1&gt;
-&lt;h2 id=&#34;2023-10-28选题黄淼森&#34;&gt;2023-10-28选题：黄淼森&lt;/h2&gt;
-&lt;p&gt;社会空间不平等问题&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;参考文献&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/452072791&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;zhihu/p/452072791&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/106501422&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;zhihu/p/106501422&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sohu.com/a/482049556_121124003&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;sohu/a/482049556_121124003&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://fjyl.cnjournals.com/fjyl/ch/reader/create_pdf.aspx?file_no=20200910&amp;amp;flag=1&amp;amp;journal_id=fjyl&amp;amp;year_id=2020&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;fjyl/file_no=20200910&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/review/14200117/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;douban.com/review/14200117/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选题报告&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在报告中，将关注的主题定为“身边的社区存在的社会空间不平等现象”。这着眼于城市社会学的视角，分析社区内不同区域、地段或特定场所之间的社会空间分配和利用不平等。通过案例分析，将探究社会空间不平等现象的具体表现，比如不同社区内部的基础设施分布、公共服务设施的不均匀分配、居民的社会地位差异等。可选取多个案例展示在特定社区内部的社会空间不平等，强调特定地区资源分配和利用的差异，以及这些差异对居民生活和社会互动产生的影响。这样的报告旨在深入挖掘城市中社会空间不平等现象，强调社会公平和可持续发展的重要性，同时提出可能的改善措施以促进更公正、更平等的社会空间分配。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2023-10-30选题报告撰写&#34;&gt;2023-10-30：选题报告撰写&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;规划资料&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.bjchy.gov.cn/affair/announcement/8a24fe836e8810aa016ef2c051994efb_14.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;bjchy/affair/announcement/fb_14&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.beijing.gov.cn/zhengce/gfxwj/202111/t20211110_2533543.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;beijing.gov.cn/zhengce/gfxwj&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&#34;选题报告&#34;&gt;选题报告&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;blockquote&gt;
-&lt;p&gt;定福庄社区内存在的社会空间不平等现象&lt;/p&gt;
-&lt;p&gt;我们将通过城市社会学的视角，深入探究北京市朝阳区定福庄内不同区域、地段或特定场所之间的社会空间分配和利用不平等现象。我们将寻求了解这些不平等现象在特定社区内的具体表现，如基础设施分布、公共服务设施的分配以及居民区公共空间的使用情况。本研究将采用案例分析方法，选取多个具体案例作为研究对象，通过实地调研、数据收集等手段，用定性的方式探索城市社区内的社会空间不平等情况，着重分析这些差异对居民生活和社会互动的影响。我们强调社会公平和可持续发展的重要性，并尝试提出可能的改善措施。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&#34;社会空间资料&#34;&gt;社会空间资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ptext.nju.edu.cn/34/08/c13372a472072/page.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;张一兵|社会空间的关系性与历史性&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;列斐伏尔社会空间论的具体讨论域，同样是在讨论资本主义生产方式，但是他关心的问题是这一生产方式在实际社会空间中发生的历史过程。在他看来，资本主义生产方式的出现，在交通运输上首先利用了现存空间中的条件，原先客观环境中已经存在的河流和大海，人们的步行、骑马、骑自行车的活动都是已经发生在传统生产方式中的客观条件和主体实践，除此之外，资本主义新型的生产方式必须拥有自己新型的交通空间，这种新型空间建构是随着资本主义工业生产的需要，建设了铁路、高速公路和航空港。&lt;/li&gt;
-&lt;li&gt;“对空间的渗透已经在实现制度渗透获得霸权”&lt;/li&gt;
-&lt;li&gt;也由此，列斐伏尔指认说，他所重构的社会空间是“某种‘行走在大地上’（sur le terrain）的现实（réalisation），即在某种被生产出的社会空间（espace social produit）之中的现实，是社会关系的生产和再生产（rapports sociaux de production et de reproduction）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;纪要社会空间从齐美尔到戈夫曼--北京大学社会学系httpwwwshehuipkueducnsecondindexaspxnodeid52ampcontentid7860&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.shehui.pku.edu.cn/second/index.aspx?nodeid=52&amp;amp;amp;contentid=7860&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;纪要|社会空间:从齐美尔到戈夫曼- 北京大学社会学系&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;社会空间&#34;&gt;社会空间&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;社会空间具有三个构成要件：行为主体（actors），位置（positions），以及二者之间的联结关系&lt;/li&gt;
-&lt;li&gt;社会空间的概念与其他常见概念相区别——社会结构关注社会生活的结构和形状，而非行为主体的自主性；社会系统关注行为主体的功能和角色，而非空间位置；社会网络关注行为主体之间的纽带，而非行为主体和位置之间的联结。&lt;/li&gt;
-&lt;li&gt;区别于法国学者布迪厄 (Pierre Bourdieu) 和列斐伏尔 (Henri Lefebvre) 的论述（两人都受到马克思主义理论的深刻影响，而且强调社会空间的结构性。），从齐美尔到戈夫曼的这一脉传统却并非是结构性的，而是以社会互动为基础，有着他们独特的关注与品味。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;齐美尔的社会空间&#34;&gt;齐美尔的“社会空间”&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;社会空间存在有意识的边界，&lt;strong&gt;空间具有 “内聚性”(internally cohesive)。&lt;/strong&gt; 因而齐美尔较少考虑空间的外部，或者只是将其作为环境来对待。&lt;/li&gt;
-&lt;li&gt;社会距离是存在时空性的。&lt;u&gt;时间和空间意义上的社会距离指的并不是两点之间的一个固定距离，往往涉及人们之间的&lt;/u&gt;​&lt;u&gt;&lt;strong&gt;情感关系&lt;/strong&gt;&lt;/u&gt;​&lt;u&gt;。&lt;/u&gt;空间距离对情感可能产生不同效果。两个人之间的空间距离越近，既可能使感情更加强烈，也可能带来很强的压迫性。社会距离同物理距离之间不可分割，与人的情感关系也是如此。&lt;/li&gt;
-&lt;li&gt;在社会空间之中，还存在一种有&lt;strong&gt;盲点&lt;/strong&gt;的情形，并非每个社会空间的位置都有人占领，这就产生了齐美尔所谓的 “虚无空间”（empty space）。在芝加哥学派的理论中，只有当存在虚无空间之时，才会有人群去竞争和抢占，空间的流动性也由此产生。这一点可谓齐美尔与芝加哥学派的社会空间理论与法国理论的重要区别之一。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;芝加哥学派的社会空间&#34;&gt;芝加哥学派的“社会空间”&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;他在一张同心圆图上将芝加哥分为由中心到边缘的各个不同区域，去研究处于不同位置上的不同群体之间如何互动，不同族裔在城市空间之中如何流动，而非完全关注城市的结构性特征。这是当代城市社会学研究中时常忽略的一个问题。&lt;/li&gt;
-&lt;li&gt;芝加哥学派认为社会互动有四种基本形态：竞争（competition）、冲突（conflict）、顺应（accommodation）、同化（assimilation）。此外还有一种经常被后来的研究忽略的形态——&lt;strong&gt;孤立（isolation）&lt;/strong&gt; ，它同齐美尔的虚无空间有所关联，因为当两个人或两个群体之间的空间是虚无空间时，就会产生孤立。&lt;/li&gt;
-&lt;li&gt;既然社会空间存在边界，就会有入侵的现象，入侵者和空间区位原来的占据者之间产生互动，从而出现各个人群的&lt;strong&gt;适应现象&lt;/strong&gt;。帕克、伯吉斯、麦肯齐 (Roderick D. McKenzie) 等第一代芝加哥学派的社会学家认为，人类社会的诸多文化特征，都是在入侵与适应的过程之中产生的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;戈夫曼的社会空间理论&#34;&gt;戈夫曼的社会空间理论&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;《精神病院》(Asylums) 、《公共空间的关系》(Relations in Public)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;《精神病院》一书中，提出了 “全控机构”(total institution) 这一经典概念，精神病院、监狱、军队、寄宿学校等全控机构都把人同外界隔离开来，让其原本的自我消亡，在机构中形成新的训练和秩序。~值得注意的是，戈夫曼的这一概念同芝加哥学派将城市作为一个生态系统进行研究，以及齐美尔关于框架和边界的论述，具有一个共同点，也就是都将研究者所关注的社会空间之外的东西隔离出去，不予考虑，或者只作为外部环境来考虑。~&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;《公共空间的关系》中《自我的领地》(The Territories of the Self) 一文从自我出发，探查自我周边的空间是如何组织的。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;“领地” 有三种类型：固定的（fixed）、情境化的（situational）、自我中心的（egocentric）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;由此，他区分了八种个人领地——个人空间 (personal space)，即属于个人的专属空间；落脚之处 (the stall)，比如公共空间一些舒适的椅子、电话亭等暂时性的空间；用途空间 (use space)，比如被 “占用” 的谈话人之间的视线、运动员使用器械的空间；次序 (the turn)，即通过先来后到等次序确定的空间；外套 (the sheath)，比如遮挡皮肤的衣服或一把伞；占有领地 (possessional territory)，比如用外衣、帽子、手包等个人物品所占有的空间；信息禁区 (information preserve) 以及谈话禁区 (conversational preserve)，比如某一微信群内信息共享、自由谈话，但不能随意扩展到外面的空间。可以看出，戈夫曼的这个分类是将物理空间与社会空间混在一起论述的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;“标记”(markers) 与 “侵犯”(encroachment)的概念。对于领地的占有需要标记，通常是用一个私人物品放在某处，形成行为主体和位置之间的关系。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;侵犯也有不同的种类，一种是进入他人的领地，另一种则是放弃个人的领地，比如在排队过程中突然走掉，也是对次序的侵犯。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&#34;选题修改方向&#34;&gt;选题修改方向&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;个人&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;分商业区域、公园区域、政宣区域&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;~两个人之间的空间距离越近，既可能使感情更加强烈，也可能带来很强的压迫性。社会距离同物理距离之间不可分割，与人的情感关系也是如此。~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;联想：封闭空间与开放空间之争&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;~在芝加哥学派的理论中，只有当存在虚无空间之时，才会有人群去竞争和抢占，空间的流动性也由此产生。~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;联想：最终也会落到平等与正义的讨论当中，与法国理论在这方面殊途同归&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;2023-11-22研究报告撰写&#34;&gt;2023-11-22：研究报告撰写&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;阅读笔记&#34;&gt;阅读笔记&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;秩序利润与日常生活公共空间生产及其困境_杨宇振&#34;&gt;秩序、利润与日常生活——公共空间生产及其困境_杨宇振&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;“定序”：局部调整、优化运动要素间的配置关系来持续；“去序”：从总体的角度检讨系统结构的合理性，找新的总体结构。&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;社会变迁过程中的“定序”与“去序”的辩证关系；权力和资本对于“定序”和“去序”的持续再结构和调节构成社会变迁的普遍状况。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;公共空间：不同管道（强调人口的流动）密集形成的“管束”成为公共空间。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;公共空间有观念、社会和物质的三种属性&lt;/li&gt;
-&lt;li&gt;两种公共空间：管束型和节点型公共空间成为权力与资本在“定序”和“去序”过程中的关键调节领域。&lt;/li&gt;
-&lt;li&gt;资本与权力的运动方向和内容都将重新切割和形塑公共空间的内涵与社会作用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;公共空间对社会空间的现实意义&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;阿里·迈达尼普尔曾经提出，历史过程中，公共空间丧失了它之前的诸多整合的功能，随着现代社会的变迁，公共空间专门化了（由于产业、功能的专门化），但“公共空间作为私密空间之间的媒介……抵制了社会性空间裂变的扩张”。历史进程中，特别是在现代化的历史进程中，公共空间的运动方向与内容不断受到权力与资本的切割和形塑，但仍然在社会生活中具有建立、粘结被异化的人群间沟通的可能；或者更清晰地说，经由公共空间来生产反异化、反规训的可能。对于主要受雇于强权与资本的专业人员，认识公共空间的多义性，为生产公共空间多义性提供物质形态的可能，而不是从形态美学的角度出发，是一个需要批判性认知和创造性实践的过程。&lt;/li&gt;
-&lt;li&gt;迈达尼普尔Ａ城市公共空间的设计与开发为什么重要？丨Ｍｊ／／卡斯伯特ＡＲ．设计城市城市设计的批判性导读韩冬青，王正，韩晓峰等译．北京：中国建筑工业出版社，２０１１：１６０．&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;社会空间和社会变迁转型期城市研究的社会空间转向钟晓华&#34;&gt;《社会空间和社会变迁——转型期城市研究的“社会—空间”转向》钟晓华&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;社会科学深远的空间转向&#34;&gt;社会科学深远的“空间转向”&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;芝加哥学派城市生态学将“空间区位布局简化为社会世界复杂度”的城市生态学，区位、位置、流动性等概念被用来测量、描述和最终解释社会分层现象。&lt;/li&gt;
-&lt;li&gt;到60、70年代，以列斐伏尔为代表的新马克思主义城市社会学重新引入社会再生产、资本循环等概念，将空间作为重要的社会资源及力量，城市再生产由空间中的生产（productioninspace）转向了空间本身的生产（productionofspace）。&lt;/li&gt;
-&lt;li&gt;后现代地理学家索贾（EdwardSoja）继而将社会空间的意涵进一步深化，提出“空间性”（spatiality）概念，使之成为与“历史性、“社会性”并置的社会分析维度。&lt;/li&gt;
-&lt;li&gt;继一系列空间的价值维度和理论范式维度方面的学术努力之后，马克·戈特迪纳提出了更具操作性的社会空间视角（sociospatialperspective）他从以上理论中取精华，又避免了传统空间生态学和新马克思主义空间理论两者的简化论特征，试图将阶级、教育、权力、性别、种族等更多因素以一种整合的观点纳入城市空间的分析中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;中国语境的社会空间&#34;&gt;中国语境的社会空间&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;体制转型：&lt;/strong&gt; 城市空间的改造并不是列斐伏尔意义上的空间生产；从生产导向的城市计划经济向服务消费导向全球市场经济转变的生产方式，需要生产出不同于以往的新空间，故此产业空间、居住空间和消费空间都发生了空间位置与形态上的巨大变化。城市空间的变迁背后不仅是资本累积的逻辑，也体现了政治控制与意识形态的逻辑。关于具体的中国城市空间生产机制的讨论， 多集中于城市政府角色的转变。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;经济结构变迁：&lt;/strong&gt; 城市空间结构的演化呈现出越来越强的经济利益驱动性和利益冲突特征。城市空间生产已成为当代中国建构社会生活世界的根本生产方式之一。与其他商品一样，这样的资本循环引发了空间的“同质化”，但由于空间不同于其他商品，是不可再生的稀缺资源，因此所谓新空间的生产不过是对旧空间的重复破坏以获取空间的交换价值，从而导致了空间的“不稳定性”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;社会结构变迁：&lt;/strong&gt; 政府与市场主导的匀质、抽象的空间生产将原先多元、差异的日常生活世界推至边缘，城市空间的商业价值（占有）和市民价值（使用）敦轻敦重的问题浮出水面。如，快速城市化所导致的城乡格局变化和经济全球化所带来的产业空间重构致使大批城市新移民和市民化的农民的出现。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;社会空间的研究转向&#34;&gt;社会空间的研究转向&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;城市空间的社会性：&lt;/strong&gt; 揭示自然、物质空间形态背后的动态政治、社会、文化意涵。观察资本在空间上的重新配置、劳动力流&lt;br&gt;
-动、城市扩张、内城衰落等&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;城市社会的空间性：&lt;/strong&gt; 物化的空间现象成为理解城市转型和社会变迁的具体镜像。政治经济制度、社会生产关系、个人家庭生活等无不具有空间性。体现在：资本生产与消费、国家-社会关系、符号和意义的系统、生活体验与身份认同&lt;/li&gt;
-&lt;li&gt;社会空间理论的局限性：社会空间与城市空间的界定之难、与既有城市空间研究的融合之难、西方理论对中国经验的适用性不足&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;迈向什么样的空间社会学社会学对象的四种路径与反思营立成&#34;&gt;《迈向什么样的空间社会学——&amp;hellip;社会学对象的四种路径与反思》营立成&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;四种实现社区“社会学对象化”的可能路径&lt;/strong&gt;，需要注意的是，这篇论文中“社区”名词的扩展：从居民居住区变成与“社会”群体概念相区别的空间概念。&lt;/li&gt;
-&lt;li&gt;一，社区的空间社会学：空间是动态平衡的生态有机体；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;二，情境的空间社会学：空间是影响行动的社会情境；&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;三，分配的空间社会学：空间是诱发不平等的稀缺资源&lt;/strong&gt;（业主阶层，住房阶层）（和第一篇论文有一定理论的重合，但是不同的占多数）；&lt;/li&gt;
-&lt;li&gt;四，生产的空间社会学：（社会）空间是社会的产品。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;空间社会学视阈下城乡空间关系演进研究宗海勇&#34;&gt;《空间社会学视阈下城乡空间关系演进研究》宗海勇&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;研究对象：空间的实践性、社会性、人本性、历史性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;城乡空间排斥：空间不平等的社会意涵&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;生态生活空间不平等&lt;/li&gt;
-&lt;li&gt;经济市场空间不平等&lt;/li&gt;
-&lt;li&gt;文化教育空间不平等&lt;/li&gt;
-&lt;li&gt;福利保障空间不平等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;住房商品化与中国城市阶层空间分布的重构张雪筠&#34;&gt;《住房商品化与中国城市阶层空间分布的重构》张雪筠&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;评价&lt;/strong&gt;：可以当做背景资料参考，对我们的研究没什么实际价值，斜体那里值得看一看。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;内容&lt;/strong&gt;：桑德斯：现代社会中消费具有文化意义，即消费可以形塑文化体验及个人身份。在社会学家眼中，消费不再仅仅是一个经济的、实用的过程，而是一个涉及文化符号与象征意义的表达过程。于是用住房来确定自己的身份成为了一种很自然的现象，但进而产生的“同质聚居”值得研究。&lt;/p&gt;
-&lt;p&gt;建国后至改革开放初期，住房的分布与单位有关，而且有居住地域分异的状况，如工业区产生工人居住区等，但这种混住不意味着有社会分层，因为当时的分配制度是“低工资、高福利”，住一起不代表人们的福利相似。改革开放之后，“住房商品化”会让阶层类似的人聚集，而这种分异会让城市空间资源占有不平等。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;为了扶持房地产业，政府会为新建的小区提供完善的公共配套措施，而忽略老旧居民区的公共设施。而房地产商也倾向于在公共配套设施完善的地方建造高价位的小区，不完备的地方建造低价位小区。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;“公共消费能力”：使用教育、医疗、社会公共设施、公共住房等等资源的能力。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;摘录：&lt;/strong&gt; 市民真正的生活水平、自己和家人的健康、孩子受教育和自我发展的机会、享受文化娱乐资源的可能，以及参加社会决策和活动的可能，有时可能不是取决于他的收入和工作时间，而是取决于他住在哪里&amp;hellip;&amp;hellip;世界各地城市都存在着这样的情况，低收入家庭仅仅因为住得远便难以享受优美的城市公园和公共服务设施。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;研究报告撰写&#34;&gt;研究报告撰写&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;研究缘起&#34;&gt;研究缘起&lt;/h4&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;社会空间理论背景&#34;&gt;社会空间理论背景&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;社会空间是城市社会学中的核心概念，由法国学者布迪厄和列斐伏尔等人深化和阐述。相对于其他概念如社会结构、社会系统和社会网络，社会空间关注的是行为主体、位置和它们之间的关系。它强调了社会空间的结构性，与马克思主义理论有着紧密的联系。&lt;/p&gt;
-&lt;p&gt;相对于空间生产下的社会空间理论，社会心理学派对社会空间的理解有所不同，认为社会空间是人们进行社会互动的场所。齐美尔认为社会空间具有内聚性，存在有意识的边界，强调空间的内部关系。社会距离在他的理论中不仅仅是物理距离，更涉及人际关系的情感维度。戈夫曼则通过《公共空间的关系》进一步研究了个体如何组织周围的空间。（社会空间从齐美尔到戈夫曼，刘思达，2023）&lt;/p&gt;
-&lt;p&gt;综合而言，社会空间是一个复杂而多维的概念，涵盖了个体、位置、互动和权力等多个方面。不同学派和学者对社会空间的理解有所不同，为我们理解城市社会生活提供了丰富的视角。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;社会空间研究路径&#34;&gt;社会空间研究路径&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;社会空间的多元研究路径：&lt;/strong&gt;  在研究社会空间的路径中，不同学者提出了多种研究途径。这包括社区的空间社会学、情境的空间社会学、分配的空间社会学以及生产的空间社会学。这种多元化的路径反映了对社会空间不同层面和维度的研究兴趣。（迈向什么样的空间社会学——城市社会学对象的四种路径与反思，营立成，2019）其中，空间的实践性、社会性、人本性和历史性在不同研究路径中都起到了关键作用。（空间社会学视阈下城乡空间关系演进研究，宗海勇，2018）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;公共空间的转变与困境：&lt;/strong&gt;  关于公共空间的研究强调了其演变过程和面临的困境。公共空间在社会生活中具有观念、社会和物质的三种属性。在管道社会模型中，城市公共空间分为管束型和节点型，成为权力与资本调节的关键领域。（秩序、利润与日常生活——公共空间生产及其困境，杨宇振，2018）公共空间在历史过程中失去了整合性的功能特性，在现代社会中不断趋于专门化，但仍具有建立、粘结异化人群间沟通的潜力。公共空间的运动方向与内容虽然受到权力与资本的切割和形塑，但仍可能通过生产反异化、反规训的可能性，具有社会空间的实际意义。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;中国语境下的社会空间：&lt;/strong&gt;  在中国语境下，社会空间研究涵盖了城市空间的经济、政治和社会变迁。体制转型、经济结构变迁和社会结构变迁共同塑造了城市空间的演变。这包括城市政府角色的转变、经济利益导向的空间重构、商业价值与市民价值的权衡问题。对城市空间的研究还强调了空间的“同质化”和“不稳定性”，指向了空间变革中的社会经济动态。（社会空间和社会变迁——转型期城市研究的“社会—空间”转向，钟晓华，2013）&lt;/li&gt;
-&lt;li&gt;通过对这三个方面的研究路径的探究，我们能够更全面地理解社会空间的研究动态，有助于构建一个更丰富、深入的社会空间理论体系。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;总结&#34;&gt;总结&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;在深刻理解社会空间理论及其研究路径后，我们将采用一种整合性的研究视角展开调查。社会空间既是宏观视角下行为主体、位置和它们之间的结构性关系，也是微观视角下个体的社会互动情境。&lt;/li&gt;
-&lt;li&gt;依据接近性和可获得性，我们选定了北京市朝阳区定福庄进行深入探究，关注不同区域、地段或特定场所之间的社会空间分配和利用不平等现象，了解这些不平等现象在特定社区内的具体表现，如基础设施分布、公共服务设施的分配以及居民区公共空间的使用情况。不仅聚焦于社会空间的实践性、社会性、人本性和历史性，还关注中国语境下特定的社会、经济结构关系，以求更准确地分析社会空间不公平对居民生活和社会互动的影响。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2023-11-23-下一阶段指导&#34;&gt;2023-11-23 下一阶段指导&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;定福庄社会空间的整体画像&#34;&gt;定福庄社会空间的整体画像&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;方式：文献调查&amp;amp;实地调查&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;要求：尽可能全面、做好标注和记录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;调查流程：每个小组实地调查、在地图上标注各个地点的位置并标号、在表格记录基本信息&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;表格指导&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;标号&lt;/th&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;类型&lt;/th&gt;
-&lt;th&gt;情况&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;例1&lt;/td&gt;
-&lt;td&gt;中国传媒大学田径场&lt;/td&gt;
-&lt;td&gt;公共空间&lt;/td&gt;
-&lt;td&gt;学校的附属空间、几乎没有商业属性&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;各类目的说明&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;标号，各小组各自标号即可，记得在地图上注明一下&lt;/li&gt;
-&lt;li&gt;名称：有官方名称就写，没有就自己编就好&lt;/li&gt;
-&lt;li&gt;类型：在我们的调查主要分四类：基础设施分布（交通、卫生等）、公共服务设施的分配（医疗、教育等）、公共空间（公园、商业等）、其他&lt;/li&gt;
-&lt;li&gt;情况：主要考虑空间的实践性（是什么样的活动场所）、社会性（社会功能和社会意义等）、人本性（为谁而建的，在那里活动的人有什么特征）和历史性（那个场所是否有什么起源、经历和未来规划）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;定福庄文献调查中主要设施分布&#34;&gt;定福庄文献调查中主要设施分布&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;定福庄及其附近基本范围&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;​&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 164; 
-			flex-basis: 395px&#34;
-	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/range.png&#34; data-size=&#34;1715x1040&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/range.png&#34;
-			width=&#34;1715&#34;
-			height=&#34;1040&#34;
-			srcset=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/range_hud967e822e8f74c60f97ff19ac8038704_800633_480x0_resize_box_3.png 480w, https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/range_hud967e822e8f74c60f97ff19ac8038704_800633_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;定福庄及其附近基本范围&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;定福庄及其附近基本范围&lt;/figcaption&gt;
-	
-&lt;/figure&gt;​&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;定福庄较大型公共服务及公共空间示意&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;​​&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 137; 
-			flex-basis: 330px&#34;
-	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/services.png&#34; data-size=&#34;1285x932&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/services.png&#34;
-			width=&#34;1285&#34;
-			height=&#34;932&#34;
-			srcset=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/services_hu691d0abf8bc236debb998dd30ef543e0_548812_480x0_resize_box_3.png 480w, https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/services_hu691d0abf8bc236debb998dd30ef543e0_548812_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;定福庄较大型公共服务及公共空间示意&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;定福庄较大型公共服务及公共空间示意&lt;/figcaption&gt;
-	
-&lt;/figure&gt;​&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;定福庄综合医院和教育服务分布&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;​​&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 166; 
-			flex-basis: 398px&#34;
-	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/hospital.png&#34; data-size=&#34;1624x977&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/hospital.png&#34;
-			width=&#34;1624&#34;
-			height=&#34;977&#34;
-			srcset=&#34;https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/hospital_huf3ffc9fbd3f81c78eb0ce42801c07e3f_823649_480x0_resize_box_3.png 480w, https://wish2333.github.io/en/2023/the-creative-process-of-dingfuzhuang/assets/hospital_huf3ffc9fbd3f81c78eb0ce42801c07e3f_823649_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;定福庄综合医院和教育服务分布&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;定福庄综合医院和教育服务分布&lt;/figcaption&gt;
-	
-&lt;/figure&gt;​&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;想法&#34;&gt;想法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;定位的文化产业走廊有利于地区和相关产业的发展，但是却没有给居民带来足够畅通的发展渠道和足够有前景的发展空间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;调查结果&#34;&gt;调查结果&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;assets/%e4%bb%a3%e8%a1%a8%e6%80%a7%e5%9c%b0%e7%82%b9-20231206192911-9ch0781.pdf&#34; &gt;代表性地点.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;‍&lt;/p&gt;
-&lt;h2 id=&#34;2023-12-6-最终调研指导&#34;&gt;2023-12-6 最终调研指导&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;内容：推进深入的实地调研，女生三人继续在大黄庄南里附近对文化广场、金宝生活、老年服务、早市等进行观察和记录（建议补充一些傍晚的观察）；男生组继续对定福家园和产业园区进行观察和记录（建议补充一些白天的观察）。此外，大纲已经列好，愿意对&lt;/li&gt;
-&lt;li&gt;ddl：下周二&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2023-12-6-大纲&#34;&gt;2023-12-6 大纲&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;研究背景&#34;&gt;研究背景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;社会空间是城市社会学中的核心概念，由法国学者布迪厄和列斐伏尔等人深化和阐述。相对于其他概念如社会结构、社会系统和社会网络，社会空间关注的是&lt;strong&gt;行为主体、位置和它们之间的关系&lt;/strong&gt;。它强调了社会空间的结构性，与马克思主义理论有着紧密的联系。&lt;/p&gt;
-&lt;p&gt;相对于空间生产下的社会空间理论，城市生态学派对社会空间的理解有所不同，认为社会空间是人们进行&lt;strong&gt;社会互动&lt;/strong&gt;的场所，关注社会结构对个体行为的影响。齐美尔认为社会空间具有内聚性，存在有意识的边界，强调空间的内部关系。社会距离在他的理论中不仅仅是物理距离，更涉及人际关系的情感维度。戈夫曼则通过《公共空间的关系》进一步研究了个体如何组织周围的空间。~（社会空间从齐美尔到戈夫曼，刘思达，2023）~&lt;/p&gt;
-&lt;p&gt;综合而言，社会空间是一个复杂而多维的概念，涵盖了个体、位置、互动和权力等多个方面。不同学派和学者对社会空间的理解有所不同，为我们理解城市社会生活提供了丰富的视角。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对社会空间的研究，前人有这样的研究：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;社会空间的多元研究路径&lt;/strong&gt;  【在研究社会空间的路径中，不同学者提出了多种研究途径。这包括社区的空间社会学、情境的空间社会学、分配的空间社会学以及生产的空间社会学。这种多元化的路径反映了对社会空间不同层面和维度的研究兴趣。（迈向什么样的空间社会学——城市社会学对象的四种路径与反思，营立成，2019）其中，空间的实践性、社会性、人本性和历史性在不同研究路径中都起到了关键作用。（空间社会学视阈下城乡空间关系演进研究，宗海勇，2018）】&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;公共空间的转变与困境：&lt;/strong&gt;  【关于公共空间的研究强调了其演变过程和面临的困境。公共空间在社会生活中具有观念、社会和物质的三种属性。在管道社会模型中，城市公共空间分为管束型和节点型，成为权力与资本调节的关键领域。（秩序、利润与日常生活——公共空间生产及其困境，杨宇振，2018）公共空间在历史过程中失去了整合性的功能特性，在现代社会中不断趋于专门化，但仍具有建立、粘结异化人群间沟通的潜力。公共空间的运动方向与内容虽然受到权力与资本的切割和形塑，但仍可能通过生产反异化、反规训的可能性，具有社会空间的实际意义。】&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;中国语境下的社会空间：&lt;/strong&gt;  【在中国语境下，社会空间研究涵盖了城市空间的经济、政治和社会变迁。体制转型、经济结构变迁和社会结构变迁共同塑造了城市空间的演变。这包括城市政府角色的转变、经济利益导向的空间重构、商业价值与市民价值的权衡问题。对城市空间的研究还强调了空间的“同质化”和“不稳定性”，指向了空间变革中的社会经济动态。（社会空间和社会变迁——转型期城市研究的“社会—空间”转向，钟晓华，2013）】&lt;/p&gt;
-&lt;p&gt;通过对这三个方面的研究路径的探究，我们能够更全面地理解社会空间的研究动态，有助于构建一个更丰富、深入的社会空间理论体系。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在深刻理解社会空间理论及其研究路径后，我们将采用一种整合性的研究视角展开调查。社会空间既是宏观视角下行为主体、位置和它们之间的结构性关系，也是微观视角下个体的社会互动情境。&lt;/p&gt;
-&lt;p&gt;依据接近性和可获得性，我们选定了北京市朝阳区定福庄进行深入探究，关注不同区域、地段或特定场所之间的社会空间分配和利用不平等现象，了解这些不平等现象在特定社区内的具体表现，如公共服务空间的分配、居民区公共空间的使用情况以及产业空间的规划发展。不仅聚焦于社会空间的实践性、社会性、人本性和历史性，还关注中国语境下特定的社会、经济结构关系，以求更准确地分析社会空间不公平对居民生活和社会互动的影响。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;研究方法和对象&#34;&gt;研究方法和对象&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;文献调查描绘整体&#34;&gt;文献调查描绘整体&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;空间集中化&#34;&gt;空间集中化&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;附图：朝阳区（设施图）+定福庄（设施图、自画调研商业区图）&lt;/li&gt;
-&lt;li&gt;无论从朝阳区还是从定福庄的角度出发，公共服务空间、居民区公共空间以及产业空间均呈现出集中化的特征。这种集中化现象可能导致某些社区或区域享有更多的资源和服务，而其他地区则相对欠缺。这种不均衡的资源分配可能引发社会不平等问题，影响居民的生活品质和社会互动。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;绿地在郊区&#34;&gt;绿地在郊区&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;附图：朝阳区（区划图）+定福庄（平面图）&lt;/li&gt;
-&lt;li&gt;绿地分布同样是集中化地分布的，同时位于郊区，这种低可达的特征对于居民的享用造成了阻碍。文献中提到的《抵抗孤独···》也强调了郊区绿地在城市规划中的位置，并讨论了其对社区居民的影响。这种郊区绿地的集中分布可能导致一些居民无法方便地享受到自然环境，从而影响其生活质量和社交互动。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;横向的发展纵向的式微&#34;&gt;横向的发展，纵向的式微&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;附图：朝阳区（景观图、设施图）+定福庄（交通图）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;位于北京市的横向中轴线上，定福庄的发展不可避免地存在横向的导向。然而，这种横向发展正反映了一些社会空间的不平等。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从城市生态学的同心圆概念的批判入手，我们可以观察到在横向发展中，某些社区可能更受重视，而纵向却显得相对缺乏关注。这不仅在空间上表现为资源和服务的不均衡分布，同时也体现在城市规划的倾向性，可能导致一些区域的社会经济发展不尽如人意。&lt;/li&gt;
-&lt;li&gt;从空间的生产角度看不合理的流动：交通没有纵向的分布（居民通行的流向），而只分布在横向（工作通行）。这表明城市往往被视为一个白天工作、晚上离开的地方，而居民的社会互动的可能性相对较低。这种横向导向的城市规划可能加剧了社会空间中的不平等，限制了居民的活动空间和社交范围，影响了社会互动的多样性和深度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;实地调研发现细节&#34;&gt;实地调研发现细节&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在实地调研中，我们集中在文献调查中发现的公共服务空间较为集中的区域【附图】展开了广泛的观察，在以下较为具有代表性的场景中最终选取了大黄庄南里、定福家园两个居民区以及DREAM2049国际文创产业园进行深入调研。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;大黄庄南里情况&#34;&gt;大黄庄南里情况&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;文化广场、早市、金宝生活&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;“傍晚时分来到文化广场，这里年轻人似乎已经绝迹，都是一些大爷大妈在玩。尽管昨天下了大雪，但这里打牌，下象棋，打乒乓球的人（好吧不是打乒乓球，是在乒乓球桌上打牌）依然非常多。一般的健身设施没什么人用。而且不知道什么原因，在这里活动的老年人以男性为主，能看到成群的男性中夹杂着零星的女性。除了一对老年夫妇带着两个小孩玩，此外没有小孩出没。作为一个文化广场，在社区的大门附近可能使得这个地方更像是社区的一部分，因此年轻人很少会进去参与活动。”&lt;/p&gt;
-&lt;p&gt;“早市是一个具有时效性的场所，所以在傍晚时分来的时候，里面没有什么流动商贩。但那些固定的商家都还在摆，有开门的也有关门的，无论如何都比较冷清，偶尔有成对的老年夫妇或者是大爷经过看一看。金宝生活一层以中老年人为主，但也开始出现了不少年轻人；到了二层年轻人开始居多，而且也出现了小朋友。整体性别比比较均衡。”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【年轻人的缺席】文化广场作为一个开放的场所，与附近小区居民之间存在密切的联系。然而，值得注意的是，尽管社区紧邻传媒大学附属中学，却几乎看不到年轻人在这个场所出现，这是一个引人关注的现象。金宝生活中商品的明显趋势（包括衣物款式和商品摆放等）也反映了这个地方的受众主要是年龄较大的人群。我们需要探讨的是，是什么原因导致了附近年轻人在这个区域的相对缺席？&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【短暂的活动时间】在大黄庄早市中，出现的油条“买十送一”等促销情况表明其受众并非独立个体，而是那些承担家庭或团队部分生活责任的人。这些人的聚集是否反映了在这个的家庭成员或团队成员相对较少，是一个值得思考的问题。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;定福家园情况&#34;&gt;定福家园情况&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;“我由南向北走，先经过定福家园南区再经过北区。首先的感受是，在朝阳路上早上九点交通很繁忙，在路旁走觉得很吵很心烦，但一旦从朝阳路上随便拐到一条南北（纵向）的路上，一下就会被宽敞又空旷的双向四车道三间房中路震惊到。明明交通需求没那么大，道路为什么修这么宽？&lt;/p&gt;
-&lt;p&gt;随着逐渐向北走，接近社区，能感觉到明显能看到更多的老年人不过在接近地铁站的地方，又能看到都是赶着上班的年轻人。定福家园小区周边生活还算比较便利，最近的公园只有一公里不到，小区下面周围有超市（比较少），药房（比较少按摩店、健身房……但最令人心烦的是定福家园北里和南里之间夹着一条朝阳北路，车辆噪音很大，两侧路旁到处是停的电动车、共享单车，地上都是肮脏的积雪，被从机动车道上扫到道路两旁自行车道的地方，骑车路过要很小心。&lt;/p&gt;
-&lt;p&gt;走到定福家园南里，最深刻的印象是旁边都是小区，但是小区和小区之间都用铁栅栏隔着，小区内部也看不到居民，感觉是一座鬼城。”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【集中化的设施】作为一座新建于地铁口附近的小区，不可避免地存在一些与交通导向开发（Transit-Oriented Development，TOD）相关的问题，主要表现为商业区集中分布在地铁口周边。在小区规模较大的情况下，离地铁口较远的居民可能难以充分享受到相关便利。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【纵向流动从不被利用到被忽视】&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【社会互动的缺失】我们注意到，在傍晚时分，很多人正在回家的路上，路边停放的车辆也不少，然而，公共空间中活跃的居民却寥寥可数。更令人注意的是，居民楼的公共空间甚至附近公园的照明也没有开启。这是否意味着社会互动的缺失呢？&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这种现象可能表明，尽管小区居民在日常生活中有着密切的交往，但在公共空间中的社交互动似乎较为有限。公共空间的未充分利用可能导致居民之间的社会互动机会减少。进一步的调查和分析将有助于更全面地理解这一现象，并提出改进居民社交体验的建议。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;居民区比较性分析&#34;&gt;居民区比较性分析&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;新建和旧建的客观情况&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;居民的属性：常住民和租户&lt;/li&gt;
-&lt;li&gt;2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;社会互动的区别&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;流动性的不同表现&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1&lt;/li&gt;
-&lt;li&gt;2&lt;/li&gt;
-&lt;li&gt;从管线性观的社会空间来看，定福庄的公共空间无论是公园、广场，还是街道、商业区都没有能够形成节点或集束，也因此不能够调节社会存在的资本和权力问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;文创产业园情况&#34;&gt;文创产业园情况&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;“早上八点半开始逐渐有年轻人从南北门进入，走进大楼，但从南门进入的人更多，可能是因为南门旁边有很多小区。进入园区的人们神情凝重，步伐都很着急，可能因为今天上午风很大吧。园区内北门、南门附近建筑内饰比较高级，东西两侧都是砖砌平房，和大门旁边建筑格格不入。园区内食堂、餐厅、便利店比较齐全，甚至还有一个党政服务站。早上八点多园区内建筑里人不是很多，只有稀稀拉拉的几个人在一楼装修简陋的餐厅里边看手机边吃饭，感觉到他们很孤独。&lt;/p&gt;
-&lt;p&gt;总体感觉产业园区内部很荒凉，脏兮兮的，好像一个建筑工地上随便铺了一点路，盖了几座楼就开始招商了。园区内绿化聊胜于无，只是每隔几米十几米种了一颗松树。除此之外，园区里面并没有给上班人们提供室外的休闲区域（运动、休息、就餐。。。）离园区最近的公园走路路程要20分钟以上，员工几乎没有办法在上班前后享受自然景观。感觉员工的个人体验、身心健康、能不能有一个舒适的上班环境，这些因素被忽视了”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;文创产业园本身是新建设的开放空间，其中通常包含可供人们使用的口袋公园空间。然而，实际上这些空间往往建设并不完全，即使建成也未得到人们的利用，甚至往往连灯光都未开启。这反映出工作地点的流动性。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h5 id=&#34;产业空间类比分析&#34;&gt;产业空间类比分析&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;东亿国际传媒产业园也存在类似的问题，当夜幕降临时，商厦和办公楼灯光熄灭，街上行人寥寥。尤其是商场前的广场大面积空置，这个原本规划为公共空间的区域却未能达到预期的使用效益，彰显了不仅是社会空间不平等问题的存在。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h4 id=&#34;问卷测量居民感知&#34;&gt;问卷测量居民感知&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;基本参与情况&lt;/li&gt;
-&lt;li&gt;参与发展情况&lt;/li&gt;
-&lt;li&gt;共建共治情况&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;总结定福庄空间正义现状&#34;&gt;总结：定福庄空间正义现状&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;结合上面的情况，总结几个要点&lt;/li&gt;
-&lt;li&gt;最后两三句话写结语&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+        <description>&lt;img src="https://wish2333.github.io/img1.png" alt="Featured image of post 【Academic Research】The Process of Research in Dingfuzhuang Community" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View the document (CN)&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu</title>
+        <title>【Academic Research】A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu</title>
         <link>https://wish2333.github.io/en/2023/health-information/</link>
         <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/en/2023/health-information/</guid>
-        <description>&lt;img src="https://wish2333.github.io/en/2023/health-information/img1.jpg" alt="Featured image of post A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu" /&gt;&lt;blockquote&gt;
+        <description>&lt;img src="https://wish2333.github.io/en/2023/health-information/img1.jpg" alt="Featured image of post 【Academic Research】A Study on the Adoption of Health Information by College Students in Beijing on User-Generated Content Platforms--A Case of Xiaohongshu" /&gt;&lt;blockquote&gt;
 &lt;p&gt;The present article represents a collaborative effort completed by five co-authors, with my contribution focusing specifically on the literature review and data processing sections. The text below encompasses the content of those segments, while the comprehensive full-text version is attached as a PDF file for your reference.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;！&lt;a class=&#34;link&#34; href=&#34;A_Study_on_the_Adoption_of_Health_Information_by_College_Students_in_Beijing_on_User-Generated_Content_Platforms_A_Case_of_Xiaohongshu.pdf&#34; &gt;Download Full Text&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;This study focuses on the contemporary representative Internet new media platform Xiaohongshu APP, conducting a survey targeting college students in Beijing, employing quantitative research methods, integrating information adoption models with social influence theories, and utilizing SPSS for data analysis to examine the impact of online health information on users&amp;rsquo; adoption intentions. Through this investigation, the research aims to clarify how dimensions of perceived trust and perceived risk affect users&amp;rsquo; adoption willingness and to discern the roles played by information quality and hot level within the context of perceived trust.&lt;/p&gt;
 &lt;h3 id=&#34;literature-review&#34;&gt;Literature Review&lt;/h3&gt;
@@ -1797,6 +1384,8 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 &lt;blockquote&gt;
 &lt;p&gt;完整论文和附图均在附件PDF中&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;！&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/files/A_Study_on_the_Adoption_of_Health_Information_by_College_Students_in_Beijing_on_User-Generated_Content_Platforms_A_Case_of_Xiaohongshu.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download Full Text&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>

@@ -1,8 +1,10 @@
-## 更新日志
+## Update Log
 
-### Update20240430
-1. 更新了双语界面，支持中英文（默认英文）
-2. 更新了双语内容，支持中英文，翻译上和论文的节选部分可能存在差异
-   
-### update20240505-0202
-添加了两篇“讲点嗑学”栏目的文章
+### Update 20240430
+
+1. Enhanced the bilingual interface to support both Chinese and English (defaulting to English).
+2. Enriched the bilingual content to include Chinese and English translations, noting potential variations in translated excerpts from academic papers.
+
+### Update 20240505-0202
+
+Incorporated two articles for the "Insights in Education" section.

@@ -6,10 +6,38 @@
     <description>Recent content in Posts on Wish的博客小站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FFmpeg&#43;Python GUI：实现批量头尾处理</title>
+      <title>【会议论文】性别与经济舆情在时间序列上的主题演化研究</title>
+      <link>https://wish2333.github.io/zh/2024/fatcat/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/fatcat/</guid>
+      <description>【内容摘要】 【目的】了解在男性用户为主的社交平台下，用户对性别与经济议题社会舆情事件的主题和态度，为社交媒体影响下的网络舆情引导和干预提供实</description>
+    </item>
+    <item>
+      <title>【编程开发】爬虫实践：使用开源项目获取微博博文</title>
+      <link>https://wish2333.github.io/zh/2024/crawler-weibo/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/crawler-weibo/</guid>
+      <description>开源项目地址： https://github.com/dataabc/weiboSpider https://github.com/dataabc/weibo-crawler https://github.com/dataabc/weibo-search 运行环境 开发语言：python3 安装python：https://www.python.org/downloads/ 安装</description>
+    </item>
+    <item>
+      <title>【学术研究】实证研究设计：青年人叙事化二创内容参与动机研究</title>
+      <link>https://wish2333.github.io/zh/2024/catmeme/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/catmeme/</guid>
+      <description>概念界定 叙事化二创短视频 二次创作文化： 二次创作是指在互联网语境下，网络用户通过再创作的方式利用他人作品来表达新观点，形成了一种复制、拼贴和融</description>
+    </item>
+    <item>
+      <title>Animemory序1-我的ACGN纪事·动画篇</title>
+      <link>https://wish2333.github.io/zh/2024/animemory001/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/animemory001/</guid>
+      <description>自2013年我初次涉足ACGN领域，至今已逾十载。这段旅程中，我品尝了无数精彩绝伦的作品，也偶遇了些许不尽人意之作，它们或许占据了我宝贵的时</description>
+    </item>
+    <item>
+      <title>【编程开发】FFmpeg&#43;Python GUI：实现批量头尾处理</title>
       <link>https://wish2333.github.io/zh/2024/ffpygui-preversion/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2024/ffpygui-preversion/</guid>
@@ -30,35 +58,35 @@
       <description>大家好呀，我是你们的新人up主wish，今天我们来锐评一下“MAPPA的又一gay佬番”——无人能敌BUCCHIGIRI。是的，我也愿意这么</description>
     </item>
     <item>
-      <title>文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察</title>
+      <title>【会议论文】文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察</title>
       <link>https://wish2333.github.io/zh/2024/tourism-communication/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2024/tourism-communication/</guid>
-      <description>tourism_communication.pdf 【内容摘要】 随着乡村振兴的提出与文旅产业的崛起，乡村形象建构和传播的需求日益凸显，乡村文化广场作为新型公共空间的重要内容，其发展与乡村振兴</description>
+      <description>【内容摘要】 随着乡村振兴的提出与文旅产业的崛起，乡村形象建构和传播的需求日益凸显，乡村文化广场作为新型公共空间的重要内容，其发展与乡村振兴战</description>
     </item>
     <item>
-      <title>定福庄社区的社会空间不平等研究</title>
+      <title>【学术研究】定福庄社区的社会空间不平等研究</title>
       <link>https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/</link>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/</guid>
       <description>研究背景 社会空间 社会空间是城市社会学中的核心概念，由法国学者布迪厄和列斐伏尔等人深化和阐述。相对于其他概念如社会结构、社会系统和社会网络，社</description>
     </item>
     <item>
-      <title>网课剪辑：自动化流程-基于免费软件</title>
+      <title>【后期制作】网课剪辑：自动化流程-基于免费软件</title>
       <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/webclass-autocut-free/</guid>
       <description>应用场景 网课剪辑： 大批次旧网课需要替换片头片尾，这些网课格式（编码、分辨率、帧率、音频格式等）均不一致 大批次新网课录制源文件需要处理，主要需</description>
     </item>
     <item>
-      <title>探究定福庄社会空间不平等情况的创作过程</title>
+      <title>【学术研究】探究定福庄社会空间不平等情况的创作过程</title>
       <link>https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/</guid>
       <description>理解城市-结课作业 2023-10-28选题：黄淼森 社会空间不平等问题 参考文献 zhihu/p/452072791 zhihu/p/106501422 sohu/a/482049556_121124003 fjyl/file_no=20200910 douban.com/review/14200117/ 选题报告 在报告中，将关注的主题定为“身边的社区存在的社</description>
     </item>
     <item>
-      <title>北京市大学生的UGC平台健康信息采纳研究——以小红书为例</title>
+      <title>【学术研究】北京市大学生的UGC平台健康信息采纳研究——以小红书为例</title>
       <link>https://wish2333.github.io/zh/2023/health-information/</link>
       <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/health-information/</guid>

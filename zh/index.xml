@@ -6,13 +6,784 @@
         <description>Recent content on Wish的博客小站</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/zh/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>FFmpeg&#43;Python GUI：实现批量头尾处理</title>
+        <lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wish2333.github.io/zh/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【会议论文】性别与经济舆情在时间序列上的主题演化研究</title>
+        <link>https://wish2333.github.io/zh/2024/fatcat/</link>
+        <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/zh/2024/fatcat/</guid>
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/fatcat/FatCat.jpg" alt="Featured image of post 【会议论文】性别与经济舆情在时间序列上的主题演化研究" /&gt;&lt;p&gt;&lt;strong&gt;【内容摘要】&lt;/strong&gt; 【目的】了解在男性用户为主的社交平台下，用户对性别与经济议题社会舆情事件的主题和态度，为社交媒体影响下的网络舆情引导和干预提供实证检验和数据参考。【方法】本研究以“胖猫”事件在百度贴吧的舆论表现为对象，采用机器学习方法对百度贴吧文本数据进行向量化，并使用深度学习方法对进行聚类，分析平台中主要话题的时间序列网络，从而进一步揭示舆情形成和演化的规律。【发现】百度贴吧中对于“胖猫”事件展开讨论时，涉及主题在时间序列上没有显著变化，经济问题讨论度最高，性别问题次之，事件本身讨论度最小。在时间序列上，三个主题的讨论在事件初期和通报发出后达到高峰，随后逐渐回落并保持在较低水平，但在某些时间点上仍然有明显的波动。其中性别问题波峰的出现早于其他主题。【局限】分析数据体量较小，不能完全反映真实情况，缺乏对不同社交平台数据的实验验证和分析比较。【结论】“胖猫”事件折射出社交媒体影响下的权力结构、资本流动、性别关系、媒介生态以及公共治理等多重复杂的社会现象。百度贴吧舆论虽因男性用户占主导而面临性别偏见放大的挑战，但也孕育了探讨社会、政治、经济议题的土壤。其舆论特征反映出人们对于社会不公的敏感度以及寻求改变现状的意愿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【关键词】&lt;/strong&gt; 主题演化 网络舆情 时间序列分析 百度贴吧&lt;/p&gt;
+&lt;h1 id=&#34;一-研究背景&#34;&gt;一、 研究背景&lt;/h1&gt;
+&lt;h2 id=&#34;一-社会背景&#34;&gt;（一） 社会背景&lt;/h2&gt;
+&lt;p&gt;近年来，随着互联网的普及和社交媒体的迅猛发展，网络空间成为了公众表达意见、分享信息以及进行社会互动的重要平台。在这一背景下，网络舆情逐渐成为反映社会问题、引导公众情绪的重要媒介。然而，在于全球化进程中，中国互联网空间中社会观念的多元化和区隔化现象日益显著，特别是在文化主体性相关的观念之争中，互联网新媒体的影响尤为突出(陈云松, 2022)[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1]&lt;/a&gt;]。在舆情事件发生过程，社交媒体中社会观念的多元化表达成为深刻理解公众的核心关注与诉求，成为重要的研究内容。&lt;/p&gt;
+&lt;p&gt;涉及情感纠纷、经济纠纷等个人事件常常因其复杂性和争议性而引发广泛关注，而性别议题的讨论热度在涉及情感和经济纠纷的事件中更为显著。因为这些事件不仅反映了个体之间的矛盾，也折射出社会层面的深层次问题，如信任危机、情感操控、经济压力等。在舆情事件中，公众对社会中性别不平等和性别歧视的问题较为敏感，一旦事件激发了公众的情感共鸣，就容易导致网络上的激烈争论，甚至出现性别对立情绪的升温。&lt;/p&gt;
+&lt;p&gt;此外，在当代社会，经济压力和财务纠纷常常成为个人和家庭矛盾的根源。公众对相关舆情事件的高度关注反映了社会中普遍存在的对财务安全和经济正义的关注。“胖猫”事件正是在这种社会背景下发生的，其引发的广泛关注和激烈讨论说明了公众对男女情感、经济诈骗、网络暴力等问题的高度敏感。&lt;/p&gt;
+&lt;h2 id=&#34;二-舆情演化&#34;&gt;（二） 舆情演化&lt;/h2&gt;
+&lt;p&gt;“胖猫”事件始于一名游戏昵称为“胖猫”的湖南男子，在与重庆女子谭竹的网恋关系中遭遇情感和经济纠纷后，于2024年4月11日在重庆跳江自杀，遗体于4月23日被打捞确认离世。事件中，男生疑似遭受PUA（情感操控），并在生命的最后时刻给女友转账6.6万元，标注为“自愿赠予”。舆论爆发于“胖猫”姐姐指控谭竹利用感情骗取胖猫50多万元，而谭竹则否认骗钱，称分手是因双方频繁争吵及胖猫的冷暴力，且已协议退还部分款项。&lt;/p&gt;
+&lt;p&gt;“胖猫”事件在网络空间引发了极大的关注，自5月1日起至6月1日，事件持续发酵，网络相关信息总量高达3621414条[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2]&lt;/a&gt;]，热度显著超越同期其他重大社会事件，大量民众以送外卖和鲜花的形式前往大桥进行悼念，显示了公众对此事件的高度关注。事件之所以能迅速聚集如此高的热度，是因为它触及了公众对于情感诈骗、性别对立、网络暴力等敏感社会议题的深切关切，同时，事件本身的悲剧性和复杂性也激发了公众的情感共鸣和探究真相的欲望。事件在网络的发酵，形成了几个关键阶段：&lt;/p&gt;
+&lt;p&gt;潜伏期——事件发生之后&lt;/p&gt;
+&lt;p&gt;2024年4月11日凌晨“胖猫”跳江，4月23日其遗体被打捞上岸。虽然“胖猫”的游戏代练身份，使得该事件获得相关人群的关注和讨论。但是由于细节缺失，该事件的冲突性和反常性尚未展现，网络上对于该事件的报道和互动较少。&lt;/p&gt;
+&lt;p&gt;爆发期——双方对峙冲突&lt;/p&gt;
+&lt;p&gt;2024年5月2日，胖猫姐姐通过网络平台曝光事件，揭示了情感和经济纠纷，引发初步关注。随后，“胖猫”女友发声，对相关质疑进行反驳，但很快删除，相关图片被网友保存了下来，舆论场上的紧张情绪开始升温。在双方的回应中，女方否认金钱动机并指责男方家庭引导网络暴力，而男方姐姐则坚称会为弟弟讨回公道，双方向公众的直接回应导致舆论两极分化严重。虽然“胖猫”事件本身是个体事件，但其背后映射的情感剥削和经济纠纷问题，在现代社会中并非孤立存在。“胖猫”事件中疑似存在的情感操控和金钱争议引发了部分网友的强烈不满。&lt;/p&gt;
+&lt;p&gt;蔓延期——次生舆情涌现&lt;/p&gt;
+&lt;p&gt;随着事件的扩散，公众的同情心被激发。2024年5月3日，大量网友通过外卖平台送餐、送花悼念，但这也导致了相关品牌因外卖“空包”问题陷入舆论风波。同时，网络上出现了模仿账号和不当玩梗现象，进一步复杂化了舆情环境。此外，性别对立情绪被点燃，出现了大量嘲讽逝者的行为和诋毁其女友的言论。2024年5月4日，部分账号因煽动性别对立被处理。2024年5月9日，据泸州网警报道，有网友在短视频平台冒充“胖猫”女友，发布虚假的资金往来信息，扰乱公共秩序，被采取行政处罚。&lt;/p&gt;
+&lt;p&gt;缓解期——舆情持续发酵&lt;/p&gt;
+&lt;p&gt;2024年5月4日至2024年5月17日，尽管事件长时间占据社交媒体热搜，但真相仍未明了，部分网民开始呼吁理性讨论，对持续的“小作文”和聊天记录表示疲惫。一方面，网络出现了不少事件梳理与推测分析，但由于官方提供的线索不足、双方各执其词，这些讨论难免偏颇。另一方面，也有声音提醒关注其他重要社会事件，防止舆情过度泛化。&lt;/p&gt;
+&lt;p&gt;第二爆发期——官方公告与舆论反转&lt;/p&gt;
+&lt;p&gt;2024年5月19日晚间，重庆市公安局南岸区分局发布警情通报，而微博等平台也加强了对违规内容的清理。该阶段，对真相的判断与等待成为了核心议题，虽然警方通报专业详实，还原了真相、解答了疑问，但是其过分的滞后也引发了部分网友的不满。此外，法律追偿、网络悼念的商业道德、以及网络暴力等问题也成为广泛讨论的焦点。&lt;/p&gt;
+&lt;p&gt;根据舆情研究平台“舆情通”检索，2024年5月1日至2024年6月1日期间，舆情整体呈现双峰型（如图1），对应5月4日事件在双方回应、网友悼念的推动下走向高潮，以及5月19日警方通告引发的“舆论反转”。&lt;/p&gt;
+&lt;p&gt;由图2可知，该时间段内敏感信息共有3369671条（占93.05%），非敏感信息共有229790条（占6.34%），中性信息共21953条（占0.61%）。经分析，敏感信息在2024-05-04达到舆论最高峰值，信息量为618091条，值得重点关注。&lt;/p&gt;
+&lt;p&gt;从图3可看出，该时间段内微博信息中“中性”情绪的发文最多，共1179830篇（占47.17%）。但值得注意的是，愤怒、悲伤为主的负面情绪相比积极情绪显著更高，证明该舆情事件给社会带来巨大的负面情绪影响。&lt;/p&gt;
+&lt;h2 id=&#34;三-议题分析&#34;&gt;（三） 议题分析&lt;/h2&gt;
+&lt;p&gt;整个舆情发展过程中，事件经历了从个体情感悲剧到社会广泛关注的转变，伴随着复杂的情感表达、激烈的网络骂战、性别对立的升级，以及次生舆情的不断涌现，形成了一个高度复杂且充满挑战的舆论场。&lt;/p&gt;
+&lt;p&gt;根据舆情研究平台“舆情通”检索，2024年5月1日至2024年6月1日期间，微博热门话题Top100中有30条属“胖猫”事件相关，总热度达到6411694。根据整理和人工识别，该时期对该事件的讨论议题主要分布在以下方面：双方本人情况、双方经济往来、双方法律纠纷、冒充散布谣言、煽动性别对立、操纵引导舆论、游戏代练情况、外卖悼念情况。&lt;/p&gt;
+&lt;h1 id=&#34;二-相关研究&#34;&gt;二、 相关研究&lt;/h1&gt;
+&lt;h2 id=&#34;一-研究对象&#34;&gt;（一） 研究对象&lt;/h2&gt;
+&lt;p&gt;百度贴吧成立于2003年，是百度公司推出的一款基于关键词搜索的互动平台。随着互联网的发展，百度贴吧曾一度成为中国最大的网络社区之一，用户可以围绕共同兴趣爱好和话题进行讨论。然而，随着新兴社交媒体平台的崛起，如微信、微博、抖音等，百度贴吧的用户活跃度和影响力逐渐下降，逐步退出主流社交平台的行列。&lt;/p&gt;
+&lt;p&gt;尽管如此，百度贴吧在热点话题上仍然展现出其独特的舆论生态。在平台类型上，百度贴吧作为一个高度社区化的社交媒体，其用户在平台内部也存在多元化与区隔化的特点。用户在各自的社区中组成社群共同体，表现出了强烈的社区参与动机。这也可能会导致社区用户的表达更加情绪化而非理性,从而在社区内部形成一种情绪的传染和共振（胡杨涓等,2019）[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3]&lt;/a&gt;]。理解社群共同体这一概念在网络社会的变化及发展,对于新时代合理引导和规范青少年社会价值观具有一定的启示意义（赵艳娇，2019）[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;4]&lt;/a&gt;]。在用户结构上，百度贴吧以男性用户居多，且集中于经济发达地区及一线、超一线、二线城市。用户对游戏、数码、院校等话题表现出较高的关注度。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;5]&lt;/a&gt;]在传播表现上，在百度贴吧的传播模式中，每个网民都可以自由创建贴吧或发布信息，传统“把关人”的作用被削弱。这种模式是基于用户关键词搜索的主题讨论社区，具有高度的自主性和互动性。这些特点使得百度贴吧在某些特定的舆论事件中，能够展现出不同于其他社交平台的讨论特点和舆论走势。&lt;/p&gt;
+&lt;p&gt;在“胖猫”事件中，百度贴吧的舆情表现相较于其他社交平台和网络总体舆情，展现出“双主峰+多侧峰”的特点。舆情研究平台“舆情通”数据显示（如图4），2024年5月1日至2024年6月1日期间，百度贴吧监测到总信息18518条，与网络总体舆情的双峰型不同，百度贴吧的舆情呈现出多峰特点，这反映了用户在讨论主峰之外还存在多次衍生讨论。&lt;/p&gt;
+&lt;p&gt;此外，百度贴吧在该阶段的互动声量走势独特。由图4和图5可知，在舆论总量呈现双主峰、第一主峰总量更高的同时，第一主峰的互动声量（回帖数）极低。这表现出虽然当时有较多人希望将这一社会热点事件引入百度贴吧展开讨论，但是平台的一般用户对此并不感兴趣。而当新闻通报发布之后，新旧的贴子同时获得了激烈的互动讨论。&lt;/p&gt;
+&lt;h2 id=&#34;二-网络舆情研究&#34;&gt;（二） 网络舆情研究&lt;/h2&gt;
+&lt;p&gt;随着互联网和信息科技的发展，人们已经习惯于从社交媒体获取信息。然而，社交媒体中信息的复杂性和多样性使得我们更难找到想要的信息。使用话题发现方法分析新闻事件中的话题，不仅能帮助人们更好地理解事件的发生和演化，还能分析公众关注的问题，理解舆论的关注点。因此，话题发现的分析方法吸引了众多学者的关注，并在网络舆情的相关研究中得到了广泛应用。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;6]&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;目前，关于性别议题网络舆论的话题研究主要集中在舆论话题发现和传播演变。其中，网络舆论的话题发现主要是针对社会网络中意外事件话题的识别，或者基于原始模型改进和优化预测模型的准确性。研究中通常采用聚类分析和话题模型。前者主要基于同类文档相似度大或不同类文档相似度小的聚类假设，然后将文本信息转化为数字信息，并通过机器学习方法进行处理。例如，一些研究利用社交媒体中的大规模文本数据，通过细分构建基于推文的事件监测系统，并考虑信息内容的频率分布和相似性，将紧急事件推文片段检测为事件片段，然后将事件片段聚类为事件，以实现相关事件的识别。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;7]&lt;/a&gt;]也有研究利用机器学习聚类算法来识别社交媒体中的话题趋势，并提供语义分析，以综合准确描述每个话题[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;8]&lt;/a&gt;]。后者是基于文本挖掘中广泛使用的话题发现工具，从大规模文本数据中自动寻找潜在隐藏的话题并进行建模。最广泛使用的模型是LDA（潜在狄利克雷分布）模型及其改进模型[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;9]&lt;/a&gt;]。&lt;/p&gt;
+&lt;p&gt;总结来说，网络舆情的话题研究相对成熟，已经取得了良好的成果，但很少有研究将特定平台，尤其是用户局限、特点鲜明的社区化社交媒体作为研究对象。此外，传播学领域的相关探讨存在面向单一、逻辑断裂、缺乏纵深考量等问题。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;10]&lt;/a&gt;]因此，我们以“胖猫”事件在百度贴吧的舆情表现为研究对象，舆情话题的传播演化规律，并比较进一步探讨不同类型紧急事件的舆情规律。&lt;/p&gt;
+&lt;h2 id=&#34;三-数学方法&#34;&gt;（三） 数学方法&lt;/h2&gt;
+&lt;p&gt;本文主要构建了三个模型，即文本数据的向量化、网络舆情的主题识别和网络舆情的时间序列模型。研究主要使用Word2Vec词向量模型将文本数据转换为词向量，然后使用K-means聚类方法实现主题识别。在时间序列模型中，研究主要使用ARIMA模型对舆情进行时间-主题分析，并进一步比较不同类型的主题，以探讨性别主题与其他衍生主题在时间网络上的演变共性和差异。本节将简要介绍Word2Vec词向量模型、K-means主题分类模型和ARIMA时间序列模型的原理和优势。&lt;/p&gt;
+&lt;h3 id=&#34;1-word2vec词向量模型&#34;&gt;1. Word2Vec词向量模型&lt;/h3&gt;
+&lt;p&gt;社交媒体为人们了解与突发事件相关的信息提供了便捷的渠道。然而，网络数据的规模庞大，大量的无用信息和噪声的存在使得提取有效信息变得更加困难。为了及时准确发现重要信息，主题识别方法已经在社交媒体的事件检测和信息提取中得到了广泛应用[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn11&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;11]&lt;/a&gt;]。然而，在以短文本信息为主的社交媒体平台如Twitter和Facebook上，传统的以LDA为代表的主题识别模型并不适用，主题识别的有效性无法得到良好保证[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn12&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;12]&lt;/a&gt;]。作为一种典型的主题模型，LDA主要使用软聚类方法来聚类文档，并通过研究文档矩阵，利用文档中词语的共现关系实现主题聚类。但是，当主题模型应用于短文本文档时，经常会发生数据稀疏的问题。具体来说，为了进一步提高主题识别的准确性，研究人员提出了一系列基于深度学习的主题识别和文本挖掘方法，其中最具代表性的模型是Word2Vec，它能够生成词向量，并由一个浅层双层神经网络结构表示[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn13&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;13]&lt;/a&gt;]。与以LDA为代表的主题模型相比，Word2Vec主要表现为具有神经网络结构的词嵌入模型。通过学习上下文-词语矩阵，将词语转换为词向量，这在短文本信息的主题识别中表现出了更好的结果。&lt;/p&gt;
+&lt;p&gt;Word2Vec是一个简化的神经网络模型，通过处理大量文本数据，学习词与上下文之间的关系，并将词的语义映射到向量空间。Word2Vec模型包括两种主要训练方法：CBOW模型和Skip-Gram模型。区别在于，前者主要通过当前词的语义实现上下文词的预测，而后者主要通过上下文的语义来预测当前词。尽管在遍历所有文本后，Skip-Gram模型在获取所有文本的词向量方面更为准确。考虑到在分析较小规模社交媒体数据集时的确保模型精度和预测准确度，本研究采用了Skip-Gram模型。&lt;/p&gt;
+&lt;p&gt;Skip-Gram模型具体实现如下：&lt;/p&gt;
+&lt;p&gt;输入层：一个one-hot编码的向量，维度为词汇表大小。&lt;/p&gt;
+&lt;p&gt;隐藏层：一个包含若干神经元的全连接层，神经元数量通常为词向量的维度。通过输入词的one-hot编码向量乘以输入层到隐藏层的权重矩阵将输入向量转换为隐藏层向量。&lt;/p&gt;
+&lt;p&gt;输出层：一个包含词汇表大小神经元的全连接层，输出每个词的概率。通过softmax函数将输出向量转换为概率分布，表示每个上下文词的概率。&lt;/p&gt;
+&lt;h3 id=&#34;2-k-means聚类模型&#34;&gt;2. K-means聚类模型&lt;/h3&gt;
+&lt;p&gt;K-means是一种无监督学习算法，用于将数据集中的样本划分为多个簇（clusters）。其基本原理是通过迭代优化过程，将数据点分配到最近的簇中心，并更新簇中心以最小化簇内数据点的平方误差和。&lt;/p&gt;
+&lt;p&gt;K-means的优势在于其简单性和高效性，适用于大规模数据集。然而，它对初始簇中心的选择敏感，可能陷入局部最优解。本研究会结合文献研究中的议题分析和预处理过程的tf-idf频数分析对Word2Vec词向量模型训练结果和K-means聚类结果进行评估，以减小误差。&lt;/p&gt;
+&lt;p&gt;K-means的主要步骤包括：&lt;/p&gt;
+&lt;p&gt;\1. 初始化：随机选择K个数据点作为初始簇中心。&lt;/p&gt;
+&lt;p&gt;\2. 分配：将每个数据点分配到距离最近的簇中心。&lt;/p&gt;
+&lt;p&gt;\3. 更新：计算每个簇的新中心，即簇内所有数据点的平均值。&lt;/p&gt;
+&lt;p&gt;\4. 重复步骤2和3，直到簇中心不再显著变化或达到预设的迭代次数。&lt;/p&gt;
+&lt;h3 id=&#34;3-arima时间序列模型&#34;&gt;3. ARIMA时间序列模型&lt;/h3&gt;
+&lt;p&gt;时间序列是由相同对象的观测值按照时间顺序排列形成的一系列序列。其目的是利用现有历史数据来预测未来的数据。为了实现观测值的预测，已经建立了基于时间序列数据的随机和动态模型。常见模型包括自回归（AR）、移动平均（MA）和向量自回归（VAR），以及基于AR和MA模型的自动回归移动平均（ARMA）和自回归积分移动平均（ARIMA）模型。&lt;/p&gt;
+&lt;p&gt;ARIMA（AutoRegressive Integrated Moving Average）模型是一种广泛用于时间序列分析和预测的统计模型。ARIMA模型结合了自回归（AR）、差分（I）和移动平均（MA）三个部分，以捕捉时间序列中的趋势和周期性。ARIMA 模型的基本原理是通过数学方法逼近观测对象在时间上的数据变化，并基于历史数据的拟合实现对未来的预测。&lt;/p&gt;
+&lt;p&gt;ARIMA模型的优势在于其能够处理非平稳时间序列，并通过差分和自回归项捕捉序列中的复杂动态。本研究主要使用ARIMA模型来实现对“胖猫”事件衍生的舆论主题情绪演化的分析，然后探索百度贴吧中舆论主题的内部形成和传播规律。&lt;/p&gt;
+&lt;p&gt;ARIMA模型的主要步骤包括：&lt;/p&gt;
+&lt;p&gt;\1. 平稳性检验：检查时间序列是否平稳，若不平稳则进行差分处理，直到序列平稳。&lt;/p&gt;
+&lt;p&gt;\2. 模型识别：通过自相关函数（ACF）和偏自相关函数（PACF）确定AR和MA的阶数。&lt;/p&gt;
+&lt;p&gt;\3. 参数估计：使用最大似然估计等方法估计模型参数。&lt;/p&gt;
+&lt;p&gt;\4. 模型检验：检查模型的残差是否为白噪声，以确保模型拟合良好。&lt;/p&gt;
+&lt;p&gt;\5. 预测：使用拟合好的模型进行未来值的预测。&lt;/p&gt;
+&lt;h1 id=&#34;三-研究设计&#34;&gt;三、 研究设计&lt;/h1&gt;
+&lt;p&gt;在研究中，首先选取“胖猫”事件作为主要研究对象，然后抓取了该事件不同时间下在百度贴吧的舆论数据集，并通过去除停用词、分词、过滤文本内容完成文本预处理。其次，利用Word2Vec和K -means聚类方法提取该事件下的讨论主题。最后，运用时间序列分析方法对舆论内容进行建模，探究“胖猫”事件舆情的主题演化机制，绘制演化图，并对不同主题进行对比，了解其演化规律的共性与差异。研究框架如图6。&lt;/p&gt;
+&lt;h2 id=&#34;一-数据收集与预处理&#34;&gt;（一） 数据收集与预处理&lt;/h2&gt;
+&lt;p&gt;研究选取“胖猫”事件作为案例材料，并以百度贴吧中与该事件有关帖子的回帖信息为数据来源，以对应研究背景中百度贴吧舆论在该事件中表现特殊的“互动声量”。&lt;/p&gt;
+&lt;p&gt;百度贴吧是曾是中国最具代表性和影响力的信息互动与交流平台之一。类似于Facebook等由社群主导的社交媒体平台，用户在百度贴吧中发帖与回帖，对事件表达观点，并与他人互动，从而构建了一个信息交换与共享网络。通过限定时间和搜索关键词的方法，研究人员获得了“胖猫”事件相关的回帖和时间信息，为后续的研究提供了充足的数据支持。&lt;/p&gt;
+&lt;p&gt;在数据分析之前，为了进一步提高模型运行的效率和结果的准确性，需要采取一些数据预处理步骤。首先，对获取的数据进行初步浏览、清洗，并通过正则表达式等方法对文本内容进行了过滤。其次，需要使用分词工具对中文文本进行分词，以解决中文文本与英文文本相比缺乏空格的问题。最后，为了进一步处理文本数据中的无效词汇，需要依据停用词表对分词进行停用词删除、同义词替换和词性标记等操作。&lt;/p&gt;
+&lt;h2 id=&#34;二-预实验&#34;&gt;（二） 预实验&lt;/h2&gt;
+&lt;p&gt;预实验采用DTM（Dynamic Topic Model）模型基于LDA（Latent Dirichlate Allocation）主题识别模型，引入时间因素，从而刻画舆论主题库主题随时间的动态演化。预实验使用Python用于机器学习的第三方库Gensim[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn14&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;14]&lt;/a&gt;]的模型包ldaseqmodel计算语料库主题分布。&lt;/p&gt;
+&lt;p&gt;经过反复尝试与调整，最终确定模型参数如下：（1）time_slice语料库间隔：根据获取的数据时间分布情况，切割为1225，325，255，225四部分；（2）num_topics主题数：3个；（3）passes、inter迭代次数：20次passes，50-100次em_inter。经过训练，获得主题的在不同时期的演变，结果如表1。&lt;/p&gt;
+&lt;p&gt;表 1 主题在不同时期的演变&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;1225（第一时期）&lt;/th&gt;
+&lt;th&gt;325（第二时期）&lt;/th&gt;
+&lt;th&gt;225（第三时期）&lt;/th&gt;
+&lt;th&gt;225（第四时期）&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;主题中心词&lt;/td&gt;
+&lt;td&gt;权重&lt;/td&gt;
+&lt;td&gt;主题中心词&lt;/td&gt;
+&lt;td&gt;权重&lt;/td&gt;
+&lt;td&gt;主题中心词&lt;/td&gt;
+&lt;td&gt;权重&lt;/td&gt;
+&lt;td&gt;主题中心词&lt;/td&gt;
+&lt;td&gt;权重&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题1&lt;/td&gt;
+&lt;td&gt;女、男、舔、死等&lt;/td&gt;
+&lt;td&gt;0.171&lt;/td&gt;
+&lt;td&gt;女、男、舔、死等&lt;/td&gt;
+&lt;td&gt;0.172&lt;/td&gt;
+&lt;td&gt;女、男、舔、死等&lt;/td&gt;
+&lt;td&gt;0.173&lt;/td&gt;
+&lt;td&gt;女、男、死、舔等&lt;/td&gt;
+&lt;td&gt;0.173&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题2&lt;/td&gt;
+&lt;td&gt;点、吃人血馒头、钱、现在等&lt;/td&gt;
+&lt;td&gt;0.101&lt;/td&gt;
+&lt;td&gt;点、吃人血馒头、钱、现在等&lt;/td&gt;
+&lt;td&gt;0.100&lt;/td&gt;
+&lt;td&gt;点、吃人血馒头、钱、现在等&lt;/td&gt;
+&lt;td&gt;0.101&lt;/td&gt;
+&lt;td&gt;点、吃人血馒头、钱、现在等&lt;/td&gt;
+&lt;td&gt;0.101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题3&lt;/td&gt;
+&lt;td&gt;胖猫、谭竹、好似、女等&lt;/td&gt;
+&lt;td&gt;0.116&lt;/td&gt;
+&lt;td&gt;胖猫、谭竹、好似、女等&lt;/td&gt;
+&lt;td&gt;0.118&lt;/td&gt;
+&lt;td&gt;胖猫、谭竹、好似、女等&lt;/td&gt;
+&lt;td&gt;0.119&lt;/td&gt;
+&lt;td&gt;胖猫、谭竹、好似、女等&lt;/td&gt;
+&lt;td&gt;0.119&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;由表1可知，三个主题的关键词在时间序列上基本保持不变，三个主题的权重在时间序列上基本保持不变。据此可以得出，三个主题在时间序列上不存在显著动态变化，即百度贴吧在该时间段内对“胖猫”事件的舆论主题基本保持一致，印证了研究背景中所提及的，百度贴吧舆论聚焦、延伸较少的特点。&lt;/p&gt;
+&lt;p&gt;预实验结果表示，主题关键词之间差异并不显著，即LDA-DTM模型组合训练得出的词向量表现、主题识别结果表现不良好，为最终选定Word2Vec-Kmeans模型组合进行主题识别在该舆论主题数据库的合理性提供了实验依据。预实验侧面验证了舆论主题在时间序列上的相对平稳性，为最终选定时间序列ARIMA模型提供了实验依据。&lt;/p&gt;
+&lt;h2 id=&#34;三-主题识别模型的设计&#34;&gt;（三） 主题识别模型的设计&lt;/h2&gt;
+&lt;p&gt;在使用Word2vec模型将文本信息转化为词向量之前，我们首先通过TF-IDF模型提取特征词，以减少文本数据中无用信息和噪声的干扰。基于加权处理，我们从每条文本数据中提取出最重要的关键词，并使用它们作为词向量转换的数据集。其次，我们使用Word2vec中的Skip-Gram模型转换数据集的词向量，将文本转化为词向量，并使用常见的文本挖掘方法 K-means 算法进行文本聚类。根据文本之间的相似度，将提取的主题划分为不同的聚类，以实现文本主题的识别。最后，根据主题识别模型和TF-IDF词频表，使用聚类中心词组和聚类高频词组两类词组表示主题关键词。根据两组关键词，使用人工标签编码形成主题描述，以区分每个事件的文本数据。&lt;/p&gt;
+&lt;h2 id=&#34;四-时间序列模型的设计&#34;&gt;（四） 时间序列模型的设计&lt;/h2&gt;
+&lt;p&gt;在获得舆论主题数据集后，统计百度贴吧发布时间与舆论数据集中的主题数量的关系，获得可以分析的时间序列数据。为了实现时间网络上的舆论主题分析，我们使用了ARIMA模型来分析舆论数据集。在获取舆论主题数据集的基础上，研究主要建立了一个以文本数量为纵坐标、时间尺度为横坐标的时间图，以观察时间尺度下舆论主题的演变。其中，获取基于主题的舆论时间序列数据的步骤如下。&lt;/p&gt;
+&lt;p&gt;首先，检查时间序列是否平稳，若不平稳则进行差分处理，直到序列平稳，再通过自相关函数（ACF）和偏自相关函数（PACF）确定AR和MA的阶数。其次，使用最大似然估计等方法估计模型参数。同时，通过贝叶斯信息准则（BIC）对模型可选参数进行穷举分析，对最大似然估计的结果参数进行验证，找到模型拟合最为良好的模型参数。最后，根据舆论主题数据集的发布时间和文本数量建立二维坐标图，进行舆论主题的时间序列分析。&lt;/p&gt;
+&lt;h1 id=&#34;四-研究发现&#34;&gt;四、 研究发现&lt;/h1&gt;
+&lt;h2 id=&#34;一-数据描述性分析&#34;&gt;（一） 数据描述性分析&lt;/h2&gt;
+&lt;p&gt;在本文中，研究通过舆情研究平台“舆情通”获取相关数据。基于关键词“胖猫”和平台“百度贴吧”，获取了2024年5月1日至2024年6月1日之间百度贴吧上关于“胖猫”事件的帖子，这些帖子包括用户对事件本身的评论以及与其他人评论的互动（即回帖）。最终，研究选定回帖作为数据集，回收有效数据2000条。&lt;/p&gt;
+&lt;p&gt;首先，我们对获取的数据进行了初步浏览，删除了无效的帖子，通过正则表达式等方法对文本内容进行了过滤。其次，我们使用Python用于分词的第三方库jieba[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn15&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;15]&lt;/a&gt;]进行中文分词，使用的模型为默认的HMM（隐马尔可夫）模型。最后，我们对开源的哈工大实验室停用词表stopwords_hit.txt[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;16]&lt;/a&gt;]进行微调，并据此对分词结果进行标注、合并同义词并删除了停用词。&lt;/p&gt;
+&lt;p&gt;同时，我们基于分词表，统计词语频率（如表2），构建句-词-词频表，利用Python用于词云构建的第三方库wordcloud[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn17&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;17]&lt;/a&gt;]和用于绘图的第三方库matplotlib[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;18]&lt;/a&gt;]，绘制了词云图如表7。&lt;/p&gt;
+&lt;p&gt;由频数表与词云图可初步推测，百度贴吧用户在该事件讨论中表现出以下特征：&lt;/p&gt;
+&lt;p&gt;\1. 高度聚焦特定对象：“胖猫”一词以149的高频率成为绝对焦点，表明该事件或话题围绕“胖猫”这一核心元素展开，用户对此表现出极大的兴趣和讨论热情。&lt;/p&gt;
+&lt;p&gt;\2. 性别议题显著：“女”、“男”分别以134和116的频数紧随其后，结合“龟男”、“舔狗”、“xxn”等词汇的出现，显示出讨论中存在明显的性别对立或性别角色相关的争议，反映了用户对于性别话题的敏感性和参与度。&lt;/p&gt;
+&lt;p&gt;\3. 情感色彩浓厚：诸如“好死”、“吃人血馒头”、“骂”等词汇的高频出现，说明讨论中不乏激烈的情绪表达和道德评判，用户在交流中倾向于使用强烈的情感词汇来表达不满、愤怒或批评。&lt;/p&gt;
+&lt;p&gt;\4. 特定梗与网络文化：“吃人血馒头”、“龟男”、“舔狗”等具有特定含义的网络用语频繁出现，体现了百度贴吧用户群体内部独特的语言风格和网络文化认同，这些特定梗被用来快速传递复杂情绪或观点，增强了讨论的共鸣感。&lt;/p&gt;
+&lt;p&gt;\5. 寻求真相与信息验证：“真的”、“知道”、“反转”等词的出现，表明用户在表达同情和愤怒的同时，也在寻找事件的真实面貌，有探索事件多面性、求证事实的倾向。&lt;/p&gt;
+&lt;p&gt;\6. 群体归属与身份认同：“同情”、“好死”、“谭竹”、“姐姐”等词汇的使用，反映出用户在互动中进行道德判断和价值观的输出，既有对受害者的嘲讽或同情，也有对谭竹和“胖猫”姐姐的支持与否，展现了网络社区中道德观念的碰撞和讨论，以及用户的阵营划分与相互冲突。&lt;/p&gt;
+&lt;p&gt;表 2 词频图（部分）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;词&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;频数&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;胖猫&lt;/td&gt;
+&lt;td&gt;149&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;134&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;116&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;好死&lt;/td&gt;
+&lt;td&gt;91&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;吃人血馒头&lt;/td&gt;
+&lt;td&gt;87&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;龟男&lt;/td&gt;
+&lt;td&gt;85&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;死&lt;/td&gt;
+&lt;td&gt;79&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;谭竹&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;真的&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;看&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;骂&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;钱&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;舔&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;舔狗&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;龟&lt;/td&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;发&lt;/td&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;知道&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;姐姐&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;同情&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;xxn&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;反转&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;二-基于主题识别的舆论数据集&#34;&gt;（二） 基于主题识别的舆论数据集&lt;/h2&gt;
+&lt;p&gt;首先，我们根据分词表，计算TF-IDF加权频数系数，据此从每一条句数据集中提取最多12个关键词形成句-词数据集，同时清除掉无关键词的无效句，最终留下1882条数据。其次，我们使用了Python用于机器学习的第三方库Pytorch[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn19&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;19]&lt;/a&gt;]，使用Word2Vec的Skip-Gram词向量模型，结合负样本采样方法，消除Word2Vec模型因忽略上下文之外的词语对中心词的语义影响而造成的误差，将文本数据转换为embedding向量值，形成句-词-词向量数据集。&lt;/p&gt;
+&lt;p&gt;训练模型后，以聚类的中心词-关键词组作为模型检验的选用词-参考词组，通过检索，计算词汇表所有词语与选用词的embedding向量值的余弦相似度（由于向量为多维而非二维，不使用欧氏距离，也无法作出散点图展示），取前9个最相似的词语及其相似度，得到选用词-相似词-相似度表。通过对相似词与参考词以及对相似度的比较，评估模型拟合度。&lt;/p&gt;
+&lt;p&gt;经过反复尝试与调整，最终确定模型参数如下：（1）K负样本随机采样数量：18词；（2）C周围单词的数量：5词；（3）NUM_EPOCHS训练轮数：1轮；（4）VOCAB_SIZE词汇表大小：2063词；（5）BATCH_SIZE批处理大小128词/批；（6）LEARNING_RATE学习率：0.4；（7）EMBEDDING_SIZE：300维。经过训练，模型在第101次迭代时收敛，损失值为131.689，将根据优化参数生成的词向量模型保存。其选用词-相似词-相似度表（部分）如表3。&lt;/p&gt;
+&lt;p&gt;表 3 选用词-相似词-相似度表（部分）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选用词&lt;/th&gt;
+&lt;th&gt;相似词1&lt;/th&gt;
+&lt;th&gt;相似度&lt;/th&gt;
+&lt;th&gt;相似词2&lt;/th&gt;
+&lt;th&gt;相似度&lt;/th&gt;
+&lt;th&gt;相似词3&lt;/th&gt;
+&lt;th&gt;相似度&lt;/th&gt;
+&lt;th&gt;相似词4&lt;/th&gt;
+&lt;th&gt;相似度&lt;/th&gt;
+&lt;th&gt;相似词5&lt;/th&gt;
+&lt;th&gt;相似度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;一共&lt;/td&gt;
+&lt;td&gt;删&lt;/td&gt;
+&lt;td&gt;0.208&lt;/td&gt;
+&lt;td&gt;努力&lt;/td&gt;
+&lt;td&gt;0.204&lt;/td&gt;
+&lt;td&gt;草莓&lt;/td&gt;
+&lt;td&gt;0.197&lt;/td&gt;
+&lt;td&gt;发生&lt;/td&gt;
+&lt;td&gt;0.191&lt;/td&gt;
+&lt;td&gt;还以&lt;/td&gt;
+&lt;td&gt;0.177&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;高速&lt;/td&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;0.606&lt;/td&gt;
+&lt;td&gt;死&lt;/td&gt;
+&lt;td&gt;0.598&lt;/td&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;0.597&lt;/td&gt;
+&lt;td&gt;钱&lt;/td&gt;
+&lt;td&gt;0.586&lt;/td&gt;
+&lt;td&gt;好&lt;/td&gt;
+&lt;td&gt;0.585&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;死&lt;/td&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;0.952&lt;/td&gt;
+&lt;td&gt;胖猫&lt;/td&gt;
+&lt;td&gt;0.948&lt;/td&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;0.948&lt;/td&gt;
+&lt;td&gt;骂&lt;/td&gt;
+&lt;td&gt;0.925&lt;/td&gt;
+&lt;td&gt;谭竹&lt;/td&gt;
+&lt;td&gt;0.914&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;然后，我们使用Python用于机器学习的第三方库scikit-learn[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn20&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;20]&lt;/a&gt;]库中的多个模块包，采用 K-means聚类方法实现主题识别。首先，我们通过通过轮廓系数确定最优簇数，绘制簇数2到9范围的轮廓系数折线图如图8。根据手肘法确认最佳簇数为3，即最佳主题分类数为3。&lt;/p&gt;
+&lt;p&gt;在该簇数下对词向量进行K-means聚类获得最终主题分类结果，形成句-词-词向量-主题表。同时，我们将300维词向量使用TSNE算法降维为双维和一维，形成句-词-词向量-主题-一维词向量，绘制双维聚类散点图如图9。&lt;/p&gt;
+&lt;p&gt;由双维聚类散点图可得，聚类结果较好地区分了三类主题的分布，且三类主题具有鲜明特征、存在显著的热度差异。&lt;/p&gt;
+&lt;p&gt;最后，根据主题下词向量的余弦相似度查找得到有包含簇中心的10个中心词，根据主题下的词频查找得到10个高频词，使用标签编码人工为主题进行描述，构建主题-主题描述-中心词组-高频词组表如表4。并且，我们通过句-词-频数表、句-词-词向量-主题-一维词向量表和主题-主题描述-中心词组-高频词组表分别通过词、主题进行内连接，形成舆论主题数据集（部分见表5）。&lt;/p&gt;
+&lt;p&gt;表 4 主题-主题描述-中心词组-高频词组表（附词频总数、词数）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;主题描述&lt;/th&gt;
+&lt;th&gt;中心词组&lt;/th&gt;
+&lt;th&gt;高频词组&lt;/th&gt;
+&lt;th&gt;词频总数&lt;/th&gt;
+&lt;th&gt;词数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;主题1&lt;/td&gt;
+&lt;td&gt;关注经济问题、思考舆论操纵&lt;/td&gt;
+&lt;td&gt;一共 删 努力 草莓 发生 还以 加害者 出去 男性 可悲&lt;/td&gt;
+&lt;td&gt;挣 拉 最 换 少 记录 流量 瓜 不好 纯&lt;/td&gt;
+&lt;td&gt;7060&lt;/td&gt;
+&lt;td&gt;1759&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题2&lt;/td&gt;
+&lt;td&gt;对性别话题的评价与讽刺&lt;/td&gt;
+&lt;td&gt;高速 男 死 女 钱 胖猫 好 谭竹 龟男 看&lt;/td&gt;
+&lt;td&gt;真的 会 舔狗 发姐姐 同情 xxn 出来 只能 点&lt;/td&gt;
+&lt;td&gt;3359&lt;/td&gt;
+&lt;td&gt;250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题3&lt;/td&gt;
+&lt;td&gt;议论事件本身、求证事实&lt;/td&gt;
+&lt;td&gt;死 女 胖猫 男 骂 谭竹 钱 好 看 现在&lt;/td&gt;
+&lt;td&gt;胖猫 女 男吃人血馒头 龟男 死 谭竹 看 骂 反转&lt;/td&gt;
+&lt;td&gt;1117&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;表 5 舆论主题数据集（部分）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;句&lt;/th&gt;
+&lt;th&gt;词&lt;/th&gt;
+&lt;th&gt;频数&lt;/th&gt;
+&lt;th&gt;词向量&lt;/th&gt;
+&lt;th&gt;一维词向量&lt;/th&gt;
+&lt;th&gt;主题&lt;/th&gt;
+&lt;th&gt;…&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;21 岁 年纪 12 精神 存 确实 牛 逼 低能&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;[0.0006494,……&lt;/td&gt;
+&lt;td&gt;1.597&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;岁&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;[-0.0004473,……&lt;/td&gt;
+&lt;td&gt;-0.520&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年纪&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;[0.0009117,……&lt;/td&gt;
+&lt;td&gt;-2.551&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;由主题-主题描述-中心词组-高频词组表可得，三个主题的词频总数虽然差距显著，但是其数值都较大,聚类合理。百度贴吧中对于“胖猫”事件展开讨论时，主要在经济问题、性别问题和事件本身上进行讨论。其中，经济问题讨论度最高，性别问题次之，事件本身讨论度最小。&lt;/p&gt;
+&lt;h2 id=&#34;三-基于时间序列的舆论主题分析&#34;&gt;（三） 基于时间序列的舆论主题分析&lt;/h2&gt;
+&lt;p&gt;根据舆论主题数据集，我们对性别主题与其他衍生主题在时间网络上的演变共性和差异展开探究。考虑到本研究中采用的公众舆论数据集的所有周期大约为一个月，不适合以天为单位进行切片。此外，为了进一步细化时间尺度，更直观地展示衍生舆论的演变趋势，我们最终选择以“三小时”为单位切割时间数据。&lt;/p&gt;
+&lt;p&gt;根据分析主体，选定主题回帖数和主题向量作为变量构建时间序列数据。我们统计了数据集中发布日期与主题回帖数的关系，最终构建了可分析的时间序列数据{时间，主题回帖数}。根据实验设计中的实验步骤，首先使用Python用于数据分析的第三方库statsmodels[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn21&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;21]&lt;/a&gt;]，通过ADF检验测量时间序列数据的平稳性如表6。&lt;/p&gt;
+&lt;p&gt;由表可知，各时间序列均满足：ADF在95%的置信区间内，p值远小于0.001，说明时间序列数据均为平稳序列，可以直接将原始序列用于ARIMA模型分析，而不需进行差分处理。接下来，我们将时间序列数据{时间，主题回帖数}导入ARIMA模型进行时间-主题数量。&lt;/p&gt;
+&lt;p&gt;随后，结合ACF自相关图和PACF偏相关图确定ARIMA模型中的系数和系数的取值范围，并比较不同系数的ARIMA模型的结果，选取最佳系数来绘制每个主题在时间网络上的形成和演化图表。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;22]&lt;/a&gt;]每个主题下的ARIMA模型测试结果如表6。模型的信息准则由BIC表示，根据模型的拟合度选择模型。此外，每个模型的残差不相关，时间序列数据的残差符合随机序列的分布，没有异常值，显示出良好的拟合效果。[[&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/archives/CNl5C5LH#_ftn23&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;23]&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;表 6 ADF检验表（附ARIMA模型选用-BIC）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;时间序列&lt;/th&gt;
+&lt;th&gt;ADF&lt;/th&gt;
+&lt;th&gt;ADF-pValue&lt;/th&gt;
+&lt;th&gt;模型选用&lt;/th&gt;
+&lt;th&gt;BIC&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;{时间，主题1回帖数}&lt;/td&gt;
+&lt;td&gt;-4.723&amp;lt;-3.507***&lt;/td&gt;
+&lt;td&gt;7.62e-05***&lt;/td&gt;
+&lt;td&gt;ARIMA（1,1）&lt;/td&gt;
+&lt;td&gt;797.62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{时间，主题2回帖数}&lt;/td&gt;
+&lt;td&gt;-4.822&amp;lt;-3.513***&lt;/td&gt;
+&lt;td&gt;4.93e-05***&lt;/td&gt;
+&lt;td&gt;ARIMA（1,1）&lt;/td&gt;
+&lt;td&gt;904.32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{时间，主题3回帖数}&lt;/td&gt;
+&lt;td&gt;-5.535&amp;lt;-3.515***&lt;/td&gt;
+&lt;td&gt;1.76e-06***&lt;/td&gt;
+&lt;td&gt;ARIMA（1,1）&lt;/td&gt;
+&lt;td&gt;560.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最后，根据表所示的每个主题的ARIMA模型测试结果，我们建立了每个主题在时间网络上的形成和演化的测量和拟合图表。每个主题的实际值和预测值曲线如图10(a)(b)(c)所示，其中横坐标是切片后发帖的时间，纵坐标是帖子数量。此外，蓝色曲线表示实际值，黄色曲线表示预测值。&lt;/p&gt;
+&lt;p&gt;由图10(a)(b)(c)可知，三个主题下的实际值与预测值走势吻合，但对数值的预测存在差距，表明ARIMA模型捕捉性别议题的变化趋势的能力一般。三个主题下时间序列下的表现，呈现出相似的特点：三个主题在事件初期迅速达到高峰，随后逐渐回落并保持在较低水平，但在某些时间点上仍然有明显的波动，在2024-05-29左右三个主题迎来第二波峰，第二峰值均高于第一峰值。&lt;/p&gt;
+&lt;p&gt;经济主题的两波峰值差距较小，而事件主题的两波峰值差距较大，反映出对事件本体的讨论虽然占比较小，但在警方通报后占比提高。此外，值得注意的时性别议题在三个主题中更早到达第二峰值。&lt;/p&gt;
+&lt;h2 id=&#34;四-主题演化规律&#34;&gt;（四） 主题演化规律&lt;/h2&gt;
+&lt;p&gt;根据频数分析、主题识别和时间序列预测,可以总结百度贴吧对“胖猫”事件的主题演化规律：&lt;/p&gt;
+&lt;p&gt;早期讨论主要集中在事件的事实描述和初步反应，随后逐渐转向对性别角色和经济因素的深入探讨。经过时间序列分析，结合研究背景中百度贴吧舆论在该事件中的特殊表现，即互动声量在第二峰值才迎来爆发，可以认为性别议题实际上激发了百度贴吧用户展开互动讨论。此后，用户的讨论从对事件的表层反应逐渐深入到对社会现象和结构性问题的思考。不同主题在舆情时间序列中的出现频率和强度也反映了公众关注点的倾向。“经济问题”在时间序列上的讨论度始终高于其他主题，“性别问题”主题在事件初期和高潮时期显著增加，而“事件本体”则在事件后期讨论热度有所提升。&lt;/p&gt;
+&lt;p&gt;在讨论经济问题时，贴吧用户既涉及对舆论操纵的思考，还关注事件相关的经济问题。一方面，这表明在当前社会中，舆论与经济问题的相互影响越来越受到公众关注。词组如“挣”、“流量”等反映了网民对经济利益驱动下的舆论操控的敏感。另一方面，这体现出公众对情感经济交换的复杂看法。用户对“胖猫”在情感上进行巨额经济交换的合理性各抒己见，反映出公众在现实生活中对于性别关系、恋爱中的经济行为及责任分配的关注和心理需求。&lt;/p&gt;
+&lt;p&gt;在讨论性别问题时，贴吧用户关注对男性和女性行为的讨论，体现了性别议题在社交媒体上的高热度和复杂性。词组如“舔狗”、“xxn（小仙女）”等表现用户对性别角色和行为的刻板印象和调侃。值得关注的是，该主题的聚类中心词“高速”表现了部分用户对在性别问题下的持续争辩与冲突表示疲惫，希望公众应该更加关注“梅大高速塌方”事件等社会突发事件。&lt;/p&gt;
+&lt;p&gt;在讨论事件本身时，贴吧用户对事件中涉及的道德与公平问题表达了高度的关注。嘲讽“胖猫”和抵制散布谣言的行为，反映了网民对事件真实性的关注以及对不实信息传播的抵制。这一主题中的高频词组如“吃人血馒头”、“骂”等反映了网民对事件中涉及人物和行为的强烈情感反应或道德评判。“看”、“反转”等词语也反映了用户在参与讨论时不仅关注事件本身，还重视信息的真实性和完整性，有探索事件多面性、求证事实的倾向。&lt;/p&gt;
+&lt;p&gt;随着事件的发展，用户的情感态度从最初的震惊和愤怒逐渐演变为理性讨论和反思,反映着百度贴吧用户在讨论中并不仅仅只有激烈的情绪和对性别问题防御性，而是也会关照社会、政治、经济的整体情况，强调事实求证与社会公正。&lt;/p&gt;
+&lt;h1 id=&#34;五-研究结论&#34;&gt;五、 研究结论&lt;/h1&gt;
+&lt;h2 id=&#34;一-性别与经济舆情形成&#34;&gt;（一） 性别与经济舆情形成&lt;/h2&gt;
+&lt;p&gt;“胖猫”事件产生的原因，从浅层次分析，是个人情感纠纷与经济利益冲突的直接爆发。男生“胖猫”与女友谭竹之间的情感纠葛、经济往来争议以及最终的悲剧结局，成为事件的直接导火索。从根本来说，事件发酵爆发的社会原因在于现代社会中性别角色认知的分歧、网络环境下信任缺失、以及公众对情感经济交换的敏感性，这些深层次因素为事件提供了肥沃的土壤。特别是在网络社交平台的放大效应下，个体事件迅速演变为具有广泛社会影响力的公共议题。&lt;/p&gt;
+&lt;p&gt;在事件发展的过程中，意见领袖如胖猫的姐姐和谭竹、知名人士如胡锡进、社交媒体如微博和抖音、主流媒体如人民日报等，他们的发声直接影响了舆论的走向，为各自的立场提供了支撑，或者加剧了公众的分化，或者统一着公众的集体诉求与意见。而百度贴吧等社区型平台，尽管不如微博等平台那样集中出现权威意见领袖，但用户通过帖子、回复等形式积极参与，形成了自发的站队现象，进一步推动了舆论的极化。平台内的讨论虽然分散，但同样促进了不同观点的碰撞与情绪的累积。&lt;/p&gt;
+&lt;p&gt;公众对于“胖猫事件”的事实性信息与相关价值判断的意见表现得极为分裂。一方面，许多人基于同情弱者的心态，对胖猫的遭遇表示深切同情，认为其为爱情付出巨大代价，是情感和经济双重受害者；许多人认为其心理脆弱、在情感中表现得过于软弱，对胖猫的选择进行嘲讽。另一方面，也有人质疑胖猫姐姐的动机，认为其可能借机获取关注与利益；此外，对谭竹的指责也反映了对“捞女”形象的负面刻板印象。这种分裂意见的交流中，议题逐渐超越了事件本身，扩展到了性别对立、家庭责任、网络暴力等多个社会议题，体现了公众对更广泛社会问题的关注与担忧。然而，当争论超越一定的界限，原本基于事实的讨论容易演变为对个人的人身攻击和道德审判，如性别对立的言论泛滥、对双方家庭成员的网络暴力等，这种过度的情绪化表达不仅损害了个体权益，也破坏了公共讨论的健康环境。&lt;/p&gt;
+&lt;p&gt;最终，在警方通报之后，形成了一种相对统一的“意见核”。这一“意见核”的特征体现在：首先，它凝聚了一定规模的社会成员共识，即无论事件的具体细节如何，都需要通过法律程序来公正解决；其次，它稳定了意见结构，不同声音虽存，但都开始围绕法律框架下的事实认定展开；最后，确立了有序的意见表达，减少了非理性言论，有助于构建一个更为理性的舆论环境。这意味着，尽管事件本身依然存在诸多争议，但社会对于事件处理的态度和方式已经趋向成熟和理性，为解决类似问题提供了借鉴。&lt;/p&gt;
+&lt;p&gt;综上所述，“胖猫事件”作为一个复杂的社会现象，不仅关乎个人情感与经济纠纷，更折射出网络社会中性别对立、舆论极化、信息真实性危机等深层次问题。事件中，公众情绪与商业行为的交织、意见领袖的导向作用、以及网络平台的管理挑战，共同塑造了舆论的多元化面貌。警方通报和官方介入虽为事件带来一定秩序，但事件的长期影响凸显了网络环境下维护理性讨论、打击网络暴力及促进性别平等的重要性。这一案例再次警示，真相的探求与公共情绪的健康引导是现代社会治理不可或缺的部分。&lt;/p&gt;
+&lt;h2 id=&#34;二-百度贴吧舆情特征&#34;&gt;（二） 百度贴吧舆情特征&lt;/h2&gt;
+&lt;p&gt;百度贴吧作为一个男性用户占主导的社交平台，其舆情传播具有独特的特征。男性用户的主导地位影响了讨论的方向和内容，使得其中的舆论主题在时间序列上表现一致。同时，某些性别偏见和刻板印象在讨论中被放大。在“胖猫事件”期间，除了对事件本身的讨论，百度贴吧的用户讨论集中在性别和经济问题上。这些讨论的主题在时间上表现出明显的演化特征，反映了用户对事件的关注点和情感态度的变化。&lt;/p&gt;
+&lt;p&gt;主题识别和时间序列分析显示，用户讨论从简单的事实陈述快速过渡到对性别角色、经济压力等深层次社会议题的剖析，表明百度贴吧用户在面对公共事件时，具备将个体案例引申至更广泛社会议题进行批判性思考的能力，反映了男性用户群体对于情感正义、性别平等、经济独立与网络诚信的深度关切。经济压力作为贯穿整个讨论的核心主题，凸显了当前社会环境下经济因素对公众心理和行为的深刻影响，以及用户对此的普遍关切。此外，用户情感的演变轨迹从情绪化的直接反应转为更为理性和多元的视角，尽管存在初期的情绪化批评和标签化行为，但后续讨论中不乏对事实的探究、社会公正的呼吁以及对性别问题的深度反思。一方面，这体现出百度贴吧用户讨论的复杂性和多维度。用户在批判之余，通过参与讨论，不仅在寻求事件的真相，也在表达对社会整体状况的关怀，对个人情感价值的捍卫，以及在复杂性别关系中的自我定位。另一方面，这也显示着网络公众平台在促进社会议题讨论、增进公众意识觉醒方面的潜力。此外，这种参与既是对现实社会中某些问题的映射，也是在虚拟社区中寻求认同感和归属感的一种体现。&lt;/p&gt;
+&lt;p&gt;因此，本研究表明，百度贴吧作为一个男性用户占主导的社交平台，其舆论场域虽面临性别偏见放大的挑战，但也孕育了深入探讨社会、政治、经济议题的土壤，反映出用户群体对于社会不公的敏感度以及寻求改变现状的意愿。&lt;/p&gt;
+&lt;h2 id=&#34;三-舆情中的政治经济&#34;&gt;（三） 舆情中的政治经济&lt;/h2&gt;
+&lt;p&gt;“胖猫事件” 在百度贴吧等网络平台上引发的舆论风暴，不仅是一起个人情感悲剧的公共讨论，更是社会结构、经济关系、权力运作以及文化意识形态在数字空间中的集中体现和互动结果。&lt;/p&gt;
+&lt;p&gt;事件中，“胖猫”姐姐和女方谭竹各自通过社交媒体发布信息，试图引导舆论走向，这体现了在数字时代，个人和组织可以利用粉丝基础、网络影响力等社会资本来影响公众舆论，从而在无形中争夺对事件叙事的控制权。这种争夺体现了网络空间中社会资本转化为实际权力的过程，即谁能更有效地动员和引导网络舆论，谁就能在一定程度上影响事件的舆论导向和后续处理。&lt;/p&gt;
+&lt;p&gt;事件中出现的性别对立言论，如 “捞女” 与“龟男”等标签的使用，反映了性别政治在当代社会中的持续作用。这些标签不仅加剧了性别之间的隔阂，而且在某种程度上掩盖了更深层次的阶级问题。事件中对经济纠纷的讨论，实质上触及了社会经济不平等和阶级差异，即不同社会阶层在恋爱关系中的资源分配不均，以及由此产生的社会心理影响。&lt;/p&gt;
+&lt;p&gt;网络平台上的信息过载与真伪难辨，使得 “胖猫事件” 中的真相变得扑朔迷离。这不仅考验了公众的信息甄别能力，也突显了数字时代媒介环境对真相建构的复杂性。一方面，信息的快速传播加速了事件的热度，另一方面，虚假信息和舆论操纵的盛行，反映出资本和权力如何利用信息不对称来引导公众情绪，维护或破坏特定利益。政府及平台方对网络暴力、性别对立言论的管理和处置，体现了在维护公共秩序与言论自由之间的平衡尝试。这不仅是一个法律和制度层面的问题，也是一个政治经济问题，即如何在保障公民言论自由的同时，防止网络空间成为非理性情绪、谣言和群体极化的温床，确保网络环境健康有序，是当前社会治理面临的重要课题。&lt;/p&gt;
+&lt;h2 id=&#34;四-研究局限与展望&#34;&gt;（四） 研究局限与展望&lt;/h2&gt;
+&lt;p&gt;本研究主要基于百度贴吧的数据，可能存在单一性，未来研究可以扩展到其他社交平台和更广泛的用户群体，进行适当的比较分析，以更好地解释百度贴吧平台的舆论特征，探讨不同社交平台在类似事件中的舆情传播特征和用户反应差异。&lt;/p&gt;
+&lt;p&gt;其次，机器学习和深度学习方法在文本分析中的应用虽然有效，但在主题识别和情感分析上仍有改进空间，未来可以结合更多的自然语言处理技术提升分析精度。情感态度的变化不仅反映在文本内容中，也可以通过情感分析模型进行量化。&lt;/p&gt;
+&lt;p&gt;此外，由于收集到的数据集较小，数据的时间分布于整体规律不一致，本研究ARIMA模型的拟合精度较低，不能够很好地反映实际舆论演变，也无法在时间序列上进行有效预测，可以在补充数据的情况下再次展开探讨。&lt;/p&gt;
+&lt;p&gt;最后，本研究主要是基于机器学习的文本分析，后续研究中可以结合更多的社会学和心理学理论，通过问卷调查、网络民族志等调查方法，使用内容分析、话语分析等研究方法，对网络舆情中的性别和经济问题进行多维度分析，揭示其背后的深层次原因和影响机制。&lt;/p&gt;
+&lt;h1 id=&#34;六-策略建议&#34;&gt;六、 策略建议&lt;/h1&gt;
+&lt;p&gt;对“胖猫”事件在百度贴吧舆情的时间序列研究，可以为理解社交媒体上的性别和经济问题讨论提供新的视角。这项研究不仅揭示了性别和经济问题在网络舆情中的演化规律，也为相关领域的研究提供了数据支持和分析方法。研究结果可以应用于社会治理和公共政策制定，为构建和谐社会和提升社会治理水平提供参考。&lt;/p&gt;
+&lt;p&gt;研究揭示了性别不平等和经济压力是事件讨论中的核心主题。这反映了公众对这些问题的高度关注，为政府和相关机构提供了重要的参考。公共政策制定需聚焦性别平等教育与经济压力缓解，通过广泛宣传教育与具体经济援助措施，改善社会认知结构与个体生活条件。&lt;/p&gt;
+&lt;p&gt;理性讨论和反思阶段的出现，表明公众在经历了情感宣泄后，逐渐趋向于理性思考和建设性讨论。这为社会治理提供了启示：通过引导和促进理性讨论，可以有效化解矛盾，促进社会和谐。&lt;/p&gt;
+&lt;p&gt;在社交平台治理方面，强化监管与促进正向互动是关键。这要求平台方既要严格执行规范，也要优化算法导向，保护在平台中占少数的女性群体的合理诉求，营造一个积极健康的网络交流环境。同时，需要避免个人和组织利用粉丝基础、网络影响力等社会资本影响公众舆论，不断加强主流媒体公信力和话语权，正确引导舆论，有效治理网络乱象。&lt;/p&gt;
+&lt;p&gt;此外，网络舆情监测中需要及时捕捉舆情热点，通过分析讨论主题和情感态度的变化，可以迅速识别出舆情热点并采取相应措施。例如，在事件初期的震惊和愤怒阶段，相关部门可以迅速做出回应，安抚公众情绪，避免事态恶化。关注讨论主题的演化，理解公众关切、积极回应公众疑问，并进行有针对性的政策引导和宣传。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;[[1]] 陈云松. 观念的“割席”——当代中国互联网空间的群内区隔[J]. 社会学研究, 2022, 37(4): 117-135+228.&lt;/p&gt;
+&lt;p&gt;[[2]] 基于舆情研究平台“舆情通”监测，2024年5月1日至2024年6月1日期间数据，详见附录3。&lt;/p&gt;
+&lt;p&gt;[[3]] 胡杨涓, 胡千红. 虚拟社区中的用户特征与情绪表达——对“知乎”社区五类新闻议题讨论的实证分析[J]. 青年记者, 2019(33): 22-24.&lt;/p&gt;
+&lt;p&gt;[[4]] 赵艳娇. 网络空间的社群共同体——基于百度贴吧粉丝群的考察[J]. 北方民族大学学报(哲学社会科学版), 2019(5): 82-87.&lt;/p&gt;
+&lt;p&gt;[[5]] 走心发布丨贴吧垂类生态数据报告_兴趣[EB/OL]. [2024-06-28]. &lt;a class=&#34;link&#34; href=&#34;https://www.sohu.com/a/www.sohu.com/a/447474731_165158&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sohu.com/a/www.sohu.com/a/447474731_165158&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;[[6]] Yan X, Guo J, Lan Y, et al. A probabilistic model for bursty topic discovery in microblogs[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2015, 29(1).&lt;/p&gt;
+&lt;p&gt;[[7]] Li C, Sun A, Datta A. Twevent: segment-based event detection from tweets[C]//Proceedings of the 21st ACM international conference on Information and knowledge management. 2012: 155-164.&lt;/p&gt;
+&lt;p&gt;[[8]] Mathioudakis M, Koudas N. Twittermonitor: trend detection over the twitter stream[C]//Proceedings of the 2010 ACM SIGMOD International Conference on Management of data. 2010: 1155-1158.&lt;/p&gt;
+&lt;p&gt;[[9]] Stieglitz S, Mirbabaie M, Ross B, et al. Social media analytics–Challenges in topic discovery, data collection, and data preparation[J]. International journal of information management, 2018, 39: 156-168.&lt;/p&gt;
+&lt;p&gt;[[10]] 董晨宇,林琦桁.“黏连剂”与“节拍器”：网络舆论议题的主题演化——对李佳琦“怒怼网友”事件的多维社会网络分析[J].传媒观察,2024(06):24-34.&lt;/p&gt;
+&lt;p&gt;[[11]] An L, Zhou W, Ou M, et al. Measuring and profiling the topical influence and sentiment contagion of public event stakeholders[J]. International Journal of Information Management, 2021, 58: 102327.&lt;/p&gt;
+&lt;p&gt;[[12]] Yan X, Guo J, Lan Y, et al. A biterm topic model for short texts[C]//Proceedings of the 22nd international conference on World Wide Web. 2013: 1445-1456.&lt;/p&gt;
+&lt;p&gt;[[13]] Mikolov T, Yih W, Zweig G. Linguistic regularities in continuous space word representations[C]//Proceedings of the 2013 conference of the north american chapter of the association for computational linguistics: Human language technologies. 2013: 746-751.&lt;/p&gt;
+&lt;p&gt;[[14]] 开源于：https://github.com/piskvorky/gensim.&lt;/p&gt;
+&lt;p&gt;[[15]] 开源于：https://github.com/fxsjy/jieba.&lt;/p&gt;
+&lt;p&gt;[[16]] 开源于：https://github.com/CharyHong/Stopwords.&lt;/p&gt;
+&lt;p&gt;[[17]] 开源于：https://github.com/amueller/word_cloud.&lt;/p&gt;
+&lt;p&gt;[[18]] 开源于：https://github.com/matplotlib/matplotlib.&lt;/p&gt;
+&lt;p&gt;[[19]] 开源于：https://github.com/pytorch/pytorch.&lt;/p&gt;
+&lt;p&gt;[[20]] 开源于：https://github.com/scikit-learn/scikit-learn.&lt;/p&gt;
+&lt;p&gt;[[21]] 开源于：https://github.com/statsmodels/statsmodels.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【编程开发】爬虫实践：使用开源项目获取微博博文</title>
+        <link>https://wish2333.github.io/zh/2024/crawler-weibo/</link>
+        <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/zh/2024/crawler-weibo/</guid>
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/crawler-weibo/Crawler.jpg" alt="Featured image of post 【编程开发】爬虫实践：使用开源项目获取微博博文" /&gt;&lt;p&gt;开源项目地址：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weiboSpider&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weiboSpider&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weibo-crawler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weibo-crawler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dataabc/weibo-search&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dataabc/weibo-search&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;运行环境&#34;&gt;运行环境&lt;/h2&gt;
+&lt;p&gt;开发语言：python3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装python：https://www.python.org/downloads/&lt;/li&gt;
+&lt;li&gt;安装过程中记得&lt;strong&gt;勾选&lt;/strong&gt;“添加至环境变量”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统： Windows/Linux/macOS&lt;/p&gt;
+&lt;h2 id=&#34;weibospider&#34;&gt;weiboSpider&lt;/h2&gt;
+&lt;h3 id=&#34;1-安装程序-源码安装&#34;&gt;1. 安装程序-源码安装&lt;/h3&gt;
+&lt;p&gt;解压并进入程序文件夹&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装依赖如出错，则打开requirements.txt把后面指定版本号的部分删除。&lt;/p&gt;
+&lt;p&gt;并且推荐各位使用嵌入式python或虚拟环境进行安装，不会污染自己的默认环境&lt;/p&gt;
+&lt;h3 id=&#34;2-运行程序&#34;&gt;2. 运行程序&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;源码安装&lt;/strong&gt;的用户可以在weiboSpider目录运行如下命令，&lt;strong&gt;pip安装&lt;/strong&gt;的用户可以在任意有写权限的目录运行如下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;$ python -m weibo_spider
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第一次执行，会自动在当前目录创建config.json配置文件，配置好后执行同样的命令就可以获取微博了。&lt;/p&gt;
+&lt;h3 id=&#34;3-程序设置&#34;&gt;3. 程序设置&lt;/h3&gt;
+&lt;p&gt;要了解程序设置，请查看源码中README和docs。&lt;/p&gt;
+&lt;h2 id=&#34;weibocrawler&#34;&gt;weibocrawler&lt;/h2&gt;
+&lt;p&gt;weibocrawler为weibospider变种，基本逻辑一致，可参考其README安装。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.fun/upload/weibo-crawler%e8%ae%b2%e4%b9%89.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;weibo-crawler讲义.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;weibosearch&#34;&gt;weiboSearch&lt;/h2&gt;
+&lt;p&gt;本程序的所有配置都在setting.py文件中完成，该文件位于“weibo-search\weibo\settings.py”。&lt;/p&gt;
+&lt;h3 id=&#34;1-下载脚本&#34;&gt;&lt;strong&gt;1. 下载脚本&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;解压文件夹&lt;/p&gt;
+&lt;h3 id=&#34;2-安装scrapy&#34;&gt;&lt;strong&gt;2. 安装Scrapy&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;安装Scrapy&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip install scrapy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果有不兼容问题&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip uninstall Twisted
+pip install Twisted==22.10.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;检查是否安装成功，在终端中输入&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;scrapy version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-安装依赖&#34;&gt;&lt;strong&gt;3. 安装依赖&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-undefined&#34;&gt;pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-配置程序设置&#34;&gt;&lt;strong&gt;4. 配置程序设置&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;修改weibo\settings.py&lt;/p&gt;
+&lt;p&gt;要了解程序设置，请查看源码中README和docs。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;！！一定要设置cookie，然后时间跨度不超过5天，时间跨度大分几次爬&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览器打开weibo.cn，登录&lt;/li&gt;
+&lt;li&gt;按下F12，切到网络选项卡&lt;/li&gt;
+&lt;li&gt;刷新，注意网址不能有后缀&lt;/li&gt;
+&lt;li&gt;找到weibo.cn的请求标头（request）中cookie部分，复制到settings.py中&lt;/li&gt;
+&lt;li&gt;注意，每次程序运行之前都要获取自己的cookie&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-运行程序&#34;&gt;&lt;strong&gt;5. 运行程序&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;在scrapy.cfg所在目录下的路径栏输入cmd，或者右键在终端打开都行&lt;/p&gt;
+&lt;p&gt;终端中输入&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;scrapy crawl search
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行时间可能很久，但可以提前掐断（Ctrl+C）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【学术研究】实证研究设计：青年人叙事化二创内容参与动机研究</title>
+        <link>https://wish2333.github.io/zh/2024/catmeme/</link>
+        <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/zh/2024/catmeme/</guid>
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/catmeme/CatMeme.jpg" alt="Featured image of post 【学术研究】实证研究设计：青年人叙事化二创内容参与动机研究" /&gt;&lt;h2 id=&#34;概念界定&#34;&gt;概念界定&lt;/h2&gt;
+&lt;h3 id=&#34;叙事化二创短视频&#34;&gt;叙事化二创短视频&lt;/h3&gt;
+&lt;p&gt;二次创作文化：&lt;/p&gt;
+&lt;p&gt;二次创作是指在互联网语境下，网络用户通过再创作的方式利用他人作品来表达新观点，形成了一种复制、拼贴和融合不同作品元素来创作新作品的“重混文化（remix）”。[1]&lt;/p&gt;
+&lt;p&gt;二次创作短视频：&lt;/p&gt;
+&lt;p&gt;根据12426版权监测中心发布的 《2021年中国短视频版权保护白皮书》的定义，二次创作短视频，是指利用已有作品的视频素材进行创作的，时长不超过20分钟的，由连续画面、 背景音乐及字幕等组成的内容载体，常见为以影视综、动漫、体育及游戏等作品素材制作的短视频[2]。&lt;/p&gt;
+&lt;p&gt;叙事化二次创作短视频&lt;/p&gt;
+&lt;p&gt;利用已有的视听素材进行创作的，时长不超过3分钟的[3]，由连续画面、背景音乐及叙事性的字幕等组成的内容载体。&lt;/p&gt;
+&lt;p&gt;[1]熊琦.“二次创作”行为著作权合理使用认定的经济分析范式[J].当代法学,2024,38(01):108-120.&lt;/p&gt;
+&lt;p&gt;[2]张立新.二次创作短视频授权规则的法经济学分析[J].甘肃政法大学学报,2023(05):62-74.&lt;/p&gt;
+&lt;p&gt;[3]刘丁香,万立良,彭韵.“抖音三分钟，人间两小时”：短视频消费中的时间失真与用户“保卫战”[J].新闻与写作,2024(02):86-98.&lt;/p&gt;
+&lt;h3 id=&#34;猫meme视频口头&#34;&gt;猫meme（视频+口头）&lt;/h3&gt;
+&lt;h4 id=&#34;meme又称迷因模因&#34;&gt;meme：又称迷因、模因&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：“迷因”（即meme）是指通过非遗传方式尤其是复制进行传递的基本文化单位，具有模仿（复制）、变异和选择三个基本特征，模仿是meme的主要传递方式。&lt;/li&gt;
+&lt;li&gt;溯源与演变：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;阶段一：生物学隐喻阶段。理查德·道金斯在《自私的基因》中最早提出“迷因”，他认为，信息是通过不断复制而得以传递的，在这一过程中发挥作用的基本单位是复制子。迷因是文化发展过程中具有复制能力的复制子。迷因主要依靠内容和形式的自我复制与传播进行繁衍，并在此过程中发生不可预知的文化变异。&lt;/p&gt;
+&lt;p&gt;阶段二：文化理论阶段。比利时学者海拉恩进一步发展了迷因理论，他认为，迷因的生命周期包括同化、记忆、表达和传播等具体阶段。简而言之，个体在接受并理解信息内涵之后，迷因将被存储于人的大脑之中。在信息表达阶段，个体对迷因呈现出接受与不接受两种态度：前者可以促使个体主动编辑迷因信息，创造新的迷因；后者可以保证旧的迷因停留在个体大脑中，制造持续的记忆。在个体使用迷因文化，并形成新的迷因并进行传播的过程中，迷因将感染新的个体，重新开始这一生命周期。&lt;/p&gt;
+&lt;p&gt;阶段三：互联网迷因。一般而言，基于互联网而得以迅速、广泛传播的数字、文字、图片、视频等微型内容，都可被归入互联网迷因的范畴。希夫曼将互联网迷因视为“由互联网用户传播，模仿和转变的流行文化单元，也是由互联网用户创造、共享的文化体验”。科尔曼则将互联网迷因定义为“在用户不断模仿、修改的情况下，在互联网上快速传播的具有感染性的图像，视频和流行语”。这些都表明，互联网迷因自始至终都带有明显的变异特征，其效果远远超过了“自我复制”的范畴。海量的、原子化的用户的主动参与是互联网迷因得以形成的重要标志。任何互联网用户都可以成为互联网迷因的匿名创作者。&lt;/p&gt;
+&lt;h4 id=&#34;网络meme特指以互联网为传播媒介的迷因&#34;&gt;网络meme：特指以互联网为传播媒介的迷因&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：在大量用户不断主动地模仿、修改的情况下，在互联网上快速传播的具有感染性的图像、视频和流行语。&lt;/li&gt;
+&lt;li&gt;来源：meme初始文本源于微博微信、网络直播等平台，截取自事件或非事件。&lt;/li&gt;
+&lt;li&gt;形式：变异后结构形式多样，特别是GIF动图、小视频；语法句式多样，陈述、感叹各占50%，传播效果显著。&lt;/li&gt;
+&lt;li&gt;文本特征：主体意识显现，通过对自我和他人表达中投射主体意识，如“我看不懂，但我大受震撼”源于李安导演在评价纪录片《打扰伯格曼》时，表达自己对这部纪录片的不解和震惊；“栓Q”表示主体对客体的无语、嘲讽情绪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;猫meme：此处研究对象为视频形式的猫meme&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：在大量用户不断主动地模仿、修改的情况下，在互联网上快速传播的以猫为创作素材的具有感染性的视频。&lt;/li&gt;
+&lt;li&gt;特殊性：近期在网络上较为火爆，产生了大量二创视频，形成了独特的传播现象。&lt;/li&gt;
+&lt;li&gt;例子：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BCTCk5/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;是不是你和女朋友旅游现状#猫meme的日常 #猫咪表情包 #恋爱日常 #Le - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BXdQYf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;00后勇闯奇瑞汽车 编导岗区区涨一万粉丝嘛 年轻人会帮助年轻人的对吧&lt;/a&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BXdQYf/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;00后整顿职场#猫meme - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/i2BCbSUP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最恐怖的一集 #猫meme #猫咪 #人间真实 #生活 - 抖音&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;研究动机选题原因&#34;&gt;研究动机/选题原因&lt;/h2&gt;
+&lt;p&gt;表情包已经成为网民,尤其是大学生流行使用的网络交流符号。近期，互联网上掀起猫meme生产热潮，并由此衍生出了使用猫meme进行二创的短视频制作风潮。猫meme二创短视频的盛行作为一种网络表情符号的青年亚文化现象具有研究价值。&lt;/p&gt;
+&lt;p&gt;创新性：&lt;/p&gt;
+&lt;p&gt;目前学界对于表情包的传播研究已经有了一定的基础, 他们对表情包的使用情况、传播现象、互动模式等研究较为清晰和深入, 为本研究继续深入讨论提供了一定的参考。然而, 当下研究中缺少关于将表情包用于二创视频生产的研究，对影响青年群体参与生产或观看二创视频的行为的因素缺乏关注。因此本研究聚焦青年用户在叙事化二创内容中的互动行为与传播现象，分析该群体参与动机。&lt;/p&gt;
+&lt;p&gt;可操作性：&lt;/p&gt;
+&lt;p&gt;青年群体为此类型二创内容生产的主要参与者&lt;/p&gt;
+&lt;p&gt;（如果细化到高校学生——可接近性）&lt;/p&gt;
+&lt;h3 id=&#34;研究问题&#34;&gt;研究问题&lt;/h3&gt;
+&lt;h4 id=&#34;对二创内容的特征和发展现状需要关注&#34;&gt;对二创内容的特征和发展现状需要关注：&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;猫meme二创视频中存在哪些叙事元素（如情节设计、角色设定、情感构建）？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频如何体现青年亚文化特征？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的表情符号和语言风格如何？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;在实证研究中针对以下问题展开探讨&#34;&gt;在实证研究中，针对以下问题展开探讨：&lt;/h4&gt;
+&lt;p&gt;从传播效果与动机出发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;青年人参与猫meme二创视频生产的动机是什么？这些动机如何与他们的社会认同、情感需求和文化价值观相联系？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的传播效果如何？哪些因素（如创新性、情感共鸣、社会参与感）影响青年人的观看和分享意愿？&lt;/li&gt;
+&lt;li&gt;青年群体中是否存在观看和创作猫meme二创视频的群体差异？如性别、年龄、教育背景等因素如何影响其参与行为？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从影响因素与机制出发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络社交平台的特性（如算法推荐、互动机制）如何影响猫meme二创视频的流行和传播？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的叙事结构与内容创新如何促进或限制其在青年人中的传播和接受？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的观看和创作行为如何在青年群体中形成特定的互动仪式链，以及这种仪式如何促进文化认同和群体凝聚力？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;研究目的及意义&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;研究目的&#34;&gt;研究目的&lt;/h3&gt;
+&lt;p&gt;通过定量研究得出青年人对猫meme二创视频的参与意愿及动机，从而明确猫meme二创短视频在青年人中的传播效果和可能的影响因素；通过定性研究，从青年亚文化视角切入，进一步探究猫meme这一新兴亚文化符号在青年人圈层内快速扩散、普及的心理原因、文化原因，试图更深入地研究这一创新化的叙事模式与青年人价值观念、身份认同、情感诉求等要素之间的联系。&lt;/p&gt;
+&lt;p&gt;研究意义：&lt;/p&gt;
+&lt;p&gt;在信息技术和移动互联技术高速发展的当今社会，以图像、影像为主的视觉文化形态成为人们认知和把握世界的主要途径和重要生活方式。青年是视觉文化忠实的生产、消费和传播者，视觉文化以其丰富多样的可视性和虚拟现实的视觉快感为青年喜爱并深受其影响，视觉文化承载的精神内核、价值理念影响青年价值取向和价值判断，成为建构青年价值观的力量。&lt;/p&gt;
+&lt;p&gt;猫meme二创短视频作为青年群体所喜爱的新兴视觉文形式出现，对其进行研究不仅能够及时追捕现实热点状况、从学术上补足青年亚文化研究中的部分实践空白，还能够在社会层面上发力，帮助人们更好地理解青年人的文化心理需求，创造出相互尊重的空间，为青年亚文化下一次的创新发展行为留白，具有研究价值与必要性。&lt;/p&gt;
+&lt;p&gt;[1]王迎新.视觉文化与青年价值观的互动逻辑及现实启示[J].扬州大学学报(高教研究版),2020,24(01):99-104.&lt;/p&gt;
+&lt;h2 id=&#34;研究设计研究方法及内容&#34;&gt;研究设计（研究方法及内容）&lt;/h2&gt;
+&lt;p&gt;（因为感觉研究问题很多，所以对应写了）&lt;/p&gt;
+&lt;h3 id=&#34;内容分析法&#34;&gt;内容分析法&lt;/h3&gt;
+&lt;p&gt;对应研究问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;猫meme二创视频中存在哪些叙事元素（如情节设计、角色设定、情感构建）？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频如何体现青年亚文化特征？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的表情符号和语言风格如何？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;采用内容分析法对bilibili平台上的猫meme视频做内容分析。以带有猫meme标签的视频为总体抽样框，按发表时间抽取一定数量的猫meme视频。获得视频后以叙事元素、亚文化特征、表情符号和语言风格为不同类目编码视频并处理数据。&lt;/p&gt;
+&lt;h3 id=&#34;访谈法&#34;&gt;访谈法&lt;/h3&gt;
+&lt;p&gt;对应研究问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;青年人参与猫meme二创视频生产的动机是什么？这些动机如何与他们的社会认同、情感需求和文化价值观相联系？&lt;/li&gt;
+&lt;li&gt;青年群体中是否存在观看和创作猫meme二创视频的群体差异？如性别、年龄、教育背景等因素如何影响其参与行为？&lt;/li&gt;
+&lt;li&gt;猫meme二创视频的叙事结构与内容创新如何促进或限制其在青年人中的传播和接受？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;首先，通过深度访谈了解青年人参与猫meme二创视频生产的个人和社会动机，包括社会认同、情感需求和文化价值观等方面的联系。此外，展开焦点小组讨论不同性别、年龄、教育背景的青年群体在观看和创作猫meme视频方面的差异，理解这些差异背后的社会文化因素，同时讨论猫meme二创视频的叙事和创新内容如何影响青年人的接受与传播，特别是这些因素如何影响视频的接受度和流行性。&lt;/p&gt;
+&lt;h2 id=&#34;理论模型&#34;&gt;理论模型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;互动仪式链理论：美国社会学家兰德尔·柯林斯（Randall Collins）提出互动仪式链理论，他认为该理论的研究起点是情境，际遇是由个体和个体组成，微观情境相互关联形成宏观模式，把局部情境链接起来的网络就是“互动仪式链”。构成互动仪式主要包括以下四个组成要素或起始条件：（1）两个或两个以上的人聚集在同一场所。（2）对局外人设定了界限，因此参与者知道谁在参加，而谁被排除在外。（3）人们将注意力集中在共同的对象或活动上，并通过相互传达该关注焦点。（4）人们分享共同的情绪或情感体验。其中，获取情感能量是人们进行互动仪式的重要原因，是互动仪式链的核心要素。无论是创作还是观看猫meme表情二创的视频的青年群体都在参与该文化符号的互动仪式中，渴望获得他人的身份认同和情感共鸣。&lt;/li&gt;
+&lt;li&gt;狂欢理论：巴赫金狂欢理论的基本内容可概括为三个关键词，即狂欢节、狂欢式和狂欢化。狂欢节是一种民间的节日庆典活动，也是狂欢理论的起点和支撑点，其重要价值在于颠覆等级制、主张平等对话等精神。狂欢式一种文化形式和意义衍生的符号代码，可分为以下四个范畴：（1）人们在狂欢节中可以随便亲昵的接触。（2）插科打诨的相处方式。（3）人们平等亲昵的生活态度。（4）粗鄙，即人们保持的一种平民化的生活格调。具备全民性、仪式性、平等性、颠覆性特征。狂欢化的渊源就是狂欢节本身，狂欢式在文学艺术中的表现即为狂欢化，其消除了任何的封闭性和相互间的轻蔑。表情包作为一种多元素组成的多模态话语，以其强大的叙事性和视觉感成为当下最受青年人喜爱的语言，具备全民性的狂欢特征，这种狂欢满足了大众自我表达和政治参与的心理。&lt;/li&gt;
+&lt;li&gt;拟剧理论：戈夫曼拟剧理论认为，人与人之间的交往行为如同戏剧表演，每个人在日常生活中都扮演着不同角色，并借助各种不同形态的方式完成自我呈现。在该理论中 ，最为知名的一对概念便是前台与后台。所谓前台 ，可谓是“人们有意向 他人展示的层面”；所谓后台 ，是“那些被竭力抑制，表演者确信观众不会突然闯进来的 地方”。对于前台和后台的操纵，便是“印象管理”。青年群体使用猫meme表情包来叙述视频内容，这便是将&amp;quot;理想&amp;quot;自我呈现的“前台”，而那些不愿被人所知的自我则隐藏在“后台”之中。对传受双方而言，表情包的使用不仅是一种表达，更是一种表演，能帮助个体更好地塑造出理想的自我。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Animemory序1-我的ACGN纪事·动画篇</title>
+        <link>https://wish2333.github.io/zh/2024/animemory001/</link>
+        <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://wish2333.github.io/zh/2024/animemory001/</guid>
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/animemory001/Animemory001.jpg" alt="Featured image of post Animemory序1-我的ACGN纪事·动画篇" /&gt;
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;//player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1TJ4m1A7op&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;自2013年我初次涉足ACGN领域，至今已逾十载。这段旅程中，我品尝了无数精彩绝伦的作品，也偶遇了些许不尽人意之作，它们或许占据了我宝贵的时光，却无碍于每一段经历都成为值得怀念的过往。作为一个热衷于记录生活点滴的人，我心中悄然萌生了创作一系列题为【誌】的电子札记的念头。于是，我们借由这个略显古怪却又寓意深长的栏目名【Animemory】，开启一段或可伴我终身的记录之旅。【Animemory】的开篇序曲——我的ACGN纪事。此题太过宽泛，而且十年光景也确实难以尽述，今日就先从动画篇章谈起，以这十年间反复品味的经典之作，作为我们共同记忆之旅的起点。&lt;/p&gt;
+&lt;p&gt;让我们从动画这一篇章缓缓展开。回溯至2017年，那正是我观看动画最为密集的时段，我曾尝试制作了一份纯属个人情感的排名清单，就是为了封存彼时的心绪。初衷是为每部入选动画撰写一段简短评论，遗憾的是，鉴于任务艰巨加之自身尚且青涩，见识未免浅薄，最终仅以评分形式呈现。可贵的是，如今重温，那份清单依然契合我的审美偏好。但它始终是未能充分释放我的表达欲望。因此，我长久以来渴望制作一系列视频，细细道来我的每一次观影体验。鉴于篇幅所限，在此仅挑选几部入门之作及那些我视为珍宝、必须保存于本地硬盘、重重备份的动画，与诸君共赏，细说那些年的故事。&lt;/p&gt;
+&lt;h2 id=&#34;入坑作启程的初章&#34;&gt;入坑作：启程的初章&lt;/h2&gt;
+&lt;p&gt;一切的起点，当属2013年引领我步入ACGN世界的两部入坑作——《家庭教师》与《驱魔少年》。这两部作品共享一个深深吸引我的特质：主角团队如同家人般紧密相连，无论是日常生活还是激战时刻，那份不可分割的纽带，直击心灵。尤其是《家庭教师》，其OP与ED音乐堪称神作，即便五刷之后，我依旧无法割舍，每一首都精心编织了日常的温暖与战斗的激情。《DIVE TO WORLD》作为过渡OP，巧妙融合了温馨与紧张，首领的形象在其中更是魅力四射；《gr8 story》则启蒙了我的西装情节，全员帅气逼人；而最终ED《画布》，每次聆听都令我热泪盈眶，它如同动漫本身，以故事为笔，激励我勇往直前。《家庭教师》给予我的，不仅是一次完整的追番体验，更是在结束后的淡淡失落中，注入了一股股前行的力量。&lt;/p&gt;
+&lt;p&gt;提及赋予我力量的作品，不得不提《食梦者》——我的年度必看神作。它兼具了爽文的畅快与现实奋斗的坚韧，为我的学习之路添翼。同为励志佳作，《3年E班》也是我多次回味的选择，渚与枫的甜蜜、业与渚的复杂关系，以及令人动容的杀老师，都让人难以忘怀。而《樱花庄的宠物女孩》以其独特的魅力，成为我硬盘中的常驻嘉宾。它在讲述爱情的同时，展现了角色们对梦想的执着追求，是恋爱番中的一股励志清流。此外，其中的“胃痛”元素处理得恰到好处，引人共鸣。&lt;/p&gt;
+&lt;p&gt;至于《驱魔少年》，这部因作者健康原因断断续续更新的漫画，始终是我心中的白月光。尽管故事基调偏向沉重，艾伦的可爱天真与成员间的温馨互动还是给这黑暗世界带来了一抹亮色。艾伦身上那种迷茫中不失坚定的气质，尤其吸引人。另外还必须得提一下，艾连那个穿制服提剑的手办简直就是我的神！这是难以复制的帅气。而漫画第二部中，神田优与阿尔玛的前世情缘，两度生死离别的虐心情节也蛮戳我的，活着的人应该用一种什么样的姿态继续活着呢？当然，影响我最深的就是艾伦在自我认知冲突中的探索，构成了漫画的核心线索。这十年，我仿佛与艾伦一同成长，面对迷茫，共同寻找答案。随着漫画新章节似乎预示着故事即将走向尾声，我衷心期盼能在有生之年见证它的圆满落幕。&lt;/p&gt;
+&lt;h2 id=&#34;智慧较量推理的迷宫之旅&#34;&gt;智慧较量：推理的迷宫之旅&lt;/h2&gt;
+&lt;p&gt;其实看我这入坑作都是大几十上百集的长度，能都看下来其实都只能说是小学的时间太闲了，但是接下来这部《名侦探柯南》的出现，那可才基本上是把我的时间给占得满满当当。《名侦探柯南》的全集动画（至少截止至2017年前），连同所有剧场版与OVA，我都未曾错过。这份毅力如今看来，实属惊人。虽然现在已不可能将超过一千集的内容悉数收藏，但诸如《世纪末的魔术师》、《瞳孔中的暗杀者》等经典剧场版，以及《鲁邦三世》的联动篇章，还有《黑羽快斗》系列，这些都成为了我每年重温的必备项目。尤其是快斗的新设定，让他在柯南宇宙中以更多元的身份活跃，这还是非常值得期待的。智斗、悬疑与推理，一直是我的心头好，《弹丸论破》、《ACCA13区监察课》、《奇巧计程车》、《戏言》系列等，乃至带有些许恐怖色彩的《another》、日常推理风的《冰菓》，或是《寒蝉鸣泣之时》、《海猫鸣泣之时》及《只有我不存在的城市》等，都在我的多刷清单上，展现了我的广泛兴趣。&lt;/p&gt;
+&lt;p&gt;提及西尾维新的《戏言》系列，我最初是通过轻小说的形式接触的，其独特魅力将在未来的“嗑学”讨论中详述。这类作品，《斩首循环》正是由于需要特定的审美共鸣才显得略微小众吧。我的收藏中，《目隐都市的演绎者》、《无头骑士异闻录》乃至《皿三昧》，皆富含细腻的心理描绘，触及人心深处。电影《春宵苦短，少女前进吧》亦是如此，它以感人的故事，展现了人们在一夜祭典中的相遇与成长，仿佛四季更迭，心灵得以释放。尽管影片聚焦于一个夜晚，却巧妙地揭示了每个角色内心的挣扎与转变，这些未尽之言，让整个故事层次丰富，比之严谨的哲学探讨，更令我着迷。这类作品通过细腻的情感挖掘，展现了人性的复杂与美好，给予我无尽的思考与感悟。&lt;/p&gt;
+&lt;h2 id=&#34;世界观深邃与幻想的交响&#34;&gt;世界观：深邃与幻想的交响&lt;/h2&gt;
+&lt;p&gt;谈及小众领域的瑰宝，《来自新世界》无疑是我的首选。初识此作，或许是在寻觅类似《进击的巨人》的末日题材，却意外发现了一个构筑精妙的世界观。《巨人》、《绝园的暴风雨》乃至《新世纪福音战士》，这些作品以其独特的世界观深深吸引着我。《来自新世界》基于科幻小说改编，科学与幻想交织，更蕴含着人类学与社会学的深刻洞见，对人性本质和社会结构的探讨引人深思。尤为震撼的是，作品中觉与瞬的情景，挑战了传统观念，开启了对情感认知的新视角，这无疑是我们未来“嗑学”探讨的精彩话题。&lt;/p&gt;
+&lt;p&gt;在叙事技巧与设定方面，《命运石之门》与《永生之酒》堪称典范，它们以紧凑无暇的剧情和密集的信息量，引领观众进入一场思维的盛宴。尤其在真相揭晓的瞬间，前期铺垫的伏笔逐一串联，带来震撼的观影体验，即便时至今日，重温和回味仍能感受到那份最初的激动。同样，《钢之炼金术师FA》以其64集环环相扣的紧密剧情，构建了一次非凡的视觉旅程，怎么能让一连看完的人不惊叹呢？&lt;/p&gt;
+&lt;p&gt;追溯往昔，许多我所钟爱的推理悬疑作品，是在B站的推荐、评分和社区讨论中发现的。但在那之前，尤其是在2016年以前，我的观影体验更像是一场未知的冒险。从通过PPTV在家中机顶盒初次接触动漫，到智能电视时代全面拥抱B站，这段时期，我与《东京食尸鬼》、《刀剑神域》等作品不期而遇。在《黑执事》、《潘朵拉之心》中，我被欧洲贵族的主仆情谊深深吸引；《罪恶王冠》、《革命机Valvrave》虽饱受争议，却也让我享受了观看的乐趣。直到《Re:从零开始的异世界生活》和《亚人》的出现，我正式成为B站的常客，习惯了弹幕文化，参与番剧讨论。特别值得一提的是《潘朵拉之心》的漫画，它完美契合我的喜好——鲜明的角色塑造、错综复杂的主仆关系、深邃的身世之谜，以及每个配角的生动刻画，都体现了作者对剧情和人物塑造的匠心独运。它不遗余力地展现每一个细节，既直接又含蓄，让故事逻辑自洽，人物动机与情节发展相辅相成，成就了我心中难以超越的佳作。&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;随着19年高中生活的节奏加快，我渐渐减少了探索新番的热情，每年追看与回顾的总数稳定在寥寥数部。然而，《86-不存在的战区-》却如同一股熟悉的暖流，以其独特魅力触动了我，尤其是那令人难忘的最终话，成为了我偶尔沉浸于回忆时，触动心弦的泪点。随着时间推移，我愈发感到精力的局限，选择上也难免落入习惯的轨迹。尽管时常回想起那五年间与超过两百部作品的美丽邂逅，怀念那段色彩斑斓的岁月，但昔日的那份狂热已难轻易重燃。这便是【Animemory】计划的初衷，就是为了在让那些温暖的记忆在心底深处安放，同时唤醒我对于生活的热爱与激情。我是Wish，愿与诸君一同回首过往，共赴未来。&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;p&gt;着手记录时，我才意识到自己的文字似乎难以承载饱满的情感。即便是简朴的回顾，也暴露出诸多不足。然而，创作不应被拖延的枷锁束缚，情感的表达需要适时释放，否则，我的思绪将难以追赶那些转瞬即逝的珍贵体验。唯有持续精进，边书写边成长，方能不负初心。在【讲点嗑学01】的评论区中，面对诸多质疑，我愈发渴望这一栏目能够更加严谨且富有深度。诚然，个人能力有限，但我正通过广泛阅读，借鉴其他创作者如何深入探讨的智慧。最为关键的是，我必须学会如何精准无误地用文字传达内心的声音，未来的路，我将一步步坚实地走，直至心灵的风景得以清晰展现在每一个字句之间。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【编程开发】FFmpeg&#43;Python GUI：实现批量头尾处理</title>
         <link>https://wish2333.github.io/zh/2024/ffpygui-preversion/</link>
         <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2024/ffpygui-preversion/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2024/ffpygui-preversion/img0.jpg" alt="Featured image of post FFmpeg&#43;Python GUI：实现批量头尾处理" /&gt;&lt;p&gt;开源地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/wish2333/VideoExtractAndConcat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/ffpygui-preversion/img0.jpg" alt="Featured image of post 【编程开发】FFmpeg&#43;Python GUI：实现批量头尾处理" /&gt;&lt;p&gt;开源地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/wish2333/VideoExtractAndConcat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;VideoExtractAndConcat&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目概述&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;本项目旨在开发一个用户友好的图形界面应用程序，用于视频片头和片尾的快速切割与合并功能。通过集成Qt Designer设计的界面与Python编程语言，结合强大的ffmpeg工具，用户能够轻松指定视频文件、设置切割时间点，完成视频处理任务。项目最终目标是提高视频编辑效率，尤其适合需要批量处理视频的用户。&lt;/p&gt;
@@ -440,15 +1211,19 @@ if __name__ == &#39;__main__&#39;:
 &lt;ul&gt;
 &lt;li&gt;从二次元文化向泛娱乐文化转型&lt;/li&gt;
 &lt;li&gt;具有全网ACGN最广泛、健康的内容生态和讨论氛围&lt;/li&gt;
-&lt;li&gt;UGC内容为主，但内容变现途径有限
-&lt;strong&gt;账号定位：&lt;/strong&gt; 广泛涉猎ACGN、关注人物和剧情的UP主
-&lt;strong&gt;账号调性&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;UGC内容为主，但内容变现途径有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;账号定位：&lt;/strong&gt; 广泛涉猎ACGN、关注人物和剧情的UP主&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;账号调性&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;有广度。账号提供一种更加开放的视野，带来有关更多题材的ACGN内容&lt;/li&gt;
 &lt;li&gt;有态度。账号秉持着个人的观点态度，乐于表达出来，并欢迎观众参与讨论&lt;/li&gt;
 &lt;li&gt;有深度。账号尽可能让自己的观点具有一定科学性的基础&lt;/li&gt;
-&lt;li&gt;强沟通。账号与评论、粉丝、反馈进行友好沟通，将评论区、私信等发展成第二内容
-&lt;strong&gt;栏目定位：&lt;/strong&gt; 一门讨论各类人物关系的嗑学栏目
-&lt;strong&gt;栏目调性&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;强沟通。账号与评论、粉丝、反馈进行友好沟通，将评论区、私信等发展成第二内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;栏目定位：&lt;/strong&gt; 一门讨论各类人物关系的嗑学栏目&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;栏目调性&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;专业视角：结合心理学、文学分析等多学科知识，为“嗑学”增添学术支撑，让分析不仅停留在表面，而是深入到人物性格、剧情逻辑等深层次探讨。&lt;/li&gt;
 &lt;li&gt;时效性：紧跟热门动漫、剧集更新，快速产出相关人物关系解析，把握热点，吸引流量。&lt;/li&gt;
 &lt;li&gt;互动性：鼓励观众留言提出自己对于人物关系的看法，甚至可以设置定期直播讨论，直接邀请观众参与“嗑学”讨论，增加观看与参与的即时互动性。&lt;/li&gt;
@@ -547,14 +1322,14 @@ if __name__ == &#39;__main__&#39;:
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
-			flex-grow: 225; 
-			flex-basis: 541px&#34;
+			flex-grow: 226; 
+			flex-basis: 542px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1.jpg&#34; data-size=&#34;1878x833&#34;&gt;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1.jpg&#34; data-size=&#34;640x283&#34;&gt;
 		&lt;img src=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1.jpg&#34;
-			width=&#34;1878&#34;
-			height=&#34;833&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1_hu621b65ec459bb4f1d3e2d41c3b55db05_222552_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1_hu621b65ec459bb4f1d3e2d41c3b55db05_222552_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;640&#34;
+			height=&#34;283&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1_hue045ae9e1f6748656d2c957241aac87c_73554_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img1_hue045ae9e1f6748656d2c957241aac87c_73554_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;image&#34;&gt;
 	&lt;/a&gt;
@@ -619,11 +1394,11 @@ if __name__ == &#39;__main__&#39;:
 			flex-grow: 124; 
 			flex-basis: 298px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2.jpg&#34; data-size=&#34;4145x3330&#34;&gt;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2.jpg&#34; data-size=&#34;597x480&#34;&gt;
 		&lt;img src=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2.jpg&#34;
-			width=&#34;4145&#34;
-			height=&#34;3330&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2_hu91b8e53fca5518ae15079617ee5ea137_4950594_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2_hu91b8e53fca5518ae15079617ee5ea137_4950594_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;597&#34;
+			height=&#34;480&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2_hud70d90b1bf27d9f359b53df489731b7e_77138_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2024/cplogy-initial-operation-report/img2_hud70d90b1bf27d9f359b53df489731b7e_77138_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;image&#34;&gt;
 	&lt;/a&gt;
@@ -694,13 +1469,12 @@ if __name__ == &#39;__main__&#39;:
 </description>
         </item>
         <item>
-        <title>文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察</title>
+        <title>【会议论文】文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察</title>
         <link>https://wish2333.github.io/zh/2024/tourism-communication/</link>
         <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2024/tourism-communication/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2024/tourism-communication/img1.jpg" alt="Featured image of post 文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;tourism_communication.pdf&#34; &gt;tourism_communication.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;【内容摘要】&lt;/strong&gt; 随着乡村振兴的提出与文旅产业的崛起，乡村形象建构和传播的需求日益凸显，乡村文化广场作为新型公共空间的重要内容，其发展与乡村振兴战略的密切关联以及在文旅传播中的角色尚未得到深入研究。本文以乡村文化广场为研究对象，通过考察广西丰村发现，乡村文化广场在丰村已经逐渐成为主要的公共生活场所与文旅传播对象，丰富了村民的文化生活，为游客了解丰村文化提供了窗口。同时，文化广场建设中存在的权力表征和其不满足文旅传播需要的问题也值得注意。本文强调，要重视记忆赋能、活动赋能、数字赋能三个方面的策略，以提升文化广场的赋能水平。&lt;/p&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2024/tourism-communication/img1.jpg" alt="Featured image of post 【会议论文】文旅传播背景下文化广场赋能乡村振兴实践路径探索——基于全国乡村旅游重点村广西丰村的考察" /&gt;&lt;p&gt;&lt;strong&gt;【内容摘要】&lt;/strong&gt; 随着乡村振兴的提出与文旅产业的崛起，乡村形象建构和传播的需求日益凸显，乡村文化广场作为新型公共空间的重要内容，其发展与乡村振兴战略的密切关联以及在文旅传播中的角色尚未得到深入研究。本文以乡村文化广场为研究对象，通过考察广西丰村发现，乡村文化广场在丰村已经逐渐成为主要的公共生活场所与文旅传播对象，丰富了村民的文化生活，为游客了解丰村文化提供了窗口。同时，文化广场建设中存在的权力表征和其不满足文旅传播需要的问题也值得注意。本文强调，要重视记忆赋能、活动赋能、数字赋能三个方面的策略，以提升文化广场的赋能水平。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;【关键词】&lt;/strong&gt; 文化广场 文旅传播 乡村振兴 新型公共空间&lt;/p&gt;
 &lt;h2 id=&#34;研究缘起&#34;&gt;研究缘起&lt;/h2&gt;
 &lt;p&gt;乡村公共文化空间是村民参与公共生活的载体空间，是乡村形象建构的主要方面。随着乡村文旅形象营建和传播的重要性日益明显，乡村公共文化空间的打造和应用面临着挑战。新型公共文化空间强调审美品位、人文关怀、地域特色、社会影响力等元素的融合，是公共空间和文化空间的复合体。[1]国家的“十四五”文化发展规划提出要打造新型公共文化空间，乡村的公共文化空间建设成为推动乡村振兴的关键力量。[2]这不仅是为了提升乡村形象，更是要通过文化空间的营造传递国家文化自信与传统底蕴。&lt;/p&gt;
@@ -951,15 +1725,16 @@ if __name__ == &#39;__main__&#39;:
 &lt;li&gt;吴志才, 张凌媛, 郑钟强, 等. 旅游场域中古城旅游社区的空间生产研究——基于列斐伏尔的空间生产理论视角[J]. 旅游学刊, 2019, 34(12): 86-97.&lt;/li&gt;
 &lt;li&gt;王袁欣, 刘德寰. 接触与采纳：基于人工智能早期体验者的创新扩散研究[J]. 现代传播(中国传媒大学学报), 2023, 45(2): 78-87.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;tourism_communication.pdf&#34; &gt;Download full paper (CN)&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>定福庄社区的社会空间不平等研究</title>
+        <title>【学术研究】定福庄社区的社会空间不平等研究</title>
         <link>https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/</link>
         <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img5.jpg" alt="Featured image of post 定福庄社区的社会空间不平等研究" /&gt;&lt;h2 id=&#34;研究背景&#34;&gt;研究背景&lt;/h2&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img5.jpg" alt="Featured image of post 【学术研究】定福庄社区的社会空间不平等研究" /&gt;&lt;h2 id=&#34;研究背景&#34;&gt;研究背景&lt;/h2&gt;
 &lt;h3 id=&#34;社会空间&#34;&gt;社会空间&lt;/h3&gt;
 &lt;p&gt;社会空间是城市社会学中的核心概念，由法国学者布迪厄和列斐伏尔等人深化和阐述。相对于其他概念如社会结构、社会系统和社会网络，社会空间关注的是行为主体、位置和它们之间的关系。它强调了社会空间的结构性，与马克思主义理论有着紧密的联系。&lt;/p&gt;
 &lt;p&gt;相对于空间生产下的社会空间理论，城市生态学派对社会空间的理解有所不同，认为社会空间是人们进行社会互动的场所，关注社会结构对个体行为的影响。齐美尔认为社会空间具有内聚性，存在有意识的边界，强调空间的内部关系。社会距离在他的理论中不仅仅是物理距离，更涉及人际关系的情感维度。戈夫曼则通过《公共空间的关系》进一步研究了个体如何组织周围的空间。（社会空间从齐美尔到戈夫曼，刘思达，2023）&lt;/p&gt;
@@ -982,13 +1757,13 @@ if __name__ == &#39;__main__&#39;:
 		class=&#34;gallery-image&#34; 
 		style=&#34;
 			flex-grow: 137; 
-			flex-basis: 330px&#34;
+			flex-basis: 331px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services.png&#34; data-size=&#34;1285x932&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services.png&#34;
-			width=&#34;1285&#34;
-			height=&#34;932&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services_hu691d0abf8bc236debb998dd30ef543e0_548812_480x0_resize_box_3.png 480w, https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services_hu691d0abf8bc236debb998dd30ef543e0_548812_1024x0_resize_box_3.png 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services.jpg&#34; data-size=&#34;640x464&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services.jpg&#34;
+			width=&#34;640&#34;
+			height=&#34;464&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services_hubac7eab8762fd732dd0f42a3770e394d_89370_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/services_hubac7eab8762fd732dd0f42a3770e394d_89370_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;定福庄较大型公共服务及公共空间示意&#34;&gt;
 	&lt;/a&gt;
@@ -1006,13 +1781,13 @@ if __name__ == &#39;__main__&#39;:
 		class=&#34;gallery-image&#34; 
 		style=&#34;
 			flex-grow: 133; 
-			flex-basis: 319px&#34;
+			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3.jpg&#34; data-size=&#34;1706x1280&#34;&gt;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3.jpg&#34; data-size=&#34;640x480&#34;&gt;
 		&lt;img src=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3.jpg&#34;
-			width=&#34;1706&#34;
-			height=&#34;1280&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3_hu74955e261d868512a0052032fd48903a_1270406_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3_hu74955e261d868512a0052032fd48903a_1270406_1024x0_resize_q75_box.jpg 1024w&#34;
+			width=&#34;640&#34;
+			height=&#34;480&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3_hu5b90d39ae63a88df7a6c834f105a1056_156341_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/social-spatial-inequality-within-dingfuzhuang/img3_hu5b90d39ae63a88df7a6c834f105a1056_156341_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;图片3&#34;&gt;
 	&lt;/a&gt;
@@ -1064,12 +1839,12 @@ if __name__ == &#39;__main__&#39;:
 </description>
         </item>
         <item>
-        <title>网课剪辑：自动化流程-基于免费软件</title>
+        <title>【后期制作】网课剪辑：自动化流程-基于免费软件</title>
         <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
         <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2023/webclass-autocut-free/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2023/webclass-autocut-free/img1.jpg" alt="Featured image of post 网课剪辑：自动化流程-基于免费软件" /&gt;&lt;h2 id=&#34;应用场景&#34;&gt;应用场景&lt;/h2&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2023/webclass-autocut-free/img1.jpg" alt="Featured image of post 【后期制作】网课剪辑：自动化流程-基于免费软件" /&gt;&lt;h2 id=&#34;应用场景&#34;&gt;应用场景&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;网课剪辑：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;大批次旧网课需要替换片头片尾，这些网课格式（编码、分辨率、帧率、音频格式等）均不一致&lt;/li&gt;
@@ -1337,12 +2112,12 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 </description>
         </item>
         <item>
-        <title>探究定福庄社会空间不平等情况的创作过程</title>
+        <title>【学术研究】探究定福庄社会空间不平等情况的创作过程</title>
         <link>https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/</link>
         <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/img1.png" alt="Featured image of post 探究定福庄社会空间不平等情况的创作过程" /&gt;&lt;h1 id=&#34;理解城市-结课作业&#34;&gt;理解城市-结课作业&lt;/h1&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/img1.jpg" alt="Featured image of post 【学术研究】探究定福庄社会空间不平等情况的创作过程" /&gt;&lt;h1 id=&#34;理解城市-结课作业&#34;&gt;理解城市-结课作业&lt;/h1&gt;
 &lt;h2 id=&#34;2023-10-28选题黄淼森&#34;&gt;2023-10-28选题：黄淼森&lt;/h2&gt;
 &lt;p&gt;社会空间不平等问题&lt;/p&gt;
 &lt;ul&gt;
@@ -1687,18 +2462,18 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 &lt;li&gt;
 &lt;p&gt;定福庄及其附近基本范围&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;​&lt;figure 
+&lt;li&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
 			flex-grow: 164; 
 			flex-basis: 395px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/range.png&#34; data-size=&#34;1715x1040&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/range.png&#34;
-			width=&#34;1715&#34;
-			height=&#34;1040&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/range_hud967e822e8f74c60f97ff19ac8038704_800633_480x0_resize_box_3.png 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/range_hud967e822e8f74c60f97ff19ac8038704_800633_1024x0_resize_box_3.png 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/range.jpg&#34; data-size=&#34;640x388&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/range.jpg&#34;
+			width=&#34;640&#34;
+			height=&#34;388&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/range_hud5460a91b8b1a8e84410525b2db245f2_83652_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/range_hud5460a91b8b1a8e84410525b2db245f2_83652_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;定福庄及其附近基本范围&#34;&gt;
 	&lt;/a&gt;
@@ -1711,18 +2486,18 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 &lt;li&gt;
 &lt;p&gt;定福庄较大型公共服务及公共空间示意&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;​​&lt;figure 
+&lt;li&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
 			flex-grow: 137; 
-			flex-basis: 330px&#34;
+			flex-basis: 331px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/services.png&#34; data-size=&#34;1285x932&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/services.png&#34;
-			width=&#34;1285&#34;
-			height=&#34;932&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/services_hu691d0abf8bc236debb998dd30ef543e0_548812_480x0_resize_box_3.png 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/services_hu691d0abf8bc236debb998dd30ef543e0_548812_1024x0_resize_box_3.png 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/services.jpg&#34; data-size=&#34;640x464&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/services.jpg&#34;
+			width=&#34;640&#34;
+			height=&#34;464&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/services_hubac7eab8762fd732dd0f42a3770e394d_89370_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/services_hubac7eab8762fd732dd0f42a3770e394d_89370_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;定福庄较大型公共服务及公共空间示意&#34;&gt;
 	&lt;/a&gt;
@@ -1735,18 +2510,18 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 &lt;li&gt;
 &lt;p&gt;定福庄综合医院和教育服务分布&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;​​&lt;figure 
+&lt;li&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
 			flex-grow: 166; 
 			flex-basis: 398px&#34;
 	&gt;
-	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/hospital.png&#34; data-size=&#34;1624x977&#34;&gt;
-		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/hospital.png&#34;
-			width=&#34;1624&#34;
-			height=&#34;977&#34;
-			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/hospital_huf3ffc9fbd3f81c78eb0ce42801c07e3f_823649_480x0_resize_box_3.png 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/assets/hospital_huf3ffc9fbd3f81c78eb0ce42801c07e3f_823649_1024x0_resize_box_3.png 1024w&#34;
+	&lt;a href=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/hospital.jpg&#34; data-size=&#34;640x385&#34;&gt;
+		&lt;img src=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/hospital.jpg&#34;
+			width=&#34;640&#34;
+			height=&#34;385&#34;
+			srcset=&#34;https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/hospital_hua8d4f255a4b278a5483e21fe93c2dd87_82588_480x0_resize_q75_box.jpg 480w, https://wish2333.github.io/zh/2023/the-creative-process-of-dingfuzhuang/hospital_hua8d4f255a4b278a5483e21fe93c2dd87_82588_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;定福庄综合医院和教育服务分布&#34;&gt;
 	&lt;/a&gt;
@@ -1767,11 +2542,11 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 &lt;li&gt;
 &lt;h3 id=&#34;调查结果&#34;&gt;调查结果&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;assets/%e4%bb%a3%e8%a1%a8%e6%80%a7%e5%9c%b0%e7%82%b9-20231206192911-9ch0781.pdf&#34; &gt;代表性地点.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wish2333.github.io/files/%e4%bb%a3%e8%a1%a8%e6%80%a7%e5%9c%b0%e7%82%b9-20231206192911-9ch0781.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;代表性地点.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;‍&lt;/p&gt;
 &lt;h2 id=&#34;2023-12-6-最终调研指导&#34;&gt;2023-12-6 最终调研指导&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;内容：推进深入的实地调研，女生三人继续在大黄庄南里附近对文化广场、金宝生活、老年服务、早市等进行观察和记录（建议补充一些傍晚的观察）；男生组继续对定福家园和产业园区进行观察和记录（建议补充一些白天的观察）。此外，大纲已经列好，愿意对&lt;/li&gt;
@@ -1947,12 +2722,12 @@ ffmpeg -i input.mp3 -af &amp;quot;silencedetect=mono=1&amp;quot; -vn -sn -dn -f 
 </description>
         </item>
         <item>
-        <title>北京市大学生的UGC平台健康信息采纳研究——以小红书为例</title>
+        <title>【学术研究】北京市大学生的UGC平台健康信息采纳研究——以小红书为例</title>
         <link>https://wish2333.github.io/zh/2023/health-information/</link>
         <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://wish2333.github.io/zh/2023/health-information/</guid>
-        <description>&lt;img src="https://wish2333.github.io/zh/2023/health-information/img1.jpg" alt="Featured image of post 北京市大学生的UGC平台健康信息采纳研究——以小红书为例" /&gt;&lt;p&gt;！&lt;a class=&#34;link&#34; href=&#34;A_Study_on_the_Adoption_of_Health_Information_by_College_Students_in_Beijing_on_User-Generated_Content_Platforms_A_Case_of_Xiaohongshu.pdf&#34; &gt;下载全文参考&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;img src="https://wish2333.github.io/zh/2023/health-information/img1.jpg" alt="Featured image of post 【学术研究】北京市大学生的UGC平台健康信息采纳研究——以小红书为例" /&gt;&lt;p&gt;！&lt;a class=&#34;link&#34; href=&#34;A_Study_on_the_Adoption_of_Health_Information_by_College_Students_in_Beijing_on_User-Generated_Content_Platforms_A_Case_of_Xiaohongshu.pdf&#34; &gt;下载全文参考&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;文献综述&#34;&gt;文献综述&lt;/h2&gt;
 &lt;h3 id=&#34;ugc-研究&#34;&gt;UGC 研究&lt;/h3&gt;
 &lt;p&gt;User-generated content（UGC，用户生成内容）是在 Web2.0 的基础上提出的，指的是用户自主参与网络平台建设，积极分享和展示自己拥有或创造的内容。随着视频平台 YouTube 于 2005 年推出，UGC 模式迅速成为数字内容发展的热点。学界对 UGC 的理论研究、实践应用逐渐丰富，各行业对其的关注不断增加，新媒体平台开始广泛采用 UGC 模式，依赖用户进行网络资源信息的整合管理。[4]&lt;/p&gt;

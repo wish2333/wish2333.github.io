@@ -6,17 +6,24 @@
     <description>Recent content in 技术 on Wish的博客小站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wish2333.github.io/zh/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FFmpeg&#43;Python GUI：实现批量头尾处理</title>
+      <title>【编程开发】爬虫实践：使用开源项目获取微博博文</title>
+      <link>https://wish2333.github.io/zh/2024/crawler-weibo/</link>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://wish2333.github.io/zh/2024/crawler-weibo/</guid>
+      <description>开源项目地址： https://github.com/dataabc/weiboSpider https://github.com/dataabc/weibo-crawler https://github.com/dataabc/weibo-search 运行环境 开发语言：python3 安装python：https://www.python.org/downloads/ 安装</description>
+    </item>
+    <item>
+      <title>【编程开发】FFmpeg&#43;Python GUI：实现批量头尾处理</title>
       <link>https://wish2333.github.io/zh/2024/ffpygui-preversion/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2024/ffpygui-preversion/</guid>
       <description>开源地址：VideoExtractAndConcat 项目概述 本项目旨在开发一个用户友好的图形界面应用程序，用于视频片头和片尾的快速切割与合并</description>
     </item>
     <item>
-      <title>网课剪辑：自动化流程-基于免费软件</title>
+      <title>【后期制作】网课剪辑：自动化流程-基于免费软件</title>
       <link>https://wish2333.github.io/zh/2023/webclass-autocut-free/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://wish2333.github.io/zh/2023/webclass-autocut-free/</guid>
