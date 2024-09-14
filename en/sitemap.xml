@@ -57,9 +57,6 @@
     <loc>https://wish2333.github.io/en/tags/academic-research/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wish2333.github.io/en/tags/article/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wish2333.github.io/en/categories/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -74,6 +71,9 @@
                 />
   </url><url>
     <loc>https://wish2333.github.io/en/tags/media-literacy/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wish2333.github.io/en/tags/paper/</loc>
     <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wish2333.github.io/en/post/</loc>
@@ -286,6 +286,9 @@
                 href="https://wish2333.github.io/en/archives/"
                 />
   </url><url>
+    <loc>https://wish2333.github.io/en/tags/article/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wish2333.github.io/en/2024/cplogy01/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -387,6 +390,19 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://wish2333.github.io/en/2023/health-information/"
+                />
+  </url><url>
+    <loc>https://wish2333.github.io/en/2022/fengcun-industry/</loc>
+    <lastmod>2022-09-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://wish2333.github.io/zh/2022/fengcun-industry/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://wish2333.github.io/en/2022/fengcun-industry/"
                 />
   </url><url>
     <loc>https://wish2333.github.io/en/categories/archivingold/</loc>
